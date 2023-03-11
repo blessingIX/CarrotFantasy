@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://2mcmjuespeq8"]
+
+[ext_resource type="Texture2D" uid="uid://t8vwrq02757w" path="res://assets/loading.png" id="1_emfho"]
+
+[node name="Scene" type="Sprite2D"]
+texture = ExtResource("1_emfho")
+centered = false
+metadata/_edit_lock_ = true
