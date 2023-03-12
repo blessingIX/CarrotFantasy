@@ -1,9 +1,9 @@
 using Godot;
 using System;
 
-namespace CarrotFantasy.scene.home
+namespace CarrotFantasy.common
 {
-    public partial class FlyingPathFollow2D : PathFollow2D
+    public partial class UniformMotion : PathFollow2D
     {
         [Export]
         private int velocity = 6;

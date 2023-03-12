@@ -1,9 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://b133dx4fybv8v"]
+[gd_scene load_steps=25 format=3 uid="uid://cqap4nfo3e6x1"]
 
 [ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_l0sbp"]
 [ext_resource type="Texture2D" uid="uid://coer3c87gyg6q" path="res://assets/Theme/scene/mainscene1-hd.pvr.png" id="2_yeavx"]
-[ext_resource type="Script" path="res://scene/home/FlyingPathFollow2D.cs" id="3_mvgp0"]
+[ext_resource type="Script" path="res://common/UniformMotion.cs" id="3_dbmmm"]
+[ext_resource type="Script" path="res://scene/home/Home.cs" id="3_po5i8"]
 [ext_resource type="AudioStream" uid="uid://c55xe3la2xh3l" path="res://assets/Music/Main/BGMusic.mp3" id="4_qevgl"]
+[ext_resource type="Script" path="res://scene/home/Carrot.cs" id="4_yvjcg"]
 [ext_resource type="StyleBox" uid="uid://bwqsg11i62uqs" path="res://resouce/home/SettingsNormal.tres" id="5_savee"]
 [ext_resource type="StyleBox" uid="uid://c6meh00qulbyc" path="res://resouce/home/SettingsPressed.tres" id="6_fb8vh"]
 [ext_resource type="StyleBox" uid="uid://bd7yncjqpb067" path="res://resouce/home/HelpNormal.tres" id="7_mb8n3"]
@@ -14,6 +16,18 @@
 [ext_resource type="StyleBox" uid="uid://dfwnxss61p5yq" path="res://resouce/home/BossModePressed.tres" id="12_d5r3i"]
 [ext_resource type="StyleBox" uid="uid://0sxw04vgxmyg" path="res://resouce/home/TheNestNormal.tres" id="13_74jr5"]
 [ext_resource type="StyleBox" uid="uid://bgwlkrt40cr0g" path="res://resouce/home/TheNestPressed.tres" id="14_i7j5g"]
+
+[sub_resource type="Curve2D" id="Curve2D_emn7k"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -88.0002, -160, 0, 0, 0, 0, -87.9989, 1120)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_o4x1o"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -176, -448, 0, 0, 0, 0, -175.999, 1408)
+}
+point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_pussy"]
 _data = {
@@ -37,12 +51,45 @@ texture = ExtResource("2_yeavx")
 offset = Vector2(-640, 0)
 region_enabled = true
 region_rect = Rect2(2, 2, 640, 960)
+script = ExtResource("3_po5i8")
 
-[node name="Carrot" type="Sprite2D" parent="." index="0"]
+[node name="Cloud1Path2D" type="Path2D" parent="." index="0"]
+curve = SubResource("Curve2D_emn7k")
+
+[node name="Cloud1PathFollow2D" type="PathFollow2D" parent="Cloud1Path2D" index="0"]
+position = Vector2(-88.0002, -160)
+rotation = 1.5708
+script = ExtResource("3_dbmmm")
+velocity = 40
+
+[node name="Cloud1" type="Sprite2D" parent="Cloud1Path2D/Cloud1PathFollow2D" index="0"]
+modulate = Color(1, 1, 1, 0.352941)
+texture = ExtResource("2_yeavx")
+region_enabled = true
+region_rect = Rect2(900, 945, 238, 92)
+
+[node name="Cloud2Path2D" type="Path2D" parent="." index="1"]
+curve = SubResource("Curve2D_o4x1o")
+
+[node name="Cloud2PathFollow2D" type="PathFollow2D" parent="Cloud2Path2D" index="0"]
+position = Vector2(-176, -448)
+rotation = 1.5708
+script = ExtResource("3_dbmmm")
+velocity = 64
+
+[node name="Cloud2" type="Sprite2D" parent="Cloud2Path2D/Cloud2PathFollow2D" index="0"]
+modulate = Color(1, 1, 1, 0.352941)
+rotation = 4.71239
+texture = ExtResource("2_yeavx")
+region_enabled = true
+region_rect = Rect2(1751, 915, 47, 90)
+
+[node name="Carrot" type="Sprite2D" parent="." index="2"]
 position = Vector2(-275, 480)
 texture = ExtResource("2_yeavx")
 region_enabled = true
 region_rect = Rect2(644, 729, 183, 212)
+script = ExtResource("4_yvjcg")
 metadata/_edit_group_ = true
 
 [node name="LeafLeft" type="Sprite2D" parent="Carrot" index="0"]
@@ -69,20 +116,22 @@ texture = ExtResource("2_yeavx")
 region_enabled = true
 region_rect = Rect2(1092, 724, 128, 140)
 
-[node name="Title" type="Sprite2D" parent="." index="1"]
+[node name="Timer" type="Timer" parent="Carrot" index="3"]
+
+[node name="Title" type="Sprite2D" parent="." index="3"]
 position = Vector2(-358, 493)
 texture = ExtResource("2_yeavx")
 region_enabled = true
 region_rect = Rect2(1013, 63, 262, 463)
 
-[node name="FlyingPath2D" type="Path2D" parent="." index="2"]
+[node name="FlyingPath2D" type="Path2D" parent="." index="4"]
 curve = SubResource("Curve2D_pussy")
 
 [node name="FlyingPathFollow2D" type="PathFollow2D" parent="FlyingPath2D" index="0"]
 position = Vector2(-160, 192)
 rotation = 3.14159
 rotates = false
-script = ExtResource("3_mvgp0")
+script = ExtResource("3_dbmmm")
 velocity = 10
 
 [node name="Flying" type="Sprite2D" parent="FlyingPath2D/FlyingPathFollow2D" index="0"]
@@ -91,11 +140,11 @@ texture = ExtResource("2_yeavx")
 region_enabled = true
 region_rect = Rect2(978, 539, 87, 173)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="5"]
 stream = ExtResource("4_qevgl")
 autoplay = true
 
-[node name="Buttons" type="Control" parent="." index="4"]
+[node name="Buttons" type="Control" parent="." index="6"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
