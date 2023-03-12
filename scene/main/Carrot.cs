@@ -31,6 +31,8 @@ namespace CarrotFantasy.scene.main
 
             initPosition = Position;
             leafSwingTimer.Timeout += OnLeafSwingTimerTimeout;
+            
+            Hide();
         }
 
         public void Grow()
@@ -41,12 +43,13 @@ namespace CarrotFantasy.scene.main
             }
 
             double duration = 0.16;
+            Hide();
 
             growDelayTimer.OneShot = true;
             growDelayTimer.WaitTime = 0.2;
             growDelayTimer.Timeout += () =>
             {
-
+                Show();
                 Tween tween = CreateTween().SetParallel();
                 tween.SetEase(Tween.EaseType.OutIn).SetTrans(Tween.TransitionType.Sine);
                 tween.TweenProperty(this, (string)Node2D.PropertyName.Scale, Vector2.One, duration).From(Vector2.Zero);

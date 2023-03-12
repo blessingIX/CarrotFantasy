@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://brq3rvlipdjpm"]
+
+[ext_resource type="Script" path="res://autoload/SceneManager.cs" id="1_fv5yu"]
+[ext_resource type="PackedScene" uid="uid://blebnr3eeunc8" path="res://scene/TransitionScene.tscn" id="2_v4452"]
+
+[node name="SceneManager" type="Node"]
+script = ExtResource("1_fv5yu")
+
+[node name="TransitionScene" parent="." instance=ExtResource("2_v4452")]
+visible = false

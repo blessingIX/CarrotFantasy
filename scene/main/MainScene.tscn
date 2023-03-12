@@ -1,11 +1,10 @@
-[gd_scene load_steps=27 format=3 uid="uid://doh33tidf3os0"]
+[gd_scene load_steps=26 format=3 uid="uid://doh33tidf3os0"]
 
 [ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_ycf2n"]
 [ext_resource type="Texture2D" uid="uid://coer3c87gyg6q" path="res://assets/Theme/scene/mainscene1-hd.pvr.png" id="2_f48th"]
 [ext_resource type="Script" path="res://scene/main/MainScene.cs" id="3_rhuge"]
 [ext_resource type="Script" path="res://common/UniformMotion.cs" id="4_rg5wf"]
 [ext_resource type="Script" path="res://scene/main/Carrot.cs" id="5_io8y6"]
-[ext_resource type="AudioStream" uid="uid://c55xe3la2xh3l" path="res://assets/Music/Main/BGMusic.mp3" id="6_qppsc"]
 [ext_resource type="StyleBox" uid="uid://bwqsg11i62uqs" path="res://resouce/main/SettingsNormal.tres" id="7_gstos"]
 [ext_resource type="StyleBox" uid="uid://c6meh00qulbyc" path="res://resouce/main/SettingsPressed.tres" id="8_5gx8t"]
 [ext_resource type="StyleBox" uid="uid://bd7yncjqpb067" path="res://resouce/main/HelpNormal.tres" id="9_d1ywc"]
@@ -13,6 +12,7 @@
 [ext_resource type="StyleBox" uid="uid://vnjwmlgy338" path="res://resouce/main/AdventureNormal.tres" id="11_chhgi"]
 [ext_resource type="StyleBox" uid="uid://cdujltatt7i8d" path="res://resouce/main/AdventurePressed.tres" id="12_7flwq"]
 [ext_resource type="StyleBox" uid="uid://bwps7nwwq3j2r" path="res://resouce/main/BossModeNormal.tres" id="13_8ppx5"]
+[ext_resource type="Script" path="res://scene/main/Adventure.cs" id="13_q3kr0"]
 [ext_resource type="StyleBox" uid="uid://dfwnxss61p5yq" path="res://resouce/main/BossModePressed.tres" id="14_wqx8r"]
 [ext_resource type="PackedScene" uid="uid://sau1c1uw2s2f" path="res://common/ButtonLock.tscn" id="16_dyt83"]
 [ext_resource type="StyleBox" uid="uid://0sxw04vgxmyg" path="res://resouce/main/TheNestNormal.tres" id="16_usrwd"]
@@ -41,24 +41,6 @@ point_count = 3
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aw0jf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5dk4"]
-
-[sub_resource type="CSharpScript" id="CSharpScript_lyken"]
-script/source = "using Godot;
-using System;
-
-public partial class Adventure : Button
-{
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
-}
-"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ys70u"]
 
@@ -165,11 +147,7 @@ texture = ExtResource("2_f48th")
 region_enabled = true
 region_rect = Rect2(978, 539, 87, 173)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="5"]
-stream = ExtResource("6_qppsc")
-autoplay = true
-
-[node name="Buttons" type="Control" parent="." index="6"]
+[node name="Buttons" type="Control" parent="." index="5"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -211,7 +189,7 @@ theme_override_styles/hover = ExtResource("11_chhgi")
 theme_override_styles/pressed = ExtResource("12_7flwq")
 theme_override_styles/disabled = ExtResource("11_chhgi")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_i5dk4")
-script = SubResource("CSharpScript_lyken")
+script = ExtResource("13_q3kr0")
 
 [node name="BossMode" type="Button" parent="Buttons" index="3"]
 layout_mode = 0

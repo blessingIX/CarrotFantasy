@@ -1,10 +1,11 @@
 using Godot;
 using GodotUtilities;
 using System;
+using CarrotFantasy.autoload;
 
 namespace CarrotFantasy.scene.main
 {
-    public partial class MainScene : Sprite2D
+    public partial class MainScene : Scene
     {
         [Node("Carrot")]
         private Carrot carrot;
@@ -15,6 +16,7 @@ namespace CarrotFantasy.scene.main
             this.WireNodes();
 
             carrot.Grow();
+            this._<SoundManager>()?.Play("res://resouce/main/BGMusic.tres");
         }
     }
 }

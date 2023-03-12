@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://bmkhm2ln5cmgn"]
+
+[ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_hjuc7"]
+[ext_resource type="Texture2D" uid="uid://nhb0sedhj6tv" path="res://assets/Theme/scene/stages_bg-hd.pvr.png" id="2_g85j0"]
+[ext_resource type="StyleBox" uid="uid://f71jqdaiou8u" path="res://resouce/adventure/BackNormal.tres" id="3_kkwi1"]
+[ext_resource type="Script" path="res://scene/adventure/AdventureScene.cs" id="3_ufe78"]
+[ext_resource type="StyleBox" uid="uid://b0fc3suqilw1u" path="res://resouce/adventure/BackPressed.tres" id="4_tx5jy"]
+[ext_resource type="StyleBox" uid="uid://bje31ojdwr8jq" path="res://resouce/adventure/HelpNormal.tres" id="5_p3xqy"]
+[ext_resource type="StyleBox" uid="uid://b3m058owwhey8" path="res://resouce/adventure/HelpPressed.tres" id="6_2c0po"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2irm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jmkro"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nufho"]
+texture = ExtResource("2_g85j0")
+region_rect = Rect2(285, 1736, 115, 31)
+
+[node name="AdventureScene" instance=ExtResource("1_hjuc7")]
+position = Vector2(0, 640)
+rotation = 4.71239
+texture = ExtResource("2_g85j0")
+region_enabled = true
+region_rect = Rect2(258, 2, 640, 960)
+script = ExtResource("3_ufe78")
+
+[node name="MenuBar" type="Control" parent="." index="0"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Button" parent="MenuBar" index="0"]
+layout_mode = 0
+offset_left = 587.0
+offset_top = 23.9995
+offset_right = 630.0
+offset_bottom = 72.9995
+scale = Vector2(0.9, 0.9)
+theme_override_styles/normal = ExtResource("3_kkwi1")
+theme_override_styles/hover = ExtResource("3_kkwi1")
+theme_override_styles/pressed = ExtResource("4_tx5jy")
+theme_override_styles/disabled = ExtResource("3_kkwi1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s2irm")
+
+[node name="Help" type="Button" parent="MenuBar" index="1"]
+layout_mode = 0
+offset_left = 587.001
+offset_top = 895.999
+offset_right = 639.001
+offset_bottom = 953.999
+scale = Vector2(0.8, 0.8)
+theme_override_styles/normal = ExtResource("5_p3xqy")
+theme_override_styles/hover = ExtResource("5_p3xqy")
+theme_override_styles/pressed = ExtResource("6_2c0po")
+theme_override_styles/disabled = ExtResource("5_p3xqy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jmkro")
+
+[node name="Label" type="Label" parent="MenuBar" index="2"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 504.999
+offset_right = 709.0
+offset_bottom = 535.999
+rotation = 4.71239
+theme_override_styles/normal = SubResource("StyleBoxTexture_nufho")

@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SceneManager="*res://autoload/SceneManager.cs"
+SoundManager="*res://autoload/SoundManager.tscn"
+SceneManager="*res://autoload/SceneManager.tscn"
 
 [display]
 
