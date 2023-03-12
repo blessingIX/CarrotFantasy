@@ -1,5 +1,4 @@
 using Godot;
-using System;
 using GodotUtilities;
 
 namespace CarrotFantasy.scene.home
@@ -7,18 +6,22 @@ namespace CarrotFantasy.scene.home
     public partial class Carrot : Sprite2D
     {
 
-        [Node("LeafMiddle")]
-        private Sprite2D leafMiddle;
+        [Node("LeafMiddleContainer")]
+        private Node2D leafMiddleContainer;
 
-        [Node("LeafRight")]
-        private Sprite2D LeafRight;
+        [Node("LeafRightContainer")]
+        private Node2D LeafRightContainer;
 
-        [Node("Timer")]
-        private Timer timer;
+        [Node("LeafSwingTimer")]
+        private Timer leafSwingTimer;
 
         private Timer growDelayTimer = new();
 
         private Vector2 initPosition;
+
+        private int swingCycleCount = 0;
+
+        private const int swingCycleTotalCount = 6;
 
         public override void _Ready()
         {
@@ -27,7 +30,7 @@ namespace CarrotFantasy.scene.home
             AddChild(growDelayTimer);
 
             initPosition = Position;
-            timer.Timeout += () => GD.Print("timeout");
+            leafSwingTimer.Timeout += OnLeafSwingTimerTimeout;
         }
 
         public void Grow()
@@ -49,10 +52,10 @@ namespace CarrotFantasy.scene.home
                 tween.TweenProperty(this, (string)Node2D.PropertyName.Scale, Vector2.One, duration).From(Vector2.Zero);
                 tween.SetEase(Tween.EaseType.In);
                 tween.TweenProperty(this, (string)Node2D.PropertyName.Position, initPosition, duration).From(initPosition + new Vector2(-100f, 0f));
-                tween.TweenCallback(Callable.From(() => GD.Print("TweenCallback")));
             };
 
             growDelayTimer.Start();
+            ResetSwingCycle();
         }
 
         public override void _Input(InputEvent @event)
@@ -62,6 +65,50 @@ namespace CarrotFantasy.scene.home
             {
                 Grow();
             }
+        }
+
+        private void OnLeafSwingTimerTimeout()
+        {
+            swingCycleCount = ++swingCycleCount % swingCycleTotalCount;
+            switch (swingCycleCount)
+            {
+                case 1:
+                    LeafSwingAnimation(leafMiddleContainer);
+                    break;
+                case 2:
+                    LeafSwingAnimation(LeafRightContainer);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void LeafSwingAnimation(Node2D node2D)
+        {
+            if (node2D == null)
+            {
+                return;
+            }
+
+            Tween tween = CreateTween();
+            tween.SetEase(Tween.EaseType.In).SetTrans(Tween.TransitionType.Linear);
+            tween.TweenProperty(node2D, (string)Node2D.PropertyName.RotationDegrees, 15f, 0.1);
+            tween.TweenProperty(node2D, (string)Node2D.PropertyName.RotationDegrees, 0f, 0.1);
+            tween.TweenProperty(node2D, (string)Node2D.PropertyName.RotationDegrees, 15f, 0.1);
+            tween.TweenProperty(node2D, (string)Node2D.PropertyName.RotationDegrees, 0f, 0.1);
+        }
+
+        private void ResetSwingCycle()
+        {
+            swingCycleCount = 0;
+            leafMiddleContainer.RotationDegrees = 0f;
+            LeafRightContainer.RotationDegrees = 0f;
+
+            if (!leafSwingTimer.IsStopped())
+            {
+                leafSwingTimer.Stop();
+            }
+            leafSwingTimer.Start();
         }
     }
 }

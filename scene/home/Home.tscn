@@ -90,7 +90,6 @@ texture = ExtResource("2_yeavx")
 region_enabled = true
 region_rect = Rect2(644, 729, 183, 212)
 script = ExtResource("4_yvjcg")
-metadata/_edit_group_ = true
 
 [node name="LeafLeft" type="Sprite2D" parent="Carrot" index="0"]
 show_behind_parent = true
@@ -100,23 +99,30 @@ texture = ExtResource("2_yeavx")
 region_enabled = true
 region_rect = Rect2(1909, 252, 123, 112)
 
-[node name="LeafRight" type="Sprite2D" parent="Carrot" index="1"]
+[node name="LeafRightContainer" type="Node2D" parent="Carrot" index="1"]
 show_behind_parent = true
-position = Vector2(93, 71)
+position = Vector2(45, 7.99994)
+
+[node name="LeafRight" type="Sprite2D" parent="Carrot/LeafRightContainer" index="0"]
+position = Vector2(57, 60)
 rotation = 1.5708
 texture = ExtResource("2_yeavx")
 region_enabled = true
 region_rect = Rect2(1908, 371, 115, 105)
 
-[node name="LeafMiddle" type="Sprite2D" parent="Carrot" index="2"]
+[node name="LeafMiddleContainer" type="Node2D" parent="Carrot" index="2"]
 show_behind_parent = true
-position = Vector2(115, -3)
+position = Vector2(45.0005, 8.00021)
+
+[node name="LeafMiddle" type="Sprite2D" parent="Carrot/LeafMiddleContainer" index="0"]
+position = Vector2(70, -12)
 rotation = 1.5708
 texture = ExtResource("2_yeavx")
 region_enabled = true
 region_rect = Rect2(1092, 724, 128, 140)
 
-[node name="Timer" type="Timer" parent="Carrot" index="3"]
+[node name="LeafSwingTimer" type="Timer" parent="Carrot" index="3"]
+wait_time = 1.4
 
 [node name="Title" type="Sprite2D" parent="." index="3"]
 position = Vector2(-358, 493)
