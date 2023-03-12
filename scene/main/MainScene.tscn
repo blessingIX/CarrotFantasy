@@ -1,22 +1,22 @@
-[gd_scene load_steps=26 format=3 uid="uid://cqap4nfo3e6x1"]
+[gd_scene load_steps=27 format=3 uid="uid://doh33tidf3os0"]
 
-[ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_l0sbp"]
-[ext_resource type="Texture2D" uid="uid://coer3c87gyg6q" path="res://assets/Theme/scene/mainscene1-hd.pvr.png" id="2_yeavx"]
-[ext_resource type="Script" path="res://common/UniformMotion.cs" id="3_dbmmm"]
-[ext_resource type="Script" path="res://scene/home/Home.cs" id="3_po5i8"]
-[ext_resource type="AudioStream" uid="uid://c55xe3la2xh3l" path="res://assets/Music/Main/BGMusic.mp3" id="4_qevgl"]
-[ext_resource type="Script" path="res://scene/home/Carrot.cs" id="4_yvjcg"]
-[ext_resource type="StyleBox" uid="uid://bwqsg11i62uqs" path="res://resouce/home/SettingsNormal.tres" id="5_savee"]
-[ext_resource type="StyleBox" uid="uid://c6meh00qulbyc" path="res://resouce/home/SettingsPressed.tres" id="6_fb8vh"]
-[ext_resource type="StyleBox" uid="uid://bd7yncjqpb067" path="res://resouce/home/HelpNormal.tres" id="7_mb8n3"]
-[ext_resource type="StyleBox" uid="uid://cb15osq1tth1p" path="res://resouce/home/HelpPressed.tres" id="8_cl1ql"]
-[ext_resource type="StyleBox" uid="uid://vnjwmlgy338" path="res://resouce/home/AdventureNormal.tres" id="9_v0nmp"]
-[ext_resource type="StyleBox" uid="uid://cdujltatt7i8d" path="res://resouce/home/AdventurePressed.tres" id="10_1shnt"]
-[ext_resource type="StyleBox" uid="uid://bwps7nwwq3j2r" path="res://resouce/home/BossModeNormal.tres" id="11_gvuw2"]
-[ext_resource type="StyleBox" uid="uid://dfwnxss61p5yq" path="res://resouce/home/BossModePressed.tres" id="12_d5r3i"]
-[ext_resource type="StyleBox" uid="uid://0sxw04vgxmyg" path="res://resouce/home/TheNestNormal.tres" id="13_74jr5"]
-[ext_resource type="StyleBox" uid="uid://bgwlkrt40cr0g" path="res://resouce/home/TheNestPressed.tres" id="14_i7j5g"]
-[ext_resource type="PackedScene" uid="uid://sau1c1uw2s2f" path="res://common/ButtonLock.tscn" id="15_qgppq"]
+[ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_ycf2n"]
+[ext_resource type="Texture2D" uid="uid://coer3c87gyg6q" path="res://assets/Theme/scene/mainscene1-hd.pvr.png" id="2_f48th"]
+[ext_resource type="Script" path="res://scene/main/MainScene.cs" id="3_rhuge"]
+[ext_resource type="Script" path="res://common/UniformMotion.cs" id="4_rg5wf"]
+[ext_resource type="Script" path="res://scene/main/Carrot.cs" id="5_io8y6"]
+[ext_resource type="AudioStream" uid="uid://c55xe3la2xh3l" path="res://assets/Music/Main/BGMusic.mp3" id="6_qppsc"]
+[ext_resource type="StyleBox" uid="uid://bwqsg11i62uqs" path="res://resouce/main/SettingsNormal.tres" id="7_gstos"]
+[ext_resource type="StyleBox" uid="uid://c6meh00qulbyc" path="res://resouce/main/SettingsPressed.tres" id="8_5gx8t"]
+[ext_resource type="StyleBox" uid="uid://bd7yncjqpb067" path="res://resouce/main/HelpNormal.tres" id="9_d1ywc"]
+[ext_resource type="StyleBox" uid="uid://cb15osq1tth1p" path="res://resouce/main/HelpPressed.tres" id="10_hw26k"]
+[ext_resource type="StyleBox" uid="uid://vnjwmlgy338" path="res://resouce/main/AdventureNormal.tres" id="11_chhgi"]
+[ext_resource type="StyleBox" uid="uid://cdujltatt7i8d" path="res://resouce/main/AdventurePressed.tres" id="12_7flwq"]
+[ext_resource type="StyleBox" uid="uid://bwps7nwwq3j2r" path="res://resouce/main/BossModeNormal.tres" id="13_8ppx5"]
+[ext_resource type="StyleBox" uid="uid://dfwnxss61p5yq" path="res://resouce/main/BossModePressed.tres" id="14_wqx8r"]
+[ext_resource type="PackedScene" uid="uid://sau1c1uw2s2f" path="res://common/ButtonLock.tscn" id="16_dyt83"]
+[ext_resource type="StyleBox" uid="uid://0sxw04vgxmyg" path="res://resouce/main/TheNestNormal.tres" id="16_usrwd"]
+[ext_resource type="StyleBox" uid="uid://bgwlkrt40cr0g" path="res://resouce/main/TheNestPressed.tres" id="17_bt1bj"]
 
 [sub_resource type="Curve2D" id="Curve2D_emn7k"]
 _data = {
@@ -42,17 +42,35 @@ point_count = 3
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5dk4"]
 
+[sub_resource type="CSharpScript" id="CSharpScript_lyken"]
+script/source = "using Godot;
+using System;
+
+public partial class Adventure : Button
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ys70u"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgi2c"]
 
-[node name="Home" instance=ExtResource("1_l0sbp")]
+[node name="MainScene" instance=ExtResource("1_ycf2n")]
 rotation = 4.71239
-texture = ExtResource("2_yeavx")
+texture = ExtResource("2_f48th")
 offset = Vector2(-640, 0)
 region_enabled = true
 region_rect = Rect2(2, 2, 640, 960)
-script = ExtResource("3_po5i8")
+script = ExtResource("3_rhuge")
 
 [node name="Cloud1Path2D" type="Path2D" parent="." index="0"]
 curve = SubResource("Curve2D_emn7k")
@@ -60,12 +78,12 @@ curve = SubResource("Curve2D_emn7k")
 [node name="Cloud1PathFollow2D" type="PathFollow2D" parent="Cloud1Path2D" index="0"]
 position = Vector2(-88.0002, -160)
 rotation = 1.5708
-script = ExtResource("3_dbmmm")
+script = ExtResource("4_rg5wf")
 velocity = 40
 
 [node name="Cloud1" type="Sprite2D" parent="Cloud1Path2D/Cloud1PathFollow2D" index="0"]
 modulate = Color(1, 1, 1, 0.352941)
-texture = ExtResource("2_yeavx")
+texture = ExtResource("2_f48th")
 region_enabled = true
 region_rect = Rect2(900, 945, 238, 92)
 
@@ -75,28 +93,28 @@ curve = SubResource("Curve2D_o4x1o")
 [node name="Cloud2PathFollow2D" type="PathFollow2D" parent="Cloud2Path2D" index="0"]
 position = Vector2(-176, -448)
 rotation = 1.5708
-script = ExtResource("3_dbmmm")
+script = ExtResource("4_rg5wf")
 velocity = 64
 
 [node name="Cloud2" type="Sprite2D" parent="Cloud2Path2D/Cloud2PathFollow2D" index="0"]
 modulate = Color(1, 1, 1, 0.352941)
 rotation = 4.71239
-texture = ExtResource("2_yeavx")
+texture = ExtResource("2_f48th")
 region_enabled = true
 region_rect = Rect2(1751, 915, 47, 90)
 
 [node name="Carrot" type="Sprite2D" parent="." index="2"]
 position = Vector2(-275, 480)
-texture = ExtResource("2_yeavx")
+texture = ExtResource("2_f48th")
 region_enabled = true
 region_rect = Rect2(644, 729, 183, 212)
-script = ExtResource("4_yvjcg")
+script = ExtResource("5_io8y6")
 
 [node name="LeafLeft" type="Sprite2D" parent="Carrot" index="0"]
 show_behind_parent = true
 position = Vector2(91, -66)
 rotation = 1.5708
-texture = ExtResource("2_yeavx")
+texture = ExtResource("2_f48th")
 region_enabled = true
 region_rect = Rect2(1909, 252, 123, 112)
 
@@ -107,7 +125,7 @@ position = Vector2(45, 7.99994)
 [node name="LeafRight" type="Sprite2D" parent="Carrot/LeafRightContainer" index="0"]
 position = Vector2(57, 60)
 rotation = 1.5708
-texture = ExtResource("2_yeavx")
+texture = ExtResource("2_f48th")
 region_enabled = true
 region_rect = Rect2(1908, 371, 115, 105)
 
@@ -118,7 +136,7 @@ position = Vector2(45.0005, 8.00021)
 [node name="LeafMiddle" type="Sprite2D" parent="Carrot/LeafMiddleContainer" index="0"]
 position = Vector2(70, -12)
 rotation = 1.5708
-texture = ExtResource("2_yeavx")
+texture = ExtResource("2_f48th")
 region_enabled = true
 region_rect = Rect2(1092, 724, 128, 140)
 
@@ -127,7 +145,7 @@ wait_time = 1.4
 
 [node name="Title" type="Sprite2D" parent="." index="3"]
 position = Vector2(-358, 493)
-texture = ExtResource("2_yeavx")
+texture = ExtResource("2_f48th")
 region_enabled = true
 region_rect = Rect2(1013, 63, 262, 463)
 
@@ -138,17 +156,17 @@ curve = SubResource("Curve2D_pussy")
 position = Vector2(-160, 192)
 rotation = 3.14159
 rotates = false
-script = ExtResource("3_dbmmm")
+script = ExtResource("4_rg5wf")
 velocity = 10
 
 [node name="Flying" type="Sprite2D" parent="FlyingPath2D/FlyingPathFollow2D" index="0"]
 rotation = 3.14159
-texture = ExtResource("2_yeavx")
+texture = ExtResource("2_f48th")
 region_enabled = true
 region_rect = Rect2(978, 539, 87, 173)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="5"]
-stream = ExtResource("4_qevgl")
+stream = ExtResource("6_qppsc")
 autoplay = true
 
 [node name="Buttons" type="Control" parent="." index="6"]
@@ -163,10 +181,10 @@ offset_left = -432.0
 offset_top = 155.0
 offset_right = -379.0
 offset_bottom = 233.0
-theme_override_styles/normal = ExtResource("5_savee")
-theme_override_styles/hover = ExtResource("5_savee")
-theme_override_styles/pressed = ExtResource("6_fb8vh")
-theme_override_styles/disabled = ExtResource("5_savee")
+theme_override_styles/normal = ExtResource("7_gstos")
+theme_override_styles/hover = ExtResource("7_gstos")
+theme_override_styles/pressed = ExtResource("8_5gx8t")
+theme_override_styles/disabled = ExtResource("7_gstos")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6evdp")
 
 [node name="Help" type="Button" parent="Buttons" index="1"]
@@ -175,10 +193,10 @@ offset_left = -431.999
 offset_top = 736.0
 offset_right = -377.999
 offset_bottom = 813.0
-theme_override_styles/normal = ExtResource("7_mb8n3")
-theme_override_styles/hover = ExtResource("7_mb8n3")
-theme_override_styles/pressed = ExtResource("8_cl1ql")
-theme_override_styles/disabled = ExtResource("7_mb8n3")
+theme_override_styles/normal = ExtResource("9_d1ywc")
+theme_override_styles/hover = ExtResource("9_d1ywc")
+theme_override_styles/pressed = ExtResource("10_hw26k")
+theme_override_styles/disabled = ExtResource("9_d1ywc")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_aw0jf")
 
 [node name="Adventure" type="Button" parent="Buttons" index="2"]
@@ -188,11 +206,12 @@ offset_top = 40.0005
 offset_right = -253.0
 offset_bottom = 122.001
 rotation = 1.5708
-theme_override_styles/normal = ExtResource("9_v0nmp")
-theme_override_styles/hover = ExtResource("9_v0nmp")
-theme_override_styles/pressed = ExtResource("10_1shnt")
-theme_override_styles/disabled = ExtResource("9_v0nmp")
+theme_override_styles/normal = ExtResource("11_chhgi")
+theme_override_styles/hover = ExtResource("11_chhgi")
+theme_override_styles/pressed = ExtResource("12_7flwq")
+theme_override_styles/disabled = ExtResource("11_chhgi")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_i5dk4")
+script = SubResource("CSharpScript_lyken")
 
 [node name="BossMode" type="Button" parent="Buttons" index="3"]
 layout_mode = 0
@@ -201,13 +220,13 @@ offset_top = 344.001
 offset_right = -252.0
 offset_bottom = 429.001
 rotation = 1.5708
-theme_override_styles/normal = ExtResource("11_gvuw2")
-theme_override_styles/hover = ExtResource("11_gvuw2")
-theme_override_styles/pressed = ExtResource("12_d5r3i")
-theme_override_styles/disabled = ExtResource("11_gvuw2")
+theme_override_styles/normal = ExtResource("13_8ppx5")
+theme_override_styles/hover = ExtResource("13_8ppx5")
+theme_override_styles/pressed = ExtResource("14_wqx8r")
+theme_override_styles/disabled = ExtResource("13_8ppx5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ys70u")
 
-[node name="ButtonLock" parent="Buttons/BossMode" index="0" instance=ExtResource("15_qgppq")]
+[node name="ButtonLock" parent="Buttons/BossMode" index="0" instance=ExtResource("16_dyt83")]
 position = Vector2(268, 65.9985)
 
 [node name="TheNest" type="Button" parent="Buttons" index="4"]
@@ -216,12 +235,12 @@ offset_left = -607.999
 offset_top = 648.001
 offset_right = -524.999
 offset_bottom = 917.001
-theme_override_styles/normal = ExtResource("13_74jr5")
-theme_override_styles/hover = ExtResource("13_74jr5")
-theme_override_styles/pressed = ExtResource("14_i7j5g")
-theme_override_styles/disabled = ExtResource("13_74jr5")
+theme_override_styles/normal = ExtResource("16_usrwd")
+theme_override_styles/hover = ExtResource("16_usrwd")
+theme_override_styles/pressed = ExtResource("17_bt1bj")
+theme_override_styles/disabled = ExtResource("16_usrwd")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vgi2c")
 
-[node name="ButtonLock" parent="Buttons/TheNest" index="0" instance=ExtResource("15_qgppq")]
+[node name="ButtonLock" parent="Buttons/TheNest" index="0" instance=ExtResource("16_dyt83")]
 position = Vector2(16.9999, 269)
 rotation = 0.0

@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="CarrotFantasy"
-run/main_scene="res://scene/home/Home.tscn"
+run/main_scene="res://scene/main/MainScene.tscn"
 config/features=PackedStringArray("4.0", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SceneManager="*res://autoload/SceneManager.cs"
 
 [display]
 

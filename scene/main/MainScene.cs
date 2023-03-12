@@ -2,9 +2,9 @@ using Godot;
 using GodotUtilities;
 using System;
 
-namespace CarrotFantasy.scene.home
+namespace CarrotFantasy.scene.main
 {
-    public partial class Home : Sprite2D
+    public partial class MainScene : Sprite2D
     {
         [Node("Carrot")]
         private Carrot carrot;

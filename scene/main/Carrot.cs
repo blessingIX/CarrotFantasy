@@ -1,7 +1,7 @@
 using Godot;
 using GodotUtilities;
 
-namespace CarrotFantasy.scene.home
+namespace CarrotFantasy.scene.main
 {
     public partial class Carrot : Sprite2D
     {
