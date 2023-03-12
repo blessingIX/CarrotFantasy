@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cqap4nfo3e6x1"]
+[gd_scene load_steps=26 format=3 uid="uid://cqap4nfo3e6x1"]
 
 [ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_l0sbp"]
 [ext_resource type="Texture2D" uid="uid://coer3c87gyg6q" path="res://assets/Theme/scene/mainscene1-hd.pvr.png" id="2_yeavx"]
@@ -16,6 +16,7 @@
 [ext_resource type="StyleBox" uid="uid://dfwnxss61p5yq" path="res://resouce/home/BossModePressed.tres" id="12_d5r3i"]
 [ext_resource type="StyleBox" uid="uid://0sxw04vgxmyg" path="res://resouce/home/TheNestNormal.tres" id="13_74jr5"]
 [ext_resource type="StyleBox" uid="uid://bgwlkrt40cr0g" path="res://resouce/home/TheNestPressed.tres" id="14_i7j5g"]
+[ext_resource type="PackedScene" uid="uid://sau1c1uw2s2f" path="res://common/ButtonLock.tscn" id="15_qgppq"]
 
 [sub_resource type="Curve2D" id="Curve2D_emn7k"]
 _data = {
@@ -206,6 +207,9 @@ theme_override_styles/pressed = ExtResource("12_d5r3i")
 theme_override_styles/disabled = ExtResource("11_gvuw2")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ys70u")
 
+[node name="ButtonLock" parent="Buttons/BossMode" index="0" instance=ExtResource("15_qgppq")]
+position = Vector2(268, 65.9985)
+
 [node name="TheNest" type="Button" parent="Buttons" index="4"]
 layout_mode = 0
 offset_left = -607.999
@@ -217,3 +221,7 @@ theme_override_styles/hover = ExtResource("13_74jr5")
 theme_override_styles/pressed = ExtResource("14_i7j5g")
 theme_override_styles/disabled = ExtResource("13_74jr5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vgi2c")
+
+[node name="ButtonLock" parent="Buttons/TheNest" index="0" instance=ExtResource("15_qgppq")]
+position = Vector2(16.9999, 269)
+rotation = 0.0

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://sau1c1uw2s2f"]
+
+[ext_resource type="Texture2D" uid="uid://coer3c87gyg6q" path="res://assets/Theme/scene/mainscene1-hd.pvr.png" id="1_p7s78"]
+
+[node name="ButtonLock" type="Sprite2D"]
+rotation = 4.71239
+texture = ExtResource("1_p7s78")
+region_enabled = true
+region_rect = Rect2(1594, 846, 68, 62)

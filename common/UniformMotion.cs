@@ -7,6 +7,7 @@ namespace CarrotFantasy.common
     {
         [Export]
         private int velocity = 6;
+
         public override void _Process(double delta)
         {
             base._Process(delta);
