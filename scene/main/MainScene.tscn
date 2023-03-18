@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://doh33tidf3os0"]
+[gd_scene load_steps=34 format=3 uid="uid://bhh7fv8mq5ugn"]
 
 [ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_ycf2n"]
 [ext_resource type="Texture2D" uid="uid://csm3rclcvy4jx" path="res://assets/Theme/scene/mainscene1-hd/1.png" id="2_kdje5"]
@@ -8,23 +8,23 @@
 [ext_resource type="Texture2D" uid="uid://ca5k7014c6m4d" path="res://assets/Theme/scene/mainscene1-hd/9.png" id="5_txuan"]
 [ext_resource type="Texture2D" uid="uid://cch0nl34sjhg5" path="res://assets/Theme/scene/mainscene1-hd/12.png" id="6_4boow"]
 [ext_resource type="Texture2D" uid="uid://dhxa3n7kjcn13" path="res://assets/Theme/scene/mainscene1-hd/3.png" id="6_t7yo6"]
-[ext_resource type="StyleBox" uid="uid://bwqsg11i62uqs" path="res://resouce/main/SettingsNormal.tres" id="7_gstos"]
-[ext_resource type="StyleBox" uid="uid://c6meh00qulbyc" path="res://resouce/main/SettingsPressed.tres" id="8_5gx8t"]
 [ext_resource type="Texture2D" uid="uid://dinwbrwsv42w2" path="res://assets/Theme/scene/mainscene1-hd/36.png" id="9_andtk"]
-[ext_resource type="StyleBox" uid="uid://bd7yncjqpb067" path="res://resouce/main/HelpNormal.tres" id="9_d1ywc"]
-[ext_resource type="StyleBox" uid="uid://cb15osq1tth1p" path="res://resouce/main/HelpPressed.tres" id="10_hw26k"]
 [ext_resource type="Texture2D" uid="uid://cfk7s768in5rv" path="res://assets/Theme/scene/mainscene1-hd/38.png" id="10_kwwmr"]
-[ext_resource type="StyleBox" uid="uid://vnjwmlgy338" path="res://resouce/main/AdventureNormal.tres" id="11_chhgi"]
 [ext_resource type="Texture2D" uid="uid://u1djm37dulik" path="res://assets/Theme/scene/mainscene1-hd/15.png" id="11_drc85"]
-[ext_resource type="StyleBox" uid="uid://cdujltatt7i8d" path="res://resouce/main/AdventurePressed.tres" id="12_7flwq"]
 [ext_resource type="Texture2D" uid="uid://dxfedknhm8h41" path="res://assets/Theme/scene/mainscene1-hd/14.png" id="12_xj422"]
-[ext_resource type="StyleBox" uid="uid://bwps7nwwq3j2r" path="res://resouce/main/BossModeNormal.tres" id="13_8ppx5"]
 [ext_resource type="Texture2D" uid="uid://c17k2ikxtputp" path="res://assets/Theme/scene/mainscene1-hd/21.png" id="13_f7643"]
 [ext_resource type="Script" path="res://scene/main/Adventure.cs" id="13_q3kr0"]
-[ext_resource type="StyleBox" uid="uid://dfwnxss61p5yq" path="res://resouce/main/BossModePressed.tres" id="14_wqx8r"]
-[ext_resource type="StyleBox" uid="uid://0sxw04vgxmyg" path="res://resouce/main/TheNestNormal.tres" id="16_usrwd"]
-[ext_resource type="StyleBox" uid="uid://bgwlkrt40cr0g" path="res://resouce/main/TheNestPressed.tres" id="17_bt1bj"]
+[ext_resource type="StyleBox" uid="uid://bwqsg11i62uqs" path="res://resource/main/SettingsNormal.tres" id="14_e41yj"]
+[ext_resource type="StyleBox" uid="uid://c6meh00qulbyc" path="res://resource/main/SettingsPressed.tres" id="15_63a6w"]
+[ext_resource type="StyleBox" uid="uid://bd7yncjqpb067" path="res://resource/main/HelpNormal.tres" id="16_bd5n7"]
+[ext_resource type="StyleBox" uid="uid://cb15osq1tth1p" path="res://resource/main/HelpPressed.tres" id="17_0ahfo"]
+[ext_resource type="StyleBox" uid="uid://vnjwmlgy338" path="res://resource/main/AdventureNormal.tres" id="18_llv0v"]
+[ext_resource type="StyleBox" uid="uid://cdujltatt7i8d" path="res://resource/main/AdventurePressed.tres" id="19_nc01h"]
+[ext_resource type="StyleBox" uid="uid://bwps7nwwq3j2r" path="res://resource/main/BossModeNormal.tres" id="21_gh4hg"]
+[ext_resource type="StyleBox" uid="uid://dfwnxss61p5yq" path="res://resource/main/BossModePressed.tres" id="22_ubkoa"]
 [ext_resource type="Texture2D" uid="uid://mos3xbftdpow" path="res://assets/Theme/scene/mainscene1-hd/29.png" id="24_7sm6m"]
+[ext_resource type="StyleBox" uid="uid://0sxw04vgxmyg" path="res://resource/main/TheNestNormal.tres" id="24_la71p"]
+[ext_resource type="StyleBox" uid="uid://bgwlkrt40cr0g" path="res://resource/main/TheNestPressed.tres" id="25_4e5rr"]
 
 [sub_resource type="Curve2D" id="Curve2D_emn7k"]
 _data = {
@@ -153,10 +153,10 @@ offset_left = 136.0
 offset_top = 296.0
 offset_right = 215.0
 offset_bottom = 343.0
-theme_override_styles/normal = ExtResource("7_gstos")
-theme_override_styles/hover = ExtResource("7_gstos")
-theme_override_styles/pressed = ExtResource("8_5gx8t")
-theme_override_styles/disabled = ExtResource("7_gstos")
+theme_override_styles/normal = ExtResource("14_e41yj")
+theme_override_styles/hover = ExtResource("14_e41yj")
+theme_override_styles/pressed = ExtResource("15_63a6w")
+theme_override_styles/disabled = ExtResource("14_e41yj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6evdp")
 
 [node name="Help" type="Button" parent="Buttons" index="1"]
@@ -165,10 +165,10 @@ offset_left = 592.0
 offset_top = 312.0
 offset_right = 671.0
 offset_bottom = 359.0
-theme_override_styles/normal = ExtResource("9_d1ywc")
-theme_override_styles/hover = ExtResource("9_d1ywc")
-theme_override_styles/pressed = ExtResource("10_hw26k")
-theme_override_styles/disabled = ExtResource("9_d1ywc")
+theme_override_styles/normal = ExtResource("16_bd5n7")
+theme_override_styles/hover = ExtResource("16_bd5n7")
+theme_override_styles/pressed = ExtResource("17_0ahfo")
+theme_override_styles/disabled = ExtResource("16_bd5n7")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_aw0jf")
 
 [node name="Adventure" type="Button" parent="Buttons" index="2"]
@@ -177,10 +177,10 @@ offset_left = 24.0
 offset_top = 416.0
 offset_right = 260.0
 offset_bottom = 487.0
-theme_override_styles/normal = ExtResource("11_chhgi")
-theme_override_styles/hover = ExtResource("11_chhgi")
-theme_override_styles/pressed = ExtResource("12_7flwq")
-theme_override_styles/disabled = ExtResource("11_chhgi")
+theme_override_styles/normal = ExtResource("18_llv0v")
+theme_override_styles/hover = ExtResource("18_llv0v")
+theme_override_styles/pressed = ExtResource("19_nc01h")
+theme_override_styles/disabled = ExtResource("18_llv0v")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_i5dk4")
 script = ExtResource("13_q3kr0")
 
@@ -190,10 +190,10 @@ offset_left = 272.0
 offset_top = 416.0
 offset_right = 504.0
 offset_bottom = 489.0
-theme_override_styles/normal = ExtResource("13_8ppx5")
-theme_override_styles/hover = ExtResource("13_8ppx5")
-theme_override_styles/pressed = ExtResource("14_wqx8r")
-theme_override_styles/disabled = ExtResource("13_8ppx5")
+theme_override_styles/normal = ExtResource("21_gh4hg")
+theme_override_styles/hover = ExtResource("21_gh4hg")
+theme_override_styles/pressed = ExtResource("22_ubkoa")
+theme_override_styles/disabled = ExtResource("21_gh4hg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ys70u")
 
 [node name="ButtonLock" type="Sprite2D" parent="Buttons/BossMode" index="0"]
@@ -206,10 +206,10 @@ offset_left = 520.0
 offset_top = 416.0
 offset_right = 742.0
 offset_bottom = 487.0
-theme_override_styles/normal = ExtResource("16_usrwd")
-theme_override_styles/hover = ExtResource("16_usrwd")
-theme_override_styles/pressed = ExtResource("17_bt1bj")
-theme_override_styles/disabled = ExtResource("16_usrwd")
+theme_override_styles/normal = ExtResource("24_la71p")
+theme_override_styles/hover = ExtResource("24_la71p")
+theme_override_styles/pressed = ExtResource("25_4e5rr")
+theme_override_styles/disabled = ExtResource("24_la71p")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vgi2c")
 
 [node name="ButtonLock" type="Sprite2D" parent="Buttons/TheNest" index="0"]

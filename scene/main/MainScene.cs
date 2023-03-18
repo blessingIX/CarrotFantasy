@@ -16,7 +16,7 @@ namespace CarrotFantasy.scene.main
             this.WireNodes();
 
             carrot.Grow();
-            this._<SoundManager>()?.Play("res://resouce/main/BGMusic.tres");
+            this._<SoundManager>()?.Play("res://resource/main/BGMusic.tres");
         }
     }
 }

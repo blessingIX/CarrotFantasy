@@ -1,13 +1,13 @@
-[gd_scene load_steps=22 format=3 uid="uid://bmkhm2ln5cmgn"]
+[gd_scene load_steps=22 format=3 uid="uid://vy508myb3apv"]
 
 [ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_hjuc7"]
-[ext_resource type="PackedScene" uid="uid://d3a6kuhcieedk" path="res://scene/adventure/MenuBar.tscn" id="3_0ir5a"]
+[ext_resource type="PackedScene" path="res://scene/adventure/MenuBar.tscn" id="3_0ir5a"]
 [ext_resource type="Script" path="res://scene/adventure/AdventureScene.cs" id="3_ufe78"]
-[ext_resource type="StyleBox" uid="uid://c05jupyiu4wwj" path="res://resouce/adventure/PrevNormal.tres" id="8_38si0"]
+[ext_resource type="StyleBox" uid="uid://c05jupyiu4wwj" path="res://resource/adventure/PrevNormal.tres" id="5_qu70b"]
+[ext_resource type="StyleBox" uid="uid://d1yeab1ujuj5l" path="res://resource/adventure/PrevPressed.tres" id="6_675vd"]
+[ext_resource type="StyleBox" uid="uid://ctuvd6pxt7b3h" path="res://resource/adventure/NextNormal.tres" id="7_fun68"]
+[ext_resource type="StyleBox" uid="uid://brricrupabxgk" path="res://resource/adventure/NextPressed.tres" id="8_3hivt"]
 [ext_resource type="Script" path="res://scene/adventure/PageTurning.cs" id="8_ugr78"]
-[ext_resource type="StyleBox" uid="uid://d1yeab1ujuj5l" path="res://resouce/adventure/PrevPressed.tres" id="9_mjbpn"]
-[ext_resource type="StyleBox" uid="uid://ctuvd6pxt7b3h" path="res://resouce/adventure/NextNormal.tres" id="10_pad8g"]
-[ext_resource type="StyleBox" uid="uid://brricrupabxgk" path="res://resouce/adventure/NextPressed.tres" id="11_hww0m"]
 [ext_resource type="PackedScene" uid="uid://opqakm50l86s" path="res://scene/adventure/Theme.tscn" id="12_qh5nc"]
 [ext_resource type="Script" path="res://scene/adventure/ThemeCoverPage.cs" id="12_y17n5"]
 [ext_resource type="Script" path="res://scene/adventure/Themes.cs" id="13_i7pr5"]
@@ -46,10 +46,10 @@ offset_left = 24.0
 offset_top = 224.0
 offset_right = 102.0
 offset_bottom = 302.0
-theme_override_styles/normal = ExtResource("8_38si0")
-theme_override_styles/hover = ExtResource("8_38si0")
-theme_override_styles/pressed = ExtResource("9_mjbpn")
-theme_override_styles/disabled = ExtResource("8_38si0")
+theme_override_styles/normal = ExtResource("5_qu70b")
+theme_override_styles/hover = ExtResource("5_qu70b")
+theme_override_styles/pressed = ExtResource("6_675vd")
+theme_override_styles/disabled = ExtResource("5_qu70b")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bwx0a")
 
 [node name="Next" type="Button" parent="PageTurning" index="1"]
@@ -58,10 +58,10 @@ offset_left = 664.0
 offset_top = 224.0
 offset_right = 742.0
 offset_bottom = 302.0
-theme_override_styles/normal = ExtResource("10_pad8g")
-theme_override_styles/hover = ExtResource("10_pad8g")
-theme_override_styles/pressed = ExtResource("11_hww0m")
-theme_override_styles/disabled = ExtResource("10_pad8g")
+theme_override_styles/normal = ExtResource("7_fun68")
+theme_override_styles/hover = ExtResource("7_fun68")
+theme_override_styles/pressed = ExtResource("8_3hivt")
+theme_override_styles/disabled = ExtResource("7_fun68")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_lww5t")
 
 [node name="PointContainer" type="Control" parent="PageTurning" index="2"]
