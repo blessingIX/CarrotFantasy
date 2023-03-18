@@ -83,11 +83,11 @@ namespace CarrotFantasy.scene.adventure
             }
 
             float offset = -(float)(list.Count + 1) / 2f + 1;
-            for (int i = 0; i < list.Count; i++) 
+            for (int i = 0; i < list.Count; i++)
             {
                 Point point = list[i];
 
-                point.Position = new Vector2(32f * (offset + (float)i), 0f);
+                point.Position = new Vector2(14f * (offset + (float)i), 0f);
                 if (i == pageIndex)
                 {
                     point.Active();

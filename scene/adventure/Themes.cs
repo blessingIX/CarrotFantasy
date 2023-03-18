@@ -60,7 +60,7 @@ namespace CarrotFantasy.scene.adventure
         {
             Tween tween = CreateTween();
             tween.SetTrans(Tween.TransitionType.Linear);
-            tween.TweenProperty(this, (string)PropertyName.Position, new Vector2(Position.X, 960f * -pageIndex), 0.3);
+            tween.TweenProperty(this, (string)PropertyName.Position, new Vector2(768f * -pageIndex, Position.Y), 0.3);
         }
     }
 }

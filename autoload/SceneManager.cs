@@ -14,7 +14,7 @@ namespace CarrotFantasy.autoload
             base._Ready();
             this.WireNodes();
         }
-
+ 
         public void ChangeScene(string path)
         {
             ChangeScene(GD.Load(path) as PackedScene);

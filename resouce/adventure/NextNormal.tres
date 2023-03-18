@@ -1,7 +1,6 @@
 [gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://ctuvd6pxt7b3h"]
 
-[ext_resource type="Texture2D" uid="uid://bvy7iry60qyq8" path="res://assets/Theme/scene/themescene1-hd.png" id="1_8dx5t"]
+[ext_resource type="Texture2D" uid="uid://bwb5iousjr6i7" path="res://assets/Theme/scene/themescene1-hd/123.png" id="1_j2bee"]
 
 [resource]
-texture = ExtResource("1_8dx5t")
-region_rect = Rect2(350, 682, 63, 63)
+texture = ExtResource("1_j2bee")
