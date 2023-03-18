@@ -1,38 +1,46 @@
-[gd_scene load_steps=26 format=3 uid="uid://doh33tidf3os0"]
+[gd_scene load_steps=34 format=3 uid="uid://doh33tidf3os0"]
 
 [ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_ycf2n"]
-[ext_resource type="Texture2D" uid="uid://coer3c87gyg6q" path="res://assets/Theme/scene/mainscene1-hd.pvr.png" id="2_f48th"]
+[ext_resource type="Texture2D" uid="uid://csm3rclcvy4jx" path="res://assets/Theme/scene/mainscene1-hd/1.png" id="2_kdje5"]
 [ext_resource type="Script" path="res://scene/main/MainScene.cs" id="3_rhuge"]
 [ext_resource type="Script" path="res://common/UniformMotion.cs" id="4_rg5wf"]
 [ext_resource type="Script" path="res://scene/main/Carrot.cs" id="5_io8y6"]
+[ext_resource type="Texture2D" uid="uid://ca5k7014c6m4d" path="res://assets/Theme/scene/mainscene1-hd/9.png" id="5_txuan"]
+[ext_resource type="Texture2D" uid="uid://cch0nl34sjhg5" path="res://assets/Theme/scene/mainscene1-hd/12.png" id="6_4boow"]
+[ext_resource type="Texture2D" uid="uid://dhxa3n7kjcn13" path="res://assets/Theme/scene/mainscene1-hd/3.png" id="6_t7yo6"]
 [ext_resource type="StyleBox" uid="uid://bwqsg11i62uqs" path="res://resouce/main/SettingsNormal.tres" id="7_gstos"]
 [ext_resource type="StyleBox" uid="uid://c6meh00qulbyc" path="res://resouce/main/SettingsPressed.tres" id="8_5gx8t"]
+[ext_resource type="Texture2D" uid="uid://dinwbrwsv42w2" path="res://assets/Theme/scene/mainscene1-hd/36.png" id="9_andtk"]
 [ext_resource type="StyleBox" uid="uid://bd7yncjqpb067" path="res://resouce/main/HelpNormal.tres" id="9_d1ywc"]
 [ext_resource type="StyleBox" uid="uid://cb15osq1tth1p" path="res://resouce/main/HelpPressed.tres" id="10_hw26k"]
+[ext_resource type="Texture2D" uid="uid://cfk7s768in5rv" path="res://assets/Theme/scene/mainscene1-hd/38.png" id="10_kwwmr"]
 [ext_resource type="StyleBox" uid="uid://vnjwmlgy338" path="res://resouce/main/AdventureNormal.tres" id="11_chhgi"]
+[ext_resource type="Texture2D" uid="uid://u1djm37dulik" path="res://assets/Theme/scene/mainscene1-hd/15.png" id="11_drc85"]
 [ext_resource type="StyleBox" uid="uid://cdujltatt7i8d" path="res://resouce/main/AdventurePressed.tres" id="12_7flwq"]
+[ext_resource type="Texture2D" uid="uid://dxfedknhm8h41" path="res://assets/Theme/scene/mainscene1-hd/14.png" id="12_xj422"]
 [ext_resource type="StyleBox" uid="uid://bwps7nwwq3j2r" path="res://resouce/main/BossModeNormal.tres" id="13_8ppx5"]
+[ext_resource type="Texture2D" uid="uid://c17k2ikxtputp" path="res://assets/Theme/scene/mainscene1-hd/21.png" id="13_f7643"]
 [ext_resource type="Script" path="res://scene/main/Adventure.cs" id="13_q3kr0"]
 [ext_resource type="StyleBox" uid="uid://dfwnxss61p5yq" path="res://resouce/main/BossModePressed.tres" id="14_wqx8r"]
-[ext_resource type="PackedScene" uid="uid://sau1c1uw2s2f" path="res://common/ButtonLock.tscn" id="16_dyt83"]
 [ext_resource type="StyleBox" uid="uid://0sxw04vgxmyg" path="res://resouce/main/TheNestNormal.tres" id="16_usrwd"]
 [ext_resource type="StyleBox" uid="uid://bgwlkrt40cr0g" path="res://resouce/main/TheNestPressed.tres" id="17_bt1bj"]
+[ext_resource type="Texture2D" uid="uid://mos3xbftdpow" path="res://assets/Theme/scene/mainscene1-hd/29.png" id="24_7sm6m"]
 
 [sub_resource type="Curve2D" id="Curve2D_emn7k"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -88.0002, -160, 0, 0, 0, 0, -87.9989, 1120)
+"points": PackedVector2Array(0, 0, 0, 0, -128, 64, 0, 0, 0, 0, 896, 64)
 }
 point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_o4x1o"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -176, -448, 0, 0, 0, 0, -175.999, 1408)
+"points": PackedVector2Array(0, 0, 0, 0, -320, 128, 0, 0, 0, 0, 1024, 128)
 }
 point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_pussy"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -160, 192, 0, 0, 0, 0, -176, 192, 0, 0, 0, 0, -160, 192)
+"points": PackedVector2Array(0, 0, 0, 0, 144, 152, 0, 0, 0, 0, 144, 168, 0, 0, 0, 0, 144, 152)
 }
 point_count = 3
 
@@ -47,10 +55,7 @@ point_count = 3
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgi2c"]
 
 [node name="MainScene" instance=ExtResource("1_ycf2n")]
-rotation = 4.71239
-texture = ExtResource("2_f48th")
-offset = Vector2(-640, 0)
-region_enabled = true
+texture = ExtResource("2_kdje5")
 region_rect = Rect2(2, 2, 640, 960)
 script = ExtResource("3_rhuge")
 
@@ -58,84 +63,74 @@ script = ExtResource("3_rhuge")
 curve = SubResource("Curve2D_emn7k")
 
 [node name="Cloud1PathFollow2D" type="PathFollow2D" parent="Cloud1Path2D" index="0"]
-position = Vector2(-88.0002, -160)
-rotation = 1.5708
+position = Vector2(-128, 64)
 script = ExtResource("4_rg5wf")
 velocity = 40
 
 [node name="Cloud1" type="Sprite2D" parent="Cloud1Path2D/Cloud1PathFollow2D" index="0"]
 modulate = Color(1, 1, 1, 0.352941)
-texture = ExtResource("2_f48th")
-region_enabled = true
+texture = ExtResource("5_txuan")
 region_rect = Rect2(900, 945, 238, 92)
 
 [node name="Cloud2Path2D" type="Path2D" parent="." index="1"]
 curve = SubResource("Curve2D_o4x1o")
 
 [node name="Cloud2PathFollow2D" type="PathFollow2D" parent="Cloud2Path2D" index="0"]
-position = Vector2(-176, -448)
-rotation = 1.5708
+position = Vector2(-320, 128)
 script = ExtResource("4_rg5wf")
 velocity = 64
 
 [node name="Cloud2" type="Sprite2D" parent="Cloud2Path2D/Cloud2PathFollow2D" index="0"]
 modulate = Color(1, 1, 1, 0.352941)
-rotation = 4.71239
-texture = ExtResource("2_f48th")
-region_enabled = true
+texture = ExtResource("6_4boow")
 region_rect = Rect2(1751, 915, 47, 90)
 
 [node name="Carrot" type="Sprite2D" parent="." index="2"]
-position = Vector2(-275, 480)
-texture = ExtResource("2_f48th")
-region_enabled = true
+position = Vector2(384, 216)
+texture = ExtResource("6_t7yo6")
 region_rect = Rect2(644, 729, 183, 212)
 script = ExtResource("5_io8y6")
 
 [node name="LeafLeft" type="Sprite2D" parent="Carrot" index="0"]
 show_behind_parent = true
-position = Vector2(91, -66)
-rotation = 1.5708
-texture = ExtResource("2_f48th")
-region_enabled = true
+position = Vector2(-53, -66)
+texture = ExtResource("9_andtk")
 region_rect = Rect2(1909, 252, 123, 112)
 
 [node name="LeafRightContainer" type="Node2D" parent="Carrot" index="1"]
 show_behind_parent = true
-position = Vector2(45, 7.99994)
+position = Vector2(9.5, -34.5)
 
 [node name="LeafRight" type="Sprite2D" parent="Carrot/LeafRightContainer" index="0"]
-position = Vector2(57, 60)
-rotation = 1.5708
-texture = ExtResource("2_f48th")
-region_enabled = true
+show_behind_parent = true
+position = Vector2(46, -41)
+texture = ExtResource("10_kwwmr")
 region_rect = Rect2(1908, 371, 115, 105)
 
 [node name="LeafMiddleContainer" type="Node2D" parent="Carrot" index="2"]
 show_behind_parent = true
-position = Vector2(45.0005, 8.00021)
+position = Vector2(9.5, -34.5)
 
 [node name="LeafMiddle" type="Sprite2D" parent="Carrot/LeafMiddleContainer" index="0"]
-position = Vector2(70, -12)
-rotation = 1.5708
-texture = ExtResource("2_f48th")
-region_enabled = true
+show_behind_parent = true
+position = Vector2(-6, -55)
+texture = ExtResource("11_drc85")
 region_rect = Rect2(1092, 724, 128, 140)
 
 [node name="LeafSwingTimer" type="Timer" parent="Carrot" index="3"]
 wait_time = 1.4
 
 [node name="Title" type="Sprite2D" parent="." index="3"]
-position = Vector2(-358, 493)
-texture = ExtResource("2_f48th")
-region_enabled = true
+position = Vector2(394, 287)
+texture = ExtResource("12_xj422")
 region_rect = Rect2(1013, 63, 262, 463)
 
 [node name="FlyingPath2D" type="Path2D" parent="." index="4"]
+position = Vector2(16, -24)
 curve = SubResource("Curve2D_pussy")
 
 [node name="FlyingPathFollow2D" type="PathFollow2D" parent="FlyingPath2D" index="0"]
-position = Vector2(-160, 192)
+position = Vector2(144, 152)
 rotation = 3.14159
 rotates = false
 script = ExtResource("4_rg5wf")
@@ -143,8 +138,7 @@ velocity = 10
 
 [node name="Flying" type="Sprite2D" parent="FlyingPath2D/FlyingPathFollow2D" index="0"]
 rotation = 3.14159
-texture = ExtResource("2_f48th")
-region_enabled = true
+texture = ExtResource("13_f7643")
 region_rect = Rect2(978, 539, 87, 173)
 
 [node name="Buttons" type="Control" parent="." index="5"]
@@ -155,10 +149,10 @@ offset_bottom = 40.0
 
 [node name="Settings" type="Button" parent="Buttons" index="0"]
 layout_mode = 0
-offset_left = -432.0
-offset_top = 155.0
-offset_right = -379.0
-offset_bottom = 233.0
+offset_left = 136.0
+offset_top = 296.0
+offset_right = 215.0
+offset_bottom = 343.0
 theme_override_styles/normal = ExtResource("7_gstos")
 theme_override_styles/hover = ExtResource("7_gstos")
 theme_override_styles/pressed = ExtResource("8_5gx8t")
@@ -167,10 +161,10 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_6evdp")
 
 [node name="Help" type="Button" parent="Buttons" index="1"]
 layout_mode = 0
-offset_left = -431.999
-offset_top = 736.0
-offset_right = -377.999
-offset_bottom = 813.0
+offset_left = 592.0
+offset_top = 312.0
+offset_right = 671.0
+offset_bottom = 359.0
 theme_override_styles/normal = ExtResource("9_d1ywc")
 theme_override_styles/hover = ExtResource("9_d1ywc")
 theme_override_styles/pressed = ExtResource("10_hw26k")
@@ -179,11 +173,10 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_aw0jf")
 
 [node name="Adventure" type="Button" parent="Buttons" index="2"]
 layout_mode = 0
-offset_left = -526.0
-offset_top = 40.0005
-offset_right = -253.0
-offset_bottom = 122.001
-rotation = 1.5708
+offset_left = 24.0
+offset_top = 416.0
+offset_right = 260.0
+offset_bottom = 487.0
 theme_override_styles/normal = ExtResource("11_chhgi")
 theme_override_styles/hover = ExtResource("11_chhgi")
 theme_override_styles/pressed = ExtResource("12_7flwq")
@@ -193,32 +186,32 @@ script = ExtResource("13_q3kr0")
 
 [node name="BossMode" type="Button" parent="Buttons" index="3"]
 layout_mode = 0
-offset_left = -526.0
-offset_top = 344.001
-offset_right = -252.0
-offset_bottom = 429.001
-rotation = 1.5708
+offset_left = 272.0
+offset_top = 416.0
+offset_right = 504.0
+offset_bottom = 489.0
 theme_override_styles/normal = ExtResource("13_8ppx5")
 theme_override_styles/hover = ExtResource("13_8ppx5")
 theme_override_styles/pressed = ExtResource("14_wqx8r")
 theme_override_styles/disabled = ExtResource("13_8ppx5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ys70u")
 
-[node name="ButtonLock" parent="Buttons/BossMode" index="0" instance=ExtResource("16_dyt83")]
-position = Vector2(268, 65.9985)
+[node name="ButtonLock" type="Sprite2D" parent="Buttons/BossMode" index="0"]
+position = Vector2(224, 56)
+texture = ExtResource("24_7sm6m")
 
 [node name="TheNest" type="Button" parent="Buttons" index="4"]
 layout_mode = 0
-offset_left = -607.999
-offset_top = 648.001
-offset_right = -524.999
-offset_bottom = 917.001
+offset_left = 520.0
+offset_top = 416.0
+offset_right = 742.0
+offset_bottom = 487.0
 theme_override_styles/normal = ExtResource("16_usrwd")
 theme_override_styles/hover = ExtResource("16_usrwd")
 theme_override_styles/pressed = ExtResource("17_bt1bj")
 theme_override_styles/disabled = ExtResource("16_usrwd")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vgi2c")
 
-[node name="ButtonLock" parent="Buttons/TheNest" index="0" instance=ExtResource("16_dyt83")]
-position = Vector2(16.9999, 269)
-rotation = 0.0
+[node name="ButtonLock" type="Sprite2D" parent="Buttons/TheNest" index="0"]
+position = Vector2(224, 56)
+texture = ExtResource("24_7sm6m")

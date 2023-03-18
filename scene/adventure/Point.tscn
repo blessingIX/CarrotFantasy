@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scene/adventure/Point.cs" id="2_h76ic"]
 
 [node name="Point" type="Sprite2D"]
-scale = Vector2(3, 3)
+scale = Vector2(2.4, 2.4)
 texture = ExtResource("1_fvy8r")
 region_enabled = true
 region_rect = Rect2(416, 683, 8, 8)
