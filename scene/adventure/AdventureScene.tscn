@@ -1,19 +1,15 @@
-[gd_scene load_steps=29 format=3 uid="uid://bmkhm2ln5cmgn"]
+[gd_scene load_steps=22 format=3 uid="uid://bmkhm2ln5cmgn"]
 
 [ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_hjuc7"]
-[ext_resource type="Texture2D" uid="uid://cguqbvyjsjkxh" path="res://assets/Theme/scene/stages_bg-hd/1.png" id="2_g6l06"]
-[ext_resource type="StyleBox" uid="uid://f71jqdaiou8u" path="res://resouce/adventure/BackNormal.tres" id="3_kkwi1"]
+[ext_resource type="PackedScene" uid="uid://d3a6kuhcieedk" path="res://scene/adventure/MenuBar.tscn" id="3_0ir5a"]
 [ext_resource type="Script" path="res://scene/adventure/AdventureScene.cs" id="3_ufe78"]
-[ext_resource type="StyleBox" uid="uid://b0fc3suqilw1u" path="res://resouce/adventure/BackPressed.tres" id="4_tx5jy"]
-[ext_resource type="StyleBox" uid="uid://bje31ojdwr8jq" path="res://resouce/adventure/HelpNormal.tres" id="5_p3xqy"]
-[ext_resource type="StyleBox" uid="uid://b3m058owwhey8" path="res://resouce/adventure/HelpPressed.tres" id="6_2c0po"]
-[ext_resource type="Texture2D" uid="uid://om4s0lekdr7t" path="res://assets/Theme/scene/themescene1-hd/84.png" id="8_4rdik"]
 [ext_resource type="StyleBox" uid="uid://c05jupyiu4wwj" path="res://resouce/adventure/PrevNormal.tres" id="8_38si0"]
 [ext_resource type="Script" path="res://scene/adventure/PageTurning.cs" id="8_ugr78"]
 [ext_resource type="StyleBox" uid="uid://d1yeab1ujuj5l" path="res://resouce/adventure/PrevPressed.tres" id="9_mjbpn"]
 [ext_resource type="StyleBox" uid="uid://ctuvd6pxt7b3h" path="res://resouce/adventure/NextNormal.tres" id="10_pad8g"]
 [ext_resource type="StyleBox" uid="uid://brricrupabxgk" path="res://resouce/adventure/NextPressed.tres" id="11_hww0m"]
 [ext_resource type="PackedScene" uid="uid://opqakm50l86s" path="res://scene/adventure/Theme.tscn" id="12_qh5nc"]
+[ext_resource type="Script" path="res://scene/adventure/ThemeCoverPage.cs" id="12_y17n5"]
 [ext_resource type="Script" path="res://scene/adventure/Themes.cs" id="13_i7pr5"]
 [ext_resource type="Texture2D" uid="uid://cory56fb7mt1i" path="res://assets/Theme/scene/themescene2-hd/7.png" id="16_sj2uy"]
 [ext_resource type="Texture2D" uid="uid://d2ngw6iqyk6jp" path="res://assets/Theme/scene/themescene1-hd/6.png" id="17_4ri7a"]
@@ -24,61 +20,15 @@
 [ext_resource type="Texture2D" uid="uid://d0dk7r0fkx18j" path="res://assets/Theme/scene/themescene1-hd/2.png" id="21_ci43h"]
 [ext_resource type="Texture2D" uid="uid://ch6ox27ard5hp" path="res://assets/Theme/scene/themescene1-hd/73.png" id="23_qy0j4"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2irm"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jmkro"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nufho"]
-texture = ExtResource("8_4rdik")
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bwx0a"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lww5t"]
 
 [node name="AdventureScene" instance=ExtResource("1_hjuc7")]
-texture = ExtResource("2_g6l06")
 region_rect = Rect2(258, 2, 640, 960)
 script = ExtResource("3_ufe78")
 
-[node name="MenuBar" type="Control" parent="." index="0"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Back" type="Button" parent="MenuBar" index="0"]
-layout_mode = 0
-offset_left = 22.0
-offset_top = 11.0
-offset_right = 51.0
-offset_bottom = 39.0
-theme_override_styles/normal = ExtResource("3_kkwi1")
-theme_override_styles/hover = ExtResource("3_kkwi1")
-theme_override_styles/pressed = ExtResource("4_tx5jy")
-theme_override_styles/disabled = ExtResource("3_kkwi1")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_s2irm")
-
-[node name="Help" type="Button" parent="MenuBar" index="1"]
-layout_mode = 0
-offset_left = 712.0
-offset_top = 9.0
-offset_right = 744.0
-offset_bottom = 41.0
-theme_override_styles/normal = ExtResource("5_p3xqy")
-theme_override_styles/hover = ExtResource("5_p3xqy")
-theme_override_styles/pressed = ExtResource("6_2c0po")
-theme_override_styles/disabled = ExtResource("5_p3xqy")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_jmkro")
-
-[node name="Label" type="Label" parent="MenuBar" index="2"]
-layout_mode = 0
-offset_left = 328.0
-offset_top = 8.0
-offset_right = 443.0
-offset_bottom = 39.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_nufho")
+[node name="MenuBar" parent="." index="0" instance=ExtResource("3_0ir5a")]
 
 [node name="PageTurning" type="Control" parent="." index="1"]
 layout_mode = 3
@@ -127,12 +77,13 @@ script = ExtResource("13_i7pr5")
 
 [node name="Skyline" parent="Themes" index="0" instance=ExtResource("12_qh5nc")]
 
-[node name="ConverPage" type="Sprite2D" parent="Themes/Skyline" index="0"]
+[node name="ThemeCoverPage" type="Sprite2D" parent="Themes/Skyline" index="0"]
 position = Vector2(384, 272)
 texture = ExtResource("16_sj2uy")
 region_rect = Rect2(12, 519, 614, 506)
+script = ExtResource("12_y17n5")
 
-[node name="TitleCN" type="Sprite2D" parent="Themes/Skyline/ConverPage" index="0"]
+[node name="TitleCN" type="Sprite2D" parent="Themes/Skyline/ThemeCoverPage" index="0"]
 position = Vector2(122, -128)
 texture = ExtResource("17_4ri7a")
 region_rect = Rect2(444, 310, 139, 28)
@@ -140,33 +91,38 @@ region_rect = Rect2(444, 310, 139, 28)
 [node name="Jungle" parent="Themes" index="1" instance=ExtResource("12_qh5nc")]
 position = Vector2(768, 0)
 
-[node name="ConverPage" type="Sprite2D" parent="Themes/Jungle" index="0"]
+[node name="ThemeCoverPage" type="Sprite2D" parent="Themes/Jungle" index="0"]
 position = Vector2(384, 272)
 texture = ExtResource("18_tf1jn")
 region_rect = Rect2(30, 4, 614, 506)
+script = ExtResource("12_y17n5")
 
-[node name="TitleCN" type="Sprite2D" parent="Themes/Jungle/ConverPage" index="0"]
+[node name="TitleCN" type="Sprite2D" parent="Themes/Jungle/ThemeCoverPage" index="0"]
 position = Vector2(96, -128)
 texture = ExtResource("19_0vg6g")
 
 [node name="Desert" parent="Themes" index="2" instance=ExtResource("12_qh5nc")]
 position = Vector2(1536, 0)
 
-[node name="ConverPage" type="Sprite2D" parent="Themes/Desert" index="0"]
+[node name="ThemeCoverPage" type="Sprite2D" parent="Themes/Desert" index="0"]
 position = Vector2(384, 272)
 texture = ExtResource("20_rrsqo")
+script = ExtResource("12_y17n5")
 
-[node name="TitleCN" type="Sprite2D" parent="Themes/Desert/ConverPage" index="0"]
+[node name="TitleCN" type="Sprite2D" parent="Themes/Desert/ThemeCoverPage" index="0"]
 position = Vector2(104, -128)
 texture = ExtResource("21_ci43h")
 
 [node name="Deepsea" parent="Themes" index="3" instance=ExtResource("12_qh5nc")]
 position = Vector2(2304, 0)
 
-[node name="ConverPage" type="Sprite2D" parent="Themes/Deepsea" index="0"]
+[node name="ThemeCoverPage" type="Sprite2D" parent="Themes/Deepsea" index="0"]
 position = Vector2(384, 272)
 texture = ExtResource("21_6qxkt")
+script = ExtResource("12_y17n5")
 
-[node name="TitleCN" type="Sprite2D" parent="Themes/Deepsea/ConverPage" index="0"]
+[node name="TitleCN" type="Sprite2D" parent="Themes/Deepsea/ThemeCoverPage" index="0"]
 position = Vector2(8, -120)
 texture = ExtResource("23_qy0j4")
+
+[editable path="MenuBar"]

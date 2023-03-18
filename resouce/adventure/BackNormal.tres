@@ -1,6 +1,6 @@
-[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://f71jqdaiou8u"]
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bdbn22bdfqglm"]
 
-[ext_resource type="Texture2D" uid="uid://b6k2mbh16lq6b" path="res://assets/Theme/scene/themescene1-hd/86.png" id="1_gyhma"]
+[ext_resource type="Texture2D" uid="uid://bbiotjwlndbaf" path="res://assets/Theme/scene/stages_bg-hd/29.png" id="1_xrunc"]
 
 [resource]
-texture = ExtResource("1_gyhma")
+texture = ExtResource("1_xrunc")

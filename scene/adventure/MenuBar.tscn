@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3a6kuhcieedk"]
+
+[ext_resource type="StyleBox" uid="uid://f71jqdaiou8u" path="res://resouce/adventure/HomeNormal.tres" id="1_moew4"]
+[ext_resource type="StyleBox" uid="uid://b0fc3suqilw1u" path="res://resouce/adventure/HomePressed.tres" id="2_as8wd"]
+[ext_resource type="StyleBox" uid="uid://bje31ojdwr8jq" path="res://resouce/adventure/HelpNormal.tres" id="3_qerdt"]
+[ext_resource type="StyleBox" uid="uid://b3m058owwhey8" path="res://resouce/adventure/HelpPressed.tres" id="4_ii84s"]
+[ext_resource type="Texture2D" uid="uid://om4s0lekdr7t" path="res://assets/Theme/scene/themescene1-hd/84.png" id="5_jtji8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2irm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jmkro"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nufho"]
+texture = ExtResource("5_jtji8")
+
+[node name="MenuBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 11.0
+offset_right = 51.0
+offset_bottom = 39.0
+theme_override_styles/normal = ExtResource("1_moew4")
+theme_override_styles/hover = ExtResource("1_moew4")
+theme_override_styles/pressed = ExtResource("2_as8wd")
+theme_override_styles/disabled = ExtResource("1_moew4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s2irm")
+
+[node name="Help" type="Button" parent="."]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 9.0
+offset_right = 744.0
+offset_bottom = 41.0
+theme_override_styles/normal = ExtResource("3_qerdt")
+theme_override_styles/hover = ExtResource("3_qerdt")
+theme_override_styles/pressed = ExtResource("4_ii84s")
+theme_override_styles/disabled = ExtResource("3_qerdt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jmkro")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 8.0
+offset_right = 443.0
+offset_bottom = 39.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_nufho")

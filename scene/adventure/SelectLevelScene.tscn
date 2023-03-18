@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://bf6ipfhlytigp"]
+
+[ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_ekaga"]
+[ext_resource type="PackedScene" uid="uid://d3a6kuhcieedk" path="res://scene/adventure/MenuBar.tscn" id="2_8xe55"]
+[ext_resource type="Script" path="res://scene/adventure/SelectLevelScene.cs" id="2_lk2g3"]
+[ext_resource type="StyleBox" uid="uid://bdbn22bdfqglm" path="res://resouce/adventure/BackNormal.tres" id="4_eldom"]
+[ext_resource type="StyleBox" uid="uid://cgb8qt7liregl" path="res://resouce/adventure/BackPressed.tres" id="5_1gc84"]
+
+[node name="SelectLevelScene" instance=ExtResource("1_ekaga")]
+script = ExtResource("2_lk2g3")
+
+[node name="MenuBar" parent="." index="0" instance=ExtResource("2_8xe55")]
+
+[node name="Back" parent="MenuBar" index="0"]
+theme_override_styles/normal = ExtResource("4_eldom")
+theme_override_styles/hover = ExtResource("4_eldom")
+theme_override_styles/pressed = ExtResource("5_1gc84")
+theme_override_styles/disabled = ExtResource("4_eldom")
+
+[editable path="MenuBar"]
