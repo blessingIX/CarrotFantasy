@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://vy508myb3apv"]
 
 [ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_hjuc7"]
-[ext_resource type="PackedScene" path="res://scene/adventure/MenuBar.tscn" id="3_0ir5a"]
+[ext_resource type="PackedScene" uid="uid://dirwqpvqgibks" path="res://scene/adventure/MenuBar.tscn" id="3_0ir5a"]
 [ext_resource type="Script" path="res://scene/adventure/AdventureScene.cs" id="3_ufe78"]
 [ext_resource type="StyleBox" uid="uid://c05jupyiu4wwj" path="res://resource/adventure/PrevNormal.tres" id="5_qu70b"]
 [ext_resource type="StyleBox" uid="uid://d1yeab1ujuj5l" path="res://resource/adventure/PrevPressed.tres" id="6_675vd"]
@@ -82,6 +82,7 @@ position = Vector2(384, 272)
 texture = ExtResource("16_sj2uy")
 region_rect = Rect2(12, 519, 614, 506)
 script = ExtResource("12_y17n5")
+themePackedScenePath = "res://scene/adventure/skyline/SkylineScene.tscn"
 
 [node name="TitleCN" type="Sprite2D" parent="Themes/Skyline/ThemeCoverPage" index="0"]
 position = Vector2(122, -128)
