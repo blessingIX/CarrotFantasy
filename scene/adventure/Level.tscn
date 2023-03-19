@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhxhp8o8yhohy"]
+[gd_scene load_steps=5 format=3 uid="uid://dhxhp8o8yhohy"]
 
 [ext_resource type="Script" path="res://scene/adventure/Level.cs" id="1_x1rx5"]
 [ext_resource type="Texture2D" uid="uid://bq1jysbbrsrdg" path="res://resource/adventure/skyline/level1/LevelCoverPage.tres" id="2_p4rrh"]
+[ext_resource type="Script" path="res://scene/adventure/LevelCoverPage.cs" id="3_ars8m"]
 [ext_resource type="Texture2D" uid="uid://55fk3g8hu7ck" path="res://resource/adventure/LevelLock.tres" id="3_npmcw"]
 
 [node name="Level" type="Node2D"]
@@ -9,6 +10,7 @@ script = ExtResource("1_x1rx5")
 
 [node name="LevelCoverPage" type="Sprite2D" parent="."]
 texture = ExtResource("2_p4rrh")
+script = ExtResource("3_ars8m")
 
 [node name="LevelLock" type="Sprite2D" parent="LevelCoverPage"]
 position = Vector2(112, 80)

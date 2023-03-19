@@ -199,6 +199,10 @@ namespace CarrotFantasy.scene.adventure
                 level.Position = LevelCoverPagePosition + new Vector2(levelCoverPageInterval * count, 0);
                 level.GrayingOrLightUp(currentLevelIndex);
                 levels.AddChild(level);
+                if (level.LevelCoverPage != null)
+                {
+                    level.LevelCoverPage.BeSelected += SwitchLevel;
+                }
 
                 count++;
             }

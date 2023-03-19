@@ -7,7 +7,11 @@ namespace CarrotFantasy.scene.adventure
     public partial class Level : Node2D
     {
         [Node("LevelCoverPage")]
-        private Sprite2D levelCoverPage;
+        private LevelCoverPage levelCoverPage;
+        public LevelCoverPage LevelCoverPage
+        {
+            get => levelCoverPage;
+        }
 
         [Node("LevelCoverPage/LevelLock")]
         private Sprite2D levelLock;
@@ -22,6 +26,12 @@ namespace CarrotFantasy.scene.adventure
         private readonly Color lightUpColor = new Color("#ffffff");
 
         private readonly Color grayingColor = new Color("#525b6b");
+
+        private bool beSelected = false;
+        public bool BeSelected
+        {
+            get { return beSelected; }
+        }
 
         public override void _Ready()
         {
@@ -41,16 +51,20 @@ namespace CarrotFantasy.scene.adventure
             }
         }
 
+        public bool Selected(int index)
+        {
+            return GetLevelIndex() == index;
+        }
+
         public void GrayingOrLightUp(int index)
         {
-            if (levelData == null || levelData.Index != index)
-            {
-                Modulate = grayingColor;
-            }
-            else
-            {
-                Modulate = lightUpColor;
-            }
+            beSelected = Selected(index);
+            Modulate = beSelected ? lightUpColor : grayingColor;
+        }
+
+        public int GetLevelIndex()
+        {
+            return levelData != null ? levelData.Index : 0;
         }
     }
 }
