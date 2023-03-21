@@ -97,6 +97,7 @@ position = Vector2(384, 272)
 texture = ExtResource("18_tf1jn")
 region_rect = Rect2(30, 4, 614, 506)
 script = ExtResource("12_y17n5")
+themePackedScenePath = "res://scene/adventure/jungle/JungleScene.tscn"
 
 [node name="TitleCN" type="Sprite2D" parent="Themes/Jungle/ThemeCoverPage" index="0"]
 position = Vector2(96, -128)
@@ -109,6 +110,7 @@ position = Vector2(1536, 0)
 position = Vector2(384, 272)
 texture = ExtResource("20_rrsqo")
 script = ExtResource("12_y17n5")
+themePackedScenePath = "res://scene/adventure/desert/DesertScene.tscn"
 
 [node name="TitleCN" type="Sprite2D" parent="Themes/Desert/ThemeCoverPage" index="0"]
 position = Vector2(104, -128)
@@ -121,6 +123,7 @@ position = Vector2(2304, 0)
 position = Vector2(384, 272)
 texture = ExtResource("21_6qxkt")
 script = ExtResource("12_y17n5")
+themePackedScenePath = "res://scene/adventure/deepsea/Deepsea.tscn"
 
 [node name="TitleCN" type="Sprite2D" parent="Themes/Deepsea/ThemeCoverPage" index="0"]
 position = Vector2(8, -120)

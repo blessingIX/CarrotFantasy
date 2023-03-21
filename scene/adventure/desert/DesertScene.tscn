@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgig877x1r3l5"]
+
+[ext_resource type="PackedScene" uid="uid://c47l72cwc7kwi" path="res://scene/adventure/SelectLevelScene.tscn" id="1_quvtd"]
+
+[node name="DesertScene" instance=ExtResource("1_quvtd")]
+themeData = "res://scene/adventure/desert/theme.json"
+
+[node name="Style" parent="." index="5"]
+position = Vector2(384, 453)
+
+[editable path="MenuBar"]

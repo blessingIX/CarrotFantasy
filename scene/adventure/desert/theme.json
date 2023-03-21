@@ -1,0 +1,152 @@
+{
+    "code": "desert",
+    "levels": [
+        {
+            "index": 1,
+            "totalWaves": 15,
+            "availableTowers": [
+                "FireBottle",
+                "BlueStar",
+                "Sun",
+                "Rocket"
+            ],
+            "isUnlocked": true
+        },
+        {
+            "index": 2,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Bottle",
+                "BlueStar",
+                "Pin"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 3,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Fan",
+                "Star",
+                "FireBottle",
+                "BlueStar",
+                "Sun",
+                "Pin",
+                "Ball"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 4,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Bottle",
+                "BlueStar",
+                "Pin",
+                "Arrow"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 5,
+            "totalWaves": 25,
+            "availableTowers": [
+                "Bottle",
+                "Star",
+                "Ball",
+                "FireBottle",
+                "Snow",
+                "BlueStar",
+                "Pin",
+                "Arrow"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 6,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Bottle",
+                "Star",
+                "FireBottle",
+                "BlueStar",
+                "Sun",
+                "Snow"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 7,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Pin",
+                "Arrow",
+                "Snow",
+                "Plane",
+                "BlueStar"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 8,
+            "totalWaves": 30,
+            "availableTowers": [
+                "FireBottle",
+                "BlueStar",
+                "Sun",
+                "Rocket",
+                "Pin",
+                "Arrow",
+                "Snow",
+                "Plane"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 9,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Shit",
+                "Pin",
+                "Plane"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 10,
+            "totalWaves": 25,
+            "availableTowers": [
+                "Pin",
+                "Arrow",
+                "Snow",
+                "Plane"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 11,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Shit",
+                "BlueStar",
+                "Snow"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 12,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Bottle",
+                "Fan",
+                "BlueStar",
+                "Sun",
+                "Pin",
+                "Arrow",
+                "Snow",
+                "Plane"
+            ],
+            "isUnlocked": false
+        }
+    ]
+}
