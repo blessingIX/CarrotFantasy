@@ -74,7 +74,7 @@ namespace CarrotFantasy.scene.adventure
 
         protected virtual void Back()
         {
-            this._<SceneManager>().ChangeScene(backScene);
+            this._<SceneManager>().ChangeScene(backScene, Variant.From(GetThemeCode()));
         }
 
         protected virtual ThemePO LoadThemeData()
@@ -365,6 +365,15 @@ namespace CarrotFantasy.scene.adventure
             }
 
             start.Disabled = !level.IsUnlocked;
+        }
+
+        public string GetThemeCode()
+        {
+            if (theme == null)
+            {
+                return string.Empty;
+            }
+            return theme.Code;
         }
     }
 }

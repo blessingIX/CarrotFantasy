@@ -1,3 +1,4 @@
+using System;
 using CarrotFantasy.scene;
 using Godot;
 using GodotUtilities;
@@ -9,6 +10,8 @@ namespace CarrotFantasy.autoload
         [Node("TransitionScene")]
         private TransitionScene transitionScene;
 
+        private Variant lastSceneData;
+
         public override void _Ready()
         {
             base._Ready();
@@ -17,14 +20,24 @@ namespace CarrotFantasy.autoload
 
         public void ChangeScene(string path)
         {
+            ChangeScene(path, default);
+        }
+
+        public void ChangeScene(string path, Variant variant)
+        {
             if (string.IsNullOrEmpty(path))
             {
                 return;
             }
-            ChangeScene(GD.Load(path) as PackedScene);
+            ChangeScene(GD.Load(path) as PackedScene, variant);
         }
 
         public void ChangeScene(PackedScene packedScene)
+        {
+            ChangeScene(packedScene, default);
+        }
+
+        public void ChangeScene(PackedScene packedScene, Variant variant)
         {
             if (packedScene == null)
             {
@@ -35,9 +48,27 @@ namespace CarrotFantasy.autoload
             Tween tween = CreateTween();
             tween.TweenCallback(Callable.From(() => transitionScene.Show()));
             tween.TweenInterval(0.1);
-            tween.TweenCallback(Callable.From(() => GetTree().ChangeSceneToPacked(packedScene)));
+            tween.TweenCallback(Callable.From(() => ChangeSceneToPacked(packedScene, variant)));
             tween.TweenInterval(0.1);
             tween.TweenCallback(Callable.From(() => transitionScene.Hide()));
+        }
+
+        private void ChangeSceneToPacked(PackedScene packedScene, Variant variant)
+        {
+            try
+            {
+                lastSceneData = variant;
+                GetTree().ChangeSceneToPacked(packedScene);
+            }
+            catch (Exception)
+            {
+                lastSceneData = default;
+            }
+        }
+
+        public T Data<[MustBeVariant] T>()
+        {
+            return lastSceneData.As<T>();
         }
     }
 }

@@ -62,5 +62,38 @@ namespace CarrotFantasy.scene.adventure
             tween.SetTrans(Tween.TransitionType.Linear);
             tween.TweenProperty(this, (string)PropertyName.Position, new Vector2(768f * -pageIndex, Position.Y), 0.3);
         }
+
+        public void SwitchTheme(string themeCode)
+        {
+            // TODO perf
+            int index = -1;
+            switch (themeCode)
+            {
+                case "skyline":
+                    index = 0;
+                    break;
+                case "jungle":
+                    index = 1;
+                    break;
+                case "desert":
+                    index = 2;
+                    break;
+                case "deepsea":
+                    index = 3;
+                    break;
+                default:
+                    break;
+            }
+
+            if (index == -1)
+            {
+                return;
+            }
+
+            // TODO perf
+            SwitchTheme(index);
+            pageTurning.RefreshPointContainer(PageCount(), index);
+            pageIndex = index;
+        }
     }
 }
