@@ -1,7 +1,5 @@
 using Godot;
 using GodotUtilities;
-using System;
-using CarrotFantasy.autoload;
 
 namespace CarrotFantasy.scene.main
 {
@@ -16,7 +14,6 @@ namespace CarrotFantasy.scene.main
             this.WireNodes();
 
             carrot.Grow();
-            this._<SoundManager>()?.Play("res://resource/main/BGMusic.tres");
         }
     }
 }

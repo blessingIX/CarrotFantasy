@@ -27,6 +27,7 @@
 [node name="AdventureScene" instance=ExtResource("1_hjuc7")]
 region_rect = Rect2(258, 2, 640, 960)
 script = ExtResource("3_ufe78")
+BGM = "res://assets/Music/Main/BGMusic.mp3"
 
 [node name="MenuBar" parent="." index="0" instance=ExtResource("3_0ir5a")]
 

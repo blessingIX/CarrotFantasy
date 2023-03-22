@@ -1,10 +1,30 @@
+using CarrotFantasy.autoload;
 using Godot;
-using System;
+using GodotUtilities;
 
 namespace CarrotFantasy.scene
 {
     public partial class Scene : Sprite2D
     {
-        
+        [Export(PropertyHint.File, "*.mp3")]
+        protected string BGM;
+
+        public override void _Ready()
+        {
+            base._Ready();
+            this.WireNodes();
+
+            PlayBGM();
+        }
+
+        protected void PlayBGM()
+        {
+            if (string.IsNullOrEmpty(BGM))
+            {
+                return;
+            }
+
+            this._<SoundManager>().Play(BGM);
+        }
     }
 }

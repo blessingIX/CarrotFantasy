@@ -16,6 +16,7 @@ script = ExtResource("2_lk2g3")
 backScene = "res://scene/adventure/AdventureScene.tscn"
 themeData = ""
 levelCoverPageInterval = 414
+BGM = "res://assets/Music/Main/BGMusic.mp3"
 
 [node name="MenuBar" parent="." index="0" instance=ExtResource("2_8xe55")]
 

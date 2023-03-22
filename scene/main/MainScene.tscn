@@ -58,6 +58,7 @@ point_count = 3
 texture = ExtResource("2_kdje5")
 region_rect = Rect2(2, 2, 640, 960)
 script = ExtResource("3_rhuge")
+BGM = "res://assets/Music/Main/BGMusic.mp3"
 
 [node name="Cloud1Path2D" type="Path2D" parent="." index="0"]
 curve = SubResource("Curve2D_emn7k")

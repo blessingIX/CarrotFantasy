@@ -1,6 +1,5 @@
 using Godot;
 using GodotUtilities;
-using System;
 
 namespace CarrotFantasy.autoload
 {
@@ -18,7 +17,7 @@ namespace CarrotFantasy.autoload
         public void Play(string path)
         {
             AudioStream currentStream = audioStreamPlayer.Stream;
-            if (currentStream != null && currentStream.ResourcePath == path)
+            if (currentStream != null && currentStream.ResourcePath == path && audioStreamPlayer.Playing)
             {
                 return;
             }
