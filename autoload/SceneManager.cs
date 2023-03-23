@@ -10,7 +10,7 @@ namespace CarrotFantasy.autoload
         [Node("TransitionScene")]
         private TransitionScene transitionScene;
 
-        private Variant lastSceneData;
+        private Variant lastSceneData = default;
 
         public override void _Ready()
         {

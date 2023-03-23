@@ -1,11 +1,10 @@
-using Godot;
 using GodotUtilities;
-using System;
 using CarrotFantasy.autoload;
+using CarrotFantasy.common;
 
 namespace CarrotFantasy.scene.main
 {
-    public partial class Adventure : Button
+    public partial class Adventure : ButtonWithAudio
     {
         public override void _Ready()
         {

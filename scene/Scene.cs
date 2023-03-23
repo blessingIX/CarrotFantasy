@@ -6,7 +6,7 @@ namespace CarrotFantasy.scene
 {
     public partial class Scene : Sprite2D
     {
-        [Export(PropertyHint.File, "*.mp3")]
+        [Export(PropertyHint.File, "*.ogg,*.mp3,*.wav")]
         protected string BGM;
 
         public override void _Ready()

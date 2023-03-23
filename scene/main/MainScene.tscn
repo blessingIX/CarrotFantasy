@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bhh7fv8mq5ugn"]
+[gd_scene load_steps=35 format=3 uid="uid://bhh7fv8mq5ugn"]
 
 [ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_ycf2n"]
 [ext_resource type="Texture2D" uid="uid://csm3rclcvy4jx" path="res://assets/Theme/scene/mainscene1-hd/1.png" id="2_kdje5"]
@@ -17,6 +17,7 @@
 [ext_resource type="StyleBox" uid="uid://bwqsg11i62uqs" path="res://resource/main/SettingsNormal.tres" id="14_e41yj"]
 [ext_resource type="StyleBox" uid="uid://c6meh00qulbyc" path="res://resource/main/SettingsPressed.tres" id="15_63a6w"]
 [ext_resource type="StyleBox" uid="uid://bd7yncjqpb067" path="res://resource/main/HelpNormal.tres" id="16_bd5n7"]
+[ext_resource type="PackedScene" uid="uid://coj3btlppj73w" path="res://common/ButtonWithAudio.tscn" id="16_xcv5f"]
 [ext_resource type="StyleBox" uid="uid://cb15osq1tth1p" path="res://resource/main/HelpPressed.tres" id="17_0ahfo"]
 [ext_resource type="StyleBox" uid="uid://vnjwmlgy338" path="res://resource/main/AdventureNormal.tres" id="18_llv0v"]
 [ext_resource type="StyleBox" uid="uid://cdujltatt7i8d" path="res://resource/main/AdventurePressed.tres" id="19_nc01h"]
@@ -44,21 +45,21 @@ _data = {
 }
 point_count = 3
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6evdp"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sp141"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aw0jf"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vlgjh"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5dk4"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_etxjl"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ys70u"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cmsjb"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgi2c"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ar2rh"]
 
 [node name="MainScene" instance=ExtResource("1_ycf2n")]
 texture = ExtResource("2_kdje5")
 region_rect = Rect2(2, 2, 640, 960)
 script = ExtResource("3_rhuge")
-BGM = "res://assets/Music/Main/BGMusic.mp3"
+BGM = "res://assets/Music/Main/BGMusic.ogg"
 
 [node name="Cloud1Path2D" type="Path2D" parent="." index="0"]
 curve = SubResource("Curve2D_emn7k")
@@ -148,7 +149,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Settings" type="Button" parent="Buttons" index="0"]
+[node name="Settings" parent="Buttons" index="0" instance=ExtResource("16_xcv5f")]
 layout_mode = 0
 offset_left = 136.0
 offset_top = 296.0
@@ -158,9 +159,9 @@ theme_override_styles/normal = ExtResource("14_e41yj")
 theme_override_styles/hover = ExtResource("14_e41yj")
 theme_override_styles/pressed = ExtResource("15_63a6w")
 theme_override_styles/disabled = ExtResource("14_e41yj")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6evdp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sp141")
 
-[node name="Help" type="Button" parent="Buttons" index="1"]
+[node name="Help" parent="Buttons" index="1" instance=ExtResource("16_xcv5f")]
 layout_mode = 0
 offset_left = 592.0
 offset_top = 312.0
@@ -170,9 +171,9 @@ theme_override_styles/normal = ExtResource("16_bd5n7")
 theme_override_styles/hover = ExtResource("16_bd5n7")
 theme_override_styles/pressed = ExtResource("17_0ahfo")
 theme_override_styles/disabled = ExtResource("16_bd5n7")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_aw0jf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vlgjh")
 
-[node name="Adventure" type="Button" parent="Buttons" index="2"]
+[node name="Adventure" parent="Buttons" index="2" instance=ExtResource("16_xcv5f")]
 layout_mode = 0
 offset_left = 24.0
 offset_top = 416.0
@@ -182,10 +183,10 @@ theme_override_styles/normal = ExtResource("18_llv0v")
 theme_override_styles/hover = ExtResource("18_llv0v")
 theme_override_styles/pressed = ExtResource("19_nc01h")
 theme_override_styles/disabled = ExtResource("18_llv0v")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_i5dk4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_etxjl")
 script = ExtResource("13_q3kr0")
 
-[node name="BossMode" type="Button" parent="Buttons" index="3"]
+[node name="BossMode" parent="Buttons" index="3" instance=ExtResource("16_xcv5f")]
 layout_mode = 0
 offset_left = 272.0
 offset_top = 416.0
@@ -195,13 +196,14 @@ theme_override_styles/normal = ExtResource("21_gh4hg")
 theme_override_styles/hover = ExtResource("21_gh4hg")
 theme_override_styles/pressed = ExtResource("22_ubkoa")
 theme_override_styles/disabled = ExtResource("21_gh4hg")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ys70u")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cmsjb")
+disabled = true
 
-[node name="ButtonLock" type="Sprite2D" parent="Buttons/BossMode" index="0"]
+[node name="ButtonLock" type="Sprite2D" parent="Buttons/BossMode" index="1"]
 position = Vector2(224, 56)
 texture = ExtResource("24_7sm6m")
 
-[node name="TheNest" type="Button" parent="Buttons" index="4"]
+[node name="TheNest" parent="Buttons" index="4" instance=ExtResource("16_xcv5f")]
 layout_mode = 0
 offset_left = 520.0
 offset_top = 416.0
@@ -211,8 +213,9 @@ theme_override_styles/normal = ExtResource("24_la71p")
 theme_override_styles/hover = ExtResource("24_la71p")
 theme_override_styles/pressed = ExtResource("25_4e5rr")
 theme_override_styles/disabled = ExtResource("24_la71p")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_vgi2c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ar2rh")
+disabled = true
 
-[node name="ButtonLock" type="Sprite2D" parent="Buttons/TheNest" index="0"]
+[node name="ButtonLock" type="Sprite2D" parent="Buttons/TheNest" index="1"]
 position = Vector2(224, 56)
 texture = ExtResource("24_7sm6m")

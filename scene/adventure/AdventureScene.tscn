@@ -1,10 +1,13 @@
-[gd_scene load_steps=22 format=3 uid="uid://vy508myb3apv"]
+[gd_scene load_steps=25 format=3 uid="uid://vy508myb3apv"]
 
 [ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_hjuc7"]
 [ext_resource type="PackedScene" uid="uid://dirwqpvqgibks" path="res://scene/adventure/MenuBar.tscn" id="3_0ir5a"]
 [ext_resource type="Script" path="res://scene/adventure/AdventureScene.cs" id="3_ufe78"]
+[ext_resource type="StyleBox" uid="uid://f71jqdaiou8u" path="res://resource/adventure/HomeNormal.tres" id="4_38byw"]
+[ext_resource type="StyleBox" uid="uid://b0fc3suqilw1u" path="res://resource/adventure/HomePressed.tres" id="5_h7tmp"]
 [ext_resource type="StyleBox" uid="uid://c05jupyiu4wwj" path="res://resource/adventure/PrevNormal.tres" id="5_qu70b"]
 [ext_resource type="StyleBox" uid="uid://d1yeab1ujuj5l" path="res://resource/adventure/PrevPressed.tres" id="6_675vd"]
+[ext_resource type="PackedScene" uid="uid://coj3btlppj73w" path="res://common/ButtonWithAudio.tscn" id="7_1y6b8"]
 [ext_resource type="StyleBox" uid="uid://ctuvd6pxt7b3h" path="res://resource/adventure/NextNormal.tres" id="7_fun68"]
 [ext_resource type="StyleBox" uid="uid://brricrupabxgk" path="res://resource/adventure/NextPressed.tres" id="8_3hivt"]
 [ext_resource type="Script" path="res://scene/adventure/PageTurning.cs" id="8_ugr78"]
@@ -20,16 +23,22 @@
 [ext_resource type="Texture2D" uid="uid://d0dk7r0fkx18j" path="res://assets/Theme/scene/themescene1-hd/2.png" id="21_ci43h"]
 [ext_resource type="Texture2D" uid="uid://ch6ox27ard5hp" path="res://assets/Theme/scene/themescene1-hd/73.png" id="23_qy0j4"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bwx0a"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_anlcj"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lww5t"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8jarc"]
 
 [node name="AdventureScene" instance=ExtResource("1_hjuc7")]
 region_rect = Rect2(258, 2, 640, 960)
 script = ExtResource("3_ufe78")
-BGM = "res://assets/Music/Main/BGMusic.mp3"
+BGM = "res://assets/Music/Main/BGMusic.ogg"
 
 [node name="MenuBar" parent="." index="0" instance=ExtResource("3_0ir5a")]
+
+[node name="Back" parent="MenuBar" index="0"]
+theme_override_styles/normal = ExtResource("4_38byw")
+theme_override_styles/hover = ExtResource("4_38byw")
+theme_override_styles/pressed = ExtResource("5_h7tmp")
+theme_override_styles/disabled = ExtResource("4_38byw")
 
 [node name="PageTurning" type="Control" parent="." index="1"]
 layout_mode = 3
@@ -41,7 +50,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("8_ugr78")
 
-[node name="Prev" type="Button" parent="PageTurning" index="0"]
+[node name="Prev" parent="PageTurning" index="0" instance=ExtResource("7_1y6b8")]
 layout_mode = 0
 offset_left = 24.0
 offset_top = 224.0
@@ -51,9 +60,9 @@ theme_override_styles/normal = ExtResource("5_qu70b")
 theme_override_styles/hover = ExtResource("5_qu70b")
 theme_override_styles/pressed = ExtResource("6_675vd")
 theme_override_styles/disabled = ExtResource("5_qu70b")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_bwx0a")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_anlcj")
 
-[node name="Next" type="Button" parent="PageTurning" index="1"]
+[node name="Next" parent="PageTurning" index="1" instance=ExtResource("7_1y6b8")]
 layout_mode = 0
 offset_left = 664.0
 offset_top = 224.0
@@ -63,7 +72,7 @@ theme_override_styles/normal = ExtResource("7_fun68")
 theme_override_styles/hover = ExtResource("7_fun68")
 theme_override_styles/pressed = ExtResource("8_3hivt")
 theme_override_styles/disabled = ExtResource("7_fun68")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_lww5t")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8jarc")
 
 [node name="PointContainer" type="Control" parent="PageTurning" index="2"]
 anchors_preset = 0
