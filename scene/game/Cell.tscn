@@ -1,0 +1,23 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0do4wbhvcsfx"]
+
+[ext_resource type="Script" path="res://scene/game/Cell.cs" id="1_rwwa8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xry7w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p8ecf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uylb7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tpmw4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uy631"]
+
+[node name="Cell" type="Button"]
+offset_right = 64.0
+offset_bottom = 64.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xry7w")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p8ecf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_uylb7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_tpmw4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uy631")
+script = ExtResource("1_rwwa8")

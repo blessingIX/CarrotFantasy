@@ -1,0 +1,111 @@
+[gd_scene load_steps=23 format=3 uid="uid://bgi1b54h0tn38"]
+
+[ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_wtbg2"]
+[ext_resource type="Texture2D" uid="uid://q6ifk3bwx76y" path="res://assets/Theme/skyline/BG0/BG1-hd.png" id="2_3g350"]
+[ext_resource type="Texture2D" uid="uid://bd1124kxvgjnh" path="res://assets/Theme/Items/Items02-hd/124.png" id="3_21cxg"]
+[ext_resource type="PackedScene" uid="uid://dccutfpm458c0" path="res://scene/game/CellContainer.tscn" id="3_u7mpv"]
+[ext_resource type="PackedScene" uid="uid://c5dhx08qa5sv2" path="res://scene/game/Entrance.tscn" id="4_66c0s"]
+[ext_resource type="PackedScene" uid="uid://ds82nfxdlq1lx" path="res://scene/common/Integer2D.tscn" id="5_8y6c1"]
+[ext_resource type="PackedScene" uid="uid://brrmsjfqhihe5" path="res://scene/game/Carrot.tscn" id="5_f74ni"]
+[ext_resource type="Texture2D" uid="uid://cqq5xb1vooh20" path="res://assets/Theme/Items/Items02-hd/122.png" id="5_qfwq4"]
+[ext_resource type="Texture2D" uid="uid://cw8fxwdofhqr2" path="res://assets/Theme/Items/Items02-hd/195.png" id="6_sjfam"]
+[ext_resource type="Texture2D" uid="uid://bolb7c4bbudls" path="res://assets/Theme/Items/Items02-hd/188.png" id="7_btpsy"]
+[ext_resource type="Texture2D" uid="uid://iqq07ghwubsx" path="res://assets/Theme/Items/Items02-hd/187.png" id="8_us15a"]
+[ext_resource type="Texture2D" uid="uid://pwasbagidegd" path="res://assets/Theme/Items/Items02-hd/185.png" id="9_fegjt"]
+[ext_resource type="Texture2D" uid="uid://cjburn4l6c4nd" path="res://assets/Theme/Items/Items02-hd/189.png" id="10_4molh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4tvy0"]
+texture = ExtResource("5_qfwq4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s12kn"]
+texture = ExtResource("6_sjfam")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jfrsy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i0lwu"]
+texture = ExtResource("7_btpsy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tdwhy"]
+texture = ExtResource("8_us15a")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yandx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qvovb"]
+texture = ExtResource("9_fegjt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0btf3"]
+texture = ExtResource("10_4molh")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8o2c7"]
+
+[node name="InLevelScene" instance=ExtResource("1_wtbg2")]
+texture = ExtResource("2_3g350")
+
+[node name="CellContainer" parent="." index="0" instance=ExtResource("3_u7mpv")]
+
+[node name="HUD" type="CanvasLayer" parent="." index="1"]
+layer = 80
+
+[node name="MenuBar" type="TextureRect" parent="HUD" index="0"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -371.0
+offset_right = 371.0
+offset_bottom = 62.0
+grow_horizontal = 2
+texture = ExtResource("3_21cxg")
+
+[node name="CoinAvaiable" parent="HUD/MenuBar" index="0" instance=ExtResource("5_8y6c1")]
+position = Vector2(79, 26)
+
+[node name="Accelerate" type="Button" parent="HUD/MenuBar" index="1"]
+layout_mode = 0
+offset_left = 513.0
+offset_top = 4.0
+offset_right = 594.0
+offset_bottom = 50.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_4tvy0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4tvy0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_s12kn")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_4tvy0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jfrsy")
+
+[node name="Pause" type="Button" parent="HUD/MenuBar" index="2"]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 4.0
+offset_right = 650.0
+offset_bottom = 50.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_i0lwu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_i0lwu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tdwhy")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_i0lwu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yandx")
+
+[node name="Menu" type="Button" parent="HUD/MenuBar" index="3"]
+layout_mode = 0
+offset_left = 665.0
+offset_top = 4.0
+offset_right = 710.0
+offset_bottom = 50.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_qvovb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qvovb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0btf3")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_qvovb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8o2c7")
+
+[node name="InLevelMap" type="Node2D" parent="." index="2"]
+
+[node name="Background" type="Sprite2D" parent="InLevelMap" index="0"]
+centered = false
+
+[node name="Paths" type="Node2D" parent="InLevelMap" index="1"]
+
+[node name="Entrance" parent="InLevelMap/Paths" index="0" instance=ExtResource("4_66c0s")]
+
+[node name="Carrot" parent="InLevelMap/Paths" index="1" instance=ExtResource("5_f74ni")]
+
+[node name="Path2D" type="Path2D" parent="InLevelMap/Paths" index="2"]
+
+[node name="Props" type="Node2D" parent="InLevelMap" index="2"]
