@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://vbtil58taqu7"]
+[gd_scene load_steps=11 format=3 uid="uid://vbtil58taqu7"]
 
 [ext_resource type="PackedScene" uid="uid://bgi1b54h0tn38" path="res://scene/game/InLevelScene.tscn" id="1_1gn77"]
 [ext_resource type="Texture2D" uid="uid://buulrdybopcps" path="res://assets/Theme/skyline/BG1/BG-hd.png" id="2_am8a1"]
+[ext_resource type="Texture2D" uid="uid://q6ifk3bwx76y" path="res://assets/Theme/skyline/BG0/BG1-hd.png" id="2_imuff"]
 [ext_resource type="PackedScene" uid="uid://wdqlbc4dodvl" path="res://scene/game/Prop.tscn" id="3_kdy3c"]
 [ext_resource type="Texture2D" uid="uid://cq65nf12012t4" path="res://assets/Theme/skyline/Items/Object01-hd/4.png" id="4_bfsg3"]
 [ext_resource type="Texture2D" uid="uid://yy37qdntbcmw" path="res://assets/Theme/skyline/Items/Object01-hd/5.png" id="5_sqfw4"]
@@ -16,8 +17,9 @@ _data = {
 point_count = 8
 
 [node name="Level1" instance=ExtResource("1_1gn77")]
+texture = ExtResource("2_imuff")
 
-[node name="CoinAvaiable" parent="HUD/MenuBar" index="0"]
+[node name="CoinAvailable" parent="HUD/MenuBar" index="0"]
 Value = 450
 
 [node name="Background" parent="InLevelMap" index="0"]

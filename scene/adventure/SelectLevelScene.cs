@@ -54,9 +54,11 @@ namespace CarrotFantasy.scene.adventure
 
             coverPagePackedScene = GD.Load<PackedScene>("res://scene/adventure/Level.tscn");
 
-            back.Pressed += Back;
+            back.Pressed += OnBackPressed;
+            start.Pressed += OnStartPressed;
             theme = LoadThemeData();
             LoadTheme();
+            SwitchLevel(this._<SceneManager>().Data<int>());
         }
 
         public override void _Input(InputEvent @event)
@@ -72,7 +74,7 @@ namespace CarrotFantasy.scene.adventure
             }
         }
 
-        protected virtual void Back()
+        protected virtual void OnBackPressed()
         {
             this._<SceneManager>().ChangeScene(backScene, Variant.From(GetThemeCode()));
         }
@@ -374,6 +376,16 @@ namespace CarrotFantasy.scene.adventure
                 return string.Empty;
             }
             return theme.Code;
+        }
+
+        private void OnStartPressed()
+        {
+            if (theme == null)
+            {
+                return;
+            }
+            string themeCode = theme.Code;
+            this._<SceneManager>().ChangeScene($"res://scene/game/{themeCode}/Level{currentLevelIndex}.tscn");
         }
     }
 }

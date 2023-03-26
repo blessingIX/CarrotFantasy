@@ -9,3 +9,4 @@ script = ExtResource("1_euy6u")
 audioPath = "res://assets/Music/Main/Select.ogg"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0

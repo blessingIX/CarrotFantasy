@@ -21,6 +21,7 @@ namespace CarrotFantasy.scene
         {
             if (string.IsNullOrEmpty(BGM))
             {
+                this._<SoundManager>().Stop();
                 return;
             }
 

@@ -27,5 +27,10 @@ namespace CarrotFantasy.autoload
             audioStreamPlayer.Stream = audioStream;
             audioStreamPlayer.Play();
         }
+
+        public void Stop()
+        {
+            audioStreamPlayer.Stop();
+        }
     }
 }
