@@ -7,6 +7,3 @@ offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("1_euy6u")
 audioPath = "res://assets/Music/Main/Select.ogg"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-volume_db = -10.0

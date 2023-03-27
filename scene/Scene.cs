@@ -21,11 +21,11 @@ namespace CarrotFantasy.scene
         {
             if (string.IsNullOrEmpty(BGM))
             {
-                this._<SoundManager>().Stop();
+                this._<SoundManager>().StopBGM();
                 return;
             }
 
-            this._<SoundManager>().Play(BGM);
+            this._<SoundManager>().PlayBGM(BGM);
         }
     }
 }
