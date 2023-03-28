@@ -189,3 +189,5 @@ metadata/_edit_lock_ = true
 
 [node name="Props" type="Node2D" parent="InLevelMap" index="2"]
 metadata/_edit_lock_ = true
+
+[node name="Fleeting" type="Node2D" parent="InLevelMap" index="3"]

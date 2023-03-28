@@ -24,6 +24,12 @@ namespace CarrotFantasy.scene.game
         [Node("HUD/GameMenuRect/GameMenuPanel/Quit")]
         private Button quit;
 
+        [Node("CellContainer")]
+        private CellContainer cellContainer;
+
+        [Node("InLevelMap/Fleeting")]
+        private Node2D fleeting;
+
         public override void _Ready()
         {
             base._Ready();
@@ -32,6 +38,7 @@ namespace CarrotFantasy.scene.game
             menu.Pressed += OnMenuPressed;
             continueButton.Pressed += OnContinuePressed;
             quit.Pressed += OnQuitPressed;
+            cellContainer.CellPressed += OnCellContainerCellPressed;
         }
 
         private void OnMenuPressed()
@@ -55,6 +62,18 @@ namespace CarrotFantasy.scene.game
         private void OnQuitPressed()
         {
             this._<SceneManager>().ChangeScene($"res://scene/adventure/{themeCode.ToLower()}/{themeCode}Scene.tscn", Variant.From<int>(levelIndex));
+        }
+
+        private void OnCellContainerCellPressed(Vector2 center)
+        {
+            PackedScene packedScene = GD.Load<PackedScene>("res://scene/game/SelectFault.tscn");
+            SelectFault selectFault = packedScene.InstantiateOrNull<SelectFault>();
+            if (selectFault == null)
+            {
+                return;
+            }
+            selectFault.Position = center;
+            fleeting.AddChild(selectFault);
         }
     }
 }

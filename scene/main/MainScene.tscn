@@ -199,7 +199,7 @@ theme_override_styles/disabled = ExtResource("21_gh4hg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_cmsjb")
 disabled = true
 
-[node name="ButtonLock" type="Sprite2D" parent="Buttons/BossMode" index="1"]
+[node name="ButtonLock" type="Sprite2D" parent="Buttons/BossMode" index="0"]
 position = Vector2(224, 56)
 texture = ExtResource("24_7sm6m")
 
@@ -216,6 +216,6 @@ theme_override_styles/disabled = ExtResource("24_la71p")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ar2rh")
 disabled = true
 
-[node name="ButtonLock" type="Sprite2D" parent="Buttons/TheNest" index="1"]
+[node name="ButtonLock" type="Sprite2D" parent="Buttons/TheNest" index="0"]
 position = Vector2(224, 56)
 texture = ExtResource("24_7sm6m")

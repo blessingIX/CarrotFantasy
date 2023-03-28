@@ -7,6 +7,9 @@ namespace CarrotFantasy.scene.game
 {
     public partial class CellContainer : CanvasLayer
     {
+        [Signal]
+        public delegate void CellPressedEventHandler(Vector2 center);
+
         public override void _Ready()
         {
             base._Ready();
@@ -53,7 +56,7 @@ namespace CarrotFantasy.scene.game
 
         private void OnCellCellPressed(Vector2 center)
         {
-            GD.Print($"OnCellPressed {center}");
+            EmitSignal(SignalName.CellPressed, new Variant[] { center });
         }
     }
 }
