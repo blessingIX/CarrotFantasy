@@ -12,6 +12,9 @@ namespace CarrotFantasy.scene.game
         [Export(PropertyHint.Range, "1,2147483647")]
         private int levelIndex = 1;
 
+        [Node("HUD")]
+        private CanvasLayer hud;
+
         [Node("HUD/MenuBar/Menu")]
         private Button menu;
 
@@ -39,6 +42,8 @@ namespace CarrotFantasy.scene.game
             continueButton.Pressed += OnContinuePressed;
             quit.Pressed += OnQuitPressed;
             cellContainer.CellPressed += OnCellContainerCellPressed;
+
+            StartCountDown();
         }
 
         private void OnMenuPressed()
@@ -74,6 +79,23 @@ namespace CarrotFantasy.scene.game
             }
             selectFault.Position = center;
             fleeting.AddChild(selectFault);
+        }
+
+        private void StartCountDown()
+        {
+            PackedScene packedScene = GD.Load<PackedScene>("res://scene/game/CountDown.tscn");
+            CountDown countDown = packedScene.InstantiateOrNull<CountDown>();
+            if (countDown == null)
+            {
+                return;
+            }
+            countDown.Finished += OnCountDownFinished;
+            hud.AddChild(countDown);
+        }
+
+        protected void OnCountDownFinished()
+        {
+            GD.Print("Game start!");
         }
     }
 }

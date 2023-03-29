@@ -14,10 +14,10 @@ namespace CarrotFantasy.scene.game
             base._Ready();
             this.WireNodes();
 
-            this.Fade();
+            this.FadeOut();
         }
 
-        private void Fade()
+        private void FadeOut()
         {
             this._<SoundManager>().PlayFleeting(soundPath);
             var tween = CreateTween();

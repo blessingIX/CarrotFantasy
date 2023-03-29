@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://vbtil58taqu7"]
 
-[ext_resource type="PackedScene" uid="uid://bgi1b54h0tn38" path="res://scene/game/InLevelScene.tscn" id="1_1gn77"]
+[ext_resource type="PackedScene" uid="uid://bdxcq3vib0xkb" path="res://scene/game/InLevelScene.tscn" id="1_1gn77"]
 [ext_resource type="Texture2D" uid="uid://buulrdybopcps" path="res://assets/Theme/skyline/BG1/BG-hd.png" id="2_am8a1"]
 [ext_resource type="Texture2D" uid="uid://q6ifk3bwx76y" path="res://assets/Theme/skyline/BG0/BG1-hd.png" id="2_imuff"]
 [ext_resource type="PackedScene" uid="uid://wdqlbc4dodvl" path="res://scene/game/Prop.tscn" id="3_kdy3c"]
