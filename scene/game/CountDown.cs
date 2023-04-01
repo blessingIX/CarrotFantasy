@@ -55,7 +55,7 @@ namespace CarrotFantasy.scene.game
 
                 this._<SoundManager>().PlayFleeting(goSound);
                 double fadeInInterval = 0.1;
-                double interval = 0.1;
+                double interval = 0.2;
                 double fadeOutInterval = 0.1;
                 Tween tween = CreateTween();
                 tween.SetParallel(true);
@@ -69,7 +69,7 @@ namespace CarrotFantasy.scene.game
             else
             {
                 this._<SoundManager>().PlayFleeting(countDownSound);
-                double effectInterval = 1.2;
+                double effectInterval = 1.1;
                 double charactersFadeInInterval = 0.1;
                 double charactersFadeOutInterval = 0.1;
                 double charactersInterval = effectInterval - charactersFadeInInterval - charactersFadeOutInterval;
@@ -94,6 +94,11 @@ namespace CarrotFantasy.scene.game
         {
             EmitSignal(SignalName.Finished, new Variant[] { });
             QueueFree();
+        }
+
+        public void SkipCountDown()
+        {
+            value = 0;
         }
     }
 }

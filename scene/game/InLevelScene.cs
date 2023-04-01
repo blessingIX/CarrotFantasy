@@ -23,6 +23,9 @@ namespace CarrotFantasy.scene.game
 
         [Node("HUD/GameMenuRect/GameMenuPanel/Continue")]
         private Button continueButton;
+        
+        [Node("HUD/GameMenuRect/GameMenuPanel/Restart")]
+        private Button restartButton;
 
         [Node("HUD/GameMenuRect/GameMenuPanel/Quit")]
         private Button quit;
@@ -41,12 +44,15 @@ namespace CarrotFantasy.scene.game
             base._Ready();
             this.WireNodes();
 
+            bool skipCountDown = this._<SceneManager>().Data<bool>();
+
             menu.Pressed += OnMenuPressed;
             continueButton.Pressed += OnContinuePressed;
             quit.Pressed += OnQuitPressed;
+            restartButton.Pressed += OnRestartPressed;
             cellContainer.CellPressed += OnCellContainerCellPressed;
 
-            StartCountDown();
+            StartCountDown(skipCountDown);
         }
 
         private void OnMenuPressed()
@@ -72,6 +78,11 @@ namespace CarrotFantasy.scene.game
             this._<SceneManager>().ChangeScene($"res://scene/adventure/{themeCode.ToLower()}/{themeCode}Scene.tscn", Variant.From<int>(levelIndex));
         }
 
+        private void OnRestartPressed()
+        {
+            this._<SceneManager>().ChangeScene($"res://scene/game/{themeCode}/Level{levelIndex}.tscn", Variant.From(true));
+        }
+
         private void OnCellContainerCellPressed(Vector2 center)
         {
             PackedScene packedScene = GD.Load<PackedScene>("res://scene/game/SelectFault.tscn");
@@ -84,7 +95,7 @@ namespace CarrotFantasy.scene.game
             fleeting.AddChild(selectFault);
         }
 
-        private void StartCountDown()
+        private void StartCountDown(bool skipCountDown = false)
         {
             PackedScene packedScene = GD.Load<PackedScene>("res://scene/game/CountDown.tscn");
             CountDown countDown = packedScene.InstantiateOrNull<CountDown>();
@@ -93,6 +104,10 @@ namespace CarrotFantasy.scene.game
                 return;
             }
             countDown.Finished += OnCountDownFinished;
+            if (skipCountDown)
+            {
+                countDown.SkipCountDown();
+            }
             hud.AddChild(countDown);
         }
 

@@ -44,13 +44,15 @@ namespace CarrotFantasy.autoload
                 return;
             }
 
-            // 使用Tween来实现切换场景前后各间隔0.1秒，不然过渡场景不会显示
+            // 使用Tween来实现切换场景前间隔0.1秒，不然过渡场景不会显示
             Tween tween = CreateTween();
             tween.TweenCallback(Callable.From(() => transitionScene.Show()));
             tween.TweenInterval(0.1);
-            tween.TweenCallback(Callable.From(() => ChangeSceneToPacked(packedScene, variant)));
-            tween.TweenInterval(0.1);
-            tween.TweenCallback(Callable.From(() => transitionScene.Hide()));
+            tween.TweenCallback(Callable.From(() =>
+            {
+                ChangeSceneToPacked(packedScene, variant);
+                transitionScene.Hide();
+            }));
         }
 
         private void ChangeSceneToPacked(PackedScene packedScene, Variant variant)
