@@ -47,7 +47,7 @@ namespace CarrotFantasy.scene.game
                 for (int j = 0; j < 12; j++)
                 {
                     Cell cell = packedScene.Instantiate<Cell>();
-                    cell.Position = new Vector2(j, i) * GameConstant.CellSize;
+                    cell.Position = new Vector2(j, i) * GameConstant.Global.CellSize;
                     cell.CellPressed += OnCellCellPressed;
                     AddChild(cell);
                 }

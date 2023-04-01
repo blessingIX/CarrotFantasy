@@ -23,7 +23,7 @@ namespace CarrotFantasy.scene.game
 
         public Vector2 GetCenter()
         {
-            return Position + (GameConstant.CellSize / 2);
+            return Position + (GameConstant.Global.CellSize / 2);
         }
     }
 }

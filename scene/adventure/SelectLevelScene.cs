@@ -58,7 +58,7 @@ namespace CarrotFantasy.scene.adventure
             start.Pressed += OnStartPressed;
             themeDef = LoadThemeDef();
             LoadTheme();
-            SwitchLevel(this._<SceneManager>().Data<int>());
+            SwitchLevel(this._<SceneManager>().Data<int>(0));
         }
 
         public override void _Input(InputEvent @event)
@@ -76,7 +76,7 @@ namespace CarrotFantasy.scene.adventure
 
         protected virtual void OnBackPressed()
         {
-            this._<SceneManager>().ChangeScene(backScene, Variant.From(GetThemeCode()));
+            this._<SceneManager>().ChangeScene(backScene, GetThemeCode());
         }
 
         protected virtual ThemeDef LoadThemeDef()
@@ -385,7 +385,7 @@ namespace CarrotFantasy.scene.adventure
                 return;
             }
             string themeCode = themeDef.Code;
-            this._<SceneManager>().ChangeScene($"res://scene/game/{themeCode}/Level{currentLevelIndex}.tscn");
+            this._<SceneManager>().ChangeScene($"res://scene/game/{themeCode}/Level{currentLevelIndex}.tscn", false, themeDef.Levels[currentLevelIndex - 1].Waves);
         }
     }
 }

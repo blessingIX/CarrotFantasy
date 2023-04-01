@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using CarrotFantasy.autoload;
+using CarrotFantasy.common;
+using CarrotFantasy.def;
 using Godot;
 using GodotUtilities;
 
@@ -23,7 +25,10 @@ namespace CarrotFantasy.scene.game
         [Node("Timer")]
         private Timer timer;
 
-        private Queue<float> wave = new();
+        private Queue<MonsterSpawnDef> wave = new();
+
+        [Signal]
+        public delegate void SpwanFinishedEventHandler();
 
         public override void _Ready()
         {
@@ -42,16 +47,33 @@ namespace CarrotFantasy.scene.game
             timer.Timeout += Spawn;
         }
 
-        public void Spawn(float[] intervals)
+        public void Spawn(WaveDef waveDef)
         {
-            if (intervals == null || intervals.Length == 0)
+            if (waveDef == null)
+            {
+                return;
+            }
+            List<MonsterBundleDef> monsterBundles = waveDef.MonsterBundles;
+            if (monsterBundles == null || monsterBundles.Count == 0)
             {
                 return;
             }
             wave.Clear();
-            foreach (float interval in intervals)
+            wave.Enqueue(MonsterSpawnDef.Empty(waveDef.Delay));
+            foreach (MonsterBundleDef monsterBundleDef in monsterBundles)
             {
-                wave.Enqueue(interval);
+                if (monsterBundleDef == null || monsterBundleDef.Qty <= 0)
+                {
+                    continue;
+                }
+                for (int i = 0; i < monsterBundleDef.Qty; i++)
+                {
+                    wave.Enqueue(new MonsterSpawnDef()
+                    {
+                        Scene = monsterBundleDef.Scene,
+                        Delay = monsterBundleDef.Delay
+                    });
+                }
             }
             StartSpawnTimer();
         }
@@ -61,21 +83,34 @@ namespace CarrotFantasy.scene.game
             if (wave.Count == 0)
             {
                 timer.Stop();
+                EmitSignal(SignalName.SpwanFinished);
                 return;
             }
 
-            timer.WaitTime = wave.Dequeue();
+            timer.WaitTime = wave.Peek().Delay;
             timer.Start();
         }
 
         private void Spawn()
         {
+            if (wave.Count == 0)
+            {
+                return;
+            }
+
+            MonsterSpawnDef monsterSpawnDef = wave.Dequeue();
+            if (monsterSpawnDef == null || monsterSpawnDef.Scene == GameConstant.Monster.Empty)
+            {
+                StartSpawnTimer();
+                return;
+            }
+
             if (monsterPool == null || monsterMotionPool == null)
             {
                 return;
             }
 
-            PackedScene monsterScene = GD.Load<PackedScene>("res://scene/game/monster/YellowFlying.tscn");
+            PackedScene monsterScene = GD.Load<PackedScene>($"res://scene/game/monster/{monsterSpawnDef.Scene}.tscn");
             Monster monster = monsterScene.InstantiateOrNull<Monster>();
             if (monster == null)
             {
@@ -107,6 +142,22 @@ namespace CarrotFantasy.scene.game
             }
 
             StartSpawnTimer();
+        }
+
+        private class MonsterSpawnDef
+        {
+            public string Scene;
+
+            public float Delay;
+
+            public static MonsterSpawnDef Empty(float delay)
+            {
+                return new MonsterSpawnDef()
+                {
+                    Scene = GameConstant.Monster.Empty,
+                    Delay = delay
+                };
+            }
         }
     }
 }

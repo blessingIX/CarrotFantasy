@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using CarrotFantasy.autoload;
+using CarrotFantasy.def;
 using Godot;
 using GodotUtilities;
 
@@ -23,7 +25,7 @@ namespace CarrotFantasy.scene.game
 
         [Node("HUD/GameMenuRect/GameMenuPanel/Continue")]
         private Button continueButton;
-        
+
         [Node("HUD/GameMenuRect/GameMenuPanel/Restart")]
         private Button restartButton;
 
@@ -39,20 +41,43 @@ namespace CarrotFantasy.scene.game
         [Node("InLevelMap/MonsterSpawner")]
         private MonsterSpawner monsterSpawner;
 
+        private List<WaveDef> waveDefs;
+
+        private int waveIndex = -1;
+
+        private bool spawned = false;
+
         public override void _Ready()
         {
             base._Ready();
             this.WireNodes();
 
-            bool skipCountDown = this._<SceneManager>().Data<bool>();
+            bool skipCountDown = this._<SceneManager>().Data<bool>(0);
+            this.waveDefs = this._<SceneManager>().Data<List<WaveDef>>(1);
 
             menu.Pressed += OnMenuPressed;
             continueButton.Pressed += OnContinuePressed;
             quit.Pressed += OnQuitPressed;
             restartButton.Pressed += OnRestartPressed;
             cellContainer.CellPressed += OnCellContainerCellPressed;
+            monsterSpawner.SpwanFinished += () => spawned = true;
 
             StartCountDown(skipCountDown);
+        }
+
+        public override void _Process(double delta)
+        {
+            base._Process(delta);
+
+            if (spawned)
+            {
+                List<Monster> monsters = fleeting.GetChildren<Monster>();
+                if (monsters == null || monsters.Count == 0)
+                {
+                    spawned = false;
+                    SpawnMonsters();
+                }
+            }
         }
 
         private void OnMenuPressed()
@@ -75,12 +100,12 @@ namespace CarrotFantasy.scene.game
 
         private void OnQuitPressed()
         {
-            this._<SceneManager>().ChangeScene($"res://scene/adventure/{themeCode.ToLower()}/{themeCode}Scene.tscn", Variant.From<int>(levelIndex));
+            this._<SceneManager>().ChangeScene($"res://scene/adventure/{themeCode.ToLower()}/{themeCode}Scene.tscn", levelIndex);
         }
 
         private void OnRestartPressed()
         {
-            this._<SceneManager>().ChangeScene($"res://scene/game/{themeCode}/Level{levelIndex}.tscn", Variant.From(true));
+            this._<SceneManager>().ChangeScene($"res://scene/game/{themeCode}/Level{levelIndex}.tscn", true, this.waveDefs);
         }
 
         private void OnCellContainerCellPressed(Vector2 center)
@@ -113,7 +138,21 @@ namespace CarrotFantasy.scene.game
 
         protected void OnCountDownFinished()
         {
-            monsterSpawner.Spawn(new float[] { 3f, 0.9f, 0.9f, 0.9f, 0.9f, 0.9f, 0.9f, 0.9f, 0.9f, 0.9f });
+            SpawnMonsters();
+        }
+
+        private void SpawnMonsters()
+        {
+            if (waveDefs == null || waveDefs.Count == 0)
+            {
+                return;
+            }
+            ++waveIndex;
+            if (waveIndex < 0 || waveIndex >= waveDefs.Count)
+            {
+                return;
+            }
+            monsterSpawner.Spawn(waveDefs[waveIndex]);
         }
     }
 }

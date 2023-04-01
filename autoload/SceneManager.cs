@@ -7,10 +7,12 @@ namespace CarrotFantasy.autoload
 {
     public partial class SceneManager : Node
     {
+        public static readonly Object[] DefaultSceneData = new Object[] { };
+
         [Node("TransitionScene")]
         private TransitionScene transitionScene;
 
-        private Variant lastSceneData = default;
+        private Object[] lastSceneData = DefaultSceneData;
 
         public override void _Ready()
         {
@@ -20,10 +22,10 @@ namespace CarrotFantasy.autoload
 
         public void ChangeScene(string path)
         {
-            ChangeScene(path, default);
+            ChangeScene(path, DefaultSceneData);
         }
 
-        public void ChangeScene(string path, Variant variant)
+        public void ChangeScene(string path, params Object[] variant)
         {
             if (string.IsNullOrEmpty(path))
             {
@@ -34,10 +36,10 @@ namespace CarrotFantasy.autoload
 
         public void ChangeScene(PackedScene packedScene)
         {
-            ChangeScene(packedScene, default);
+            ChangeScene(packedScene, DefaultSceneData);
         }
 
-        public void ChangeScene(PackedScene packedScene, Variant variant)
+        public void ChangeScene(PackedScene packedScene, params Object[] variant)
         {
             if (packedScene == null)
             {
@@ -55,22 +57,36 @@ namespace CarrotFantasy.autoload
             }));
         }
 
-        private void ChangeSceneToPacked(PackedScene packedScene, Variant variant)
+        private void ChangeSceneToPacked(PackedScene packedScene, params Object[] variants)
         {
             try
             {
-                lastSceneData = variant;
+                lastSceneData = variants;
                 GetTree().ChangeSceneToPacked(packedScene);
             }
             catch (Exception)
             {
-                lastSceneData = default;
+                lastSceneData = DefaultSceneData;
             }
         }
 
-        public T Data<[MustBeVariant] T>()
+        public Object[] Data()
         {
-            return lastSceneData.As<T>();
+            return lastSceneData;
+        }
+
+        public T Data<T>(int index)
+        {
+            if (index < 0 || index >= lastSceneData.Length)
+            {
+                return default;
+            }
+            Object obj = lastSceneData[index];
+            if (obj is T t)
+            {
+                return t;
+            }
+            return default;
         }
     }
 }

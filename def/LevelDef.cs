@@ -4,19 +4,16 @@ namespace CarrotFantasy.def
 {
     public class LevelDef
     {
-        private int index;
-        public int Index { set; get; }
+        public int Index;
 
-        private string themeCode;
-        public string ThemeCode { set; get; }
+        public string ThemeCode;
 
-        private int totalWaves;
-        public int TotalWaves { set; get; }
+        public int TotalWaves;
 
-        private List<string> availableTowers;
-        public List<string> AvailableTowers { set; get; }
+        public List<string> AvailableTowers;
 
-        private bool isUnlocked;
-        public bool IsUnlocked { set; get; }
+        public bool IsUnlocked;
+
+        public List<WaveDef> Waves;
     }
 }

@@ -69,7 +69,7 @@ namespace CarrotFantasy.scene.game
                 {
                     propSize = value;
                 }
-                interaction.Size = GameConstant.CellSize * propSize;
+                interaction.Size = GameConstant.Global.CellSize * propSize;
                 interaction.Position = -interaction.Size / 2;
             }
         }

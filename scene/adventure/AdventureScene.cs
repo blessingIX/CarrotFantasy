@@ -22,7 +22,7 @@ namespace CarrotFantasy.scene.adventure
 
             back.Pressed += () => this._<SceneManager>().ChangeScene("res://scene/main/MainScene.tscn");
 
-            themes?.SwitchTheme(this._<SceneManager>().Data<string>());
+            themes?.SwitchTheme(this._<SceneManager>().Data<string>(0));
         }
     }
 }

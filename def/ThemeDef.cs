@@ -4,10 +4,8 @@ namespace CarrotFantasy.def
 {
     public class ThemeDef
     {
-        private string code;
-        public string Code { set; get; }
+        public string Code;
 
-        private List<LevelDef> levels;
-        public List<LevelDef> Levels { set; get; }
+        public List<LevelDef> Levels;
     }
 }

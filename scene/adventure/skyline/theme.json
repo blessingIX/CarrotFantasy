@@ -8,7 +8,177 @@
                 "Bottle",
                 "Shit"
             ],
-            "isUnlocked": true
+            "isUnlocked": true,
+            "waves": [
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "BigHair",
+                            "qty": 10
+                        }
+                    ]
+                },
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "BigHair",
+                            "qty": 8
+                        },
+                        {
+                            "scene": "PurpleStar",
+                            "qty": 2
+                        }
+                    ]
+                },
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "BigHair",
+                            "qty": 6
+                        },
+                        {
+                            "scene": "PurpleStar",
+                            "qty": 4
+                        }
+                    ]
+                },
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "BigHair",
+                            "qty": 4
+                        },
+                        {
+                            "scene": "PurpleStar",
+                            "qty": 6
+                        }
+                    ]
+                },
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "PurpleStar",
+                            "qty": 8
+                        },
+                        {
+                            "scene": "BigHair",
+                            "qty": 2
+                        }
+                    ]
+                },
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "PurpleStar",
+                            "qty": 10
+                        }
+                    ]
+                },
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "BigHair",
+                            "qty": 8
+                        },
+                        {
+                            "scene": "CyanBird",
+                            "qty": 2
+                        }
+                    ]
+                },
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "PurpleStar",
+                            "qty": 6
+                        },
+                        {
+                            "scene": "YellowFlying",
+                            "qty": 4
+                        }
+                    ]
+                },
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "BigHair",
+                            "qty": 4
+                        },
+                        {
+                            "scene": "PinkWorm",
+                            "qty": 6
+                        }
+                    ]
+                },
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "PurpleStar",
+                            "qty": 6
+                        },
+                        {
+                            "scene": "CyanBird",
+                            "qty": 4
+                        }
+                    ]
+                },
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "CyanScaleph",
+                            "qty": 8
+                        },
+                        {
+                            "scene": "YellowFlying",
+                            "qty": 2
+                        }
+                    ]
+                },
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "PurpleStar",
+                            "qty": 4
+                        },
+                        {
+                            "scene": "PinkWorm",
+                            "qty": 6
+                        }
+                    ]
+                },
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "CyanBird",
+                            "qty": 2
+                        },
+                        {
+                            "scene": "YellowFlying",
+                            "qty": 8
+                        }
+                    ]
+                },
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "BigHair",
+                            "qty": 4
+                        },
+                        {
+                            "scene": "YellowFlying",
+                            "qty": 6
+                        }
+                    ]
+                },
+                {
+                    "monsterBundles": [
+                        {
+                            "scene": "PinkWorm",
+                            "qty": 10
+                        }
+                    ]
+                }
+            ]
         },
         {
             "index": 2,
