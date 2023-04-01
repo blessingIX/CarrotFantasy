@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3s3escmv02dm"]
+
+[ext_resource type="PackedScene" uid="uid://cu30p3nupohpx" path="res://scene/game/Monster.tscn" id="1_giyki"]
+[ext_resource type="SpriteFrames" uid="uid://dmxg46dhwawwv" path="res://resource/game/monster/CyanBird.tres" id="2_w5irc"]
+
+[node name="CyanBird" instance=ExtResource("1_giyki")]
+Velocity = 160
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(-3, -23)
+sprite_frames = ExtResource("2_w5irc")
+frame_progress = 0.34267

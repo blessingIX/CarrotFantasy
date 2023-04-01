@@ -5,7 +5,10 @@ namespace CarrotFantasy.scene.game
 {
     public partial class Monster : Node2D
     {
-        private int velocity = 25;
+        [Node("AnimatedSprite2D")]
+        private AnimatedSprite2D animatedSprite2D;
+
+        private int velocity = 80;
         [Export]
         public int Velocity
         {
@@ -36,6 +39,16 @@ namespace CarrotFantasy.scene.game
                 motion.QueueFree();
             }
             QueueFree();
+        }
+
+        public Vector2 GetCenter()
+        {
+            Vector2 center = Vector2.Zero;
+            if (animatedSprite2D != null)
+            {
+                center = animatedSprite2D.Position;
+            }
+            return center;
         }
     }
 }

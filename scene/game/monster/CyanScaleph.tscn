@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp3khmi8tmyp0"]
+
+[ext_resource type="PackedScene" uid="uid://cu30p3nupohpx" path="res://scene/game/Monster.tscn" id="1_2ywn0"]
+[ext_resource type="SpriteFrames" uid="uid://pmwl17ay63x6" path="res://resource/game/monster/CyanScaleph.tres" id="2_dsokl"]
+
+[node name="CyanScaleph" instance=ExtResource("1_2ywn0")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -29)
+sprite_frames = ExtResource("2_dsokl")
+frame_progress = 0.82846

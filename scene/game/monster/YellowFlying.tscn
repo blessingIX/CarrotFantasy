@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://wvjsk80ywnua"]
+
+[ext_resource type="PackedScene" uid="uid://cu30p3nupohpx" path="res://scene/game/Monster.tscn" id="1_g004k"]
+[ext_resource type="SpriteFrames" uid="uid://lnc7j1mwl4y3" path="res://resource/game/monster/YellowFlying.tres" id="2_bf47o"]
+
+[node name="YellowFlying" instance=ExtResource("1_g004k")]
+Velocity = 160
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(-5, -27)
+sprite_frames = ExtResource("2_bf47o")
+frame_progress = 0.571641

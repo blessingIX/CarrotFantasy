@@ -98,8 +98,7 @@ namespace CarrotFantasy.scene.game
 
         protected void OnCountDownFinished()
         {
-            GD.Print("Game start!");
-            monsterSpawner.Spawn(new float[] { 3f, 0.8f, 0.8f, 0.8f, 0.8f, 0.8f, 0.8f, 0.8f, 0.8f, 0.8f });
+            monsterSpawner.Spawn(new float[] { 3f, 0.9f, 0.9f, 0.9f, 0.9f, 0.9f, 0.9f, 0.9f, 0.9f, 0.9f });
         }
     }
 }

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3yy7c3k5mqi5"]
+
+[ext_resource type="PackedScene" uid="uid://cu30p3nupohpx" path="res://scene/game/Monster.tscn" id="1_avxhi"]
+[ext_resource type="SpriteFrames" uid="uid://brji22ubr0uge" path="res://resource/game/monster/BigHair.tres" id="2_65g1t"]
+
+[node name="BigHair" instance=ExtResource("1_avxhi")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = ExtResource("2_65g1t")
+frame_progress = 0.353699

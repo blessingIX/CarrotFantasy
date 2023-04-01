@@ -75,7 +75,7 @@ namespace CarrotFantasy.scene.game
                 return;
             }
 
-            PackedScene monsterScene = GD.Load<PackedScene>("res://scene/game/Monster.tscn");
+            PackedScene monsterScene = GD.Load<PackedScene>("res://scene/game/monster/YellowFlying.tscn");
             Monster monster = monsterScene.InstantiateOrNull<Monster>();
             if (monster == null)
             {
@@ -102,6 +102,7 @@ namespace CarrotFantasy.scene.game
             this._<SoundManager>().PlayFleeting(MonsterSpawnSound);
             if (monsterSpawnEffect != null)
             {
+                monsterSpawnEffect.Position = monster.GetCenter();
                 monster.AddChild(monsterSpawnEffect);
             }
 
