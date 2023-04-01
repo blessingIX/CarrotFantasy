@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b02yxkpr4ywkl"]
+
+[ext_resource type="Script" path="res://scene/game/MonsterMotion.cs" id="1_siisv"]
+
+[node name="MonsterMotion" type="PathFollow2D"]
+rotates = false
+loop = false
+script = ExtResource("1_siisv")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+remote_path = NodePath("..")

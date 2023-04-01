@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc7v8h61cd7m5"]
+
+[ext_resource type="Texture2D" uid="uid://doabpm7tbgvd" path="res://resource/game/MonsterSpawnEffectStage1.tres" id="1_j7pja"]
+[ext_resource type="Script" path="res://scene/game/MonsterSpawnEffect.cs" id="2_ndp1p"]
+
+[node name="MonsterSpawnEffect" type="Sprite2D"]
+texture = ExtResource("1_j7pja")
+script = ExtResource("2_ndp1p")

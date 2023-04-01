@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bdxcq3vib0xkb"]
+[gd_scene load_steps=30 format=3 uid="uid://bdxcq3vib0xkb"]
 
 [ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_wtbg2"]
 [ext_resource type="Script" path="res://scene/game/InLevelScene.cs" id="2_plyuu"]
@@ -22,6 +22,7 @@
 [ext_resource type="StyleBox" uid="uid://dud7n6dgx8jab" path="res://resource/game/RestartPressed.tres" id="18_6vkm7"]
 [ext_resource type="StyleBox" uid="uid://40f02hi1s3rw" path="res://resource/game/QuitNormal.tres" id="19_3f8xt"]
 [ext_resource type="StyleBox" uid="uid://bqaxemlkly3vi" path="res://resource/game/QuitPressed.tres" id="20_isljc"]
+[ext_resource type="PackedScene" uid="uid://cos8f2tbmpylw" path="res://scene/game/MonsterSpawner.tscn" id="21_s4rnw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_okcrp"]
 
@@ -173,11 +174,15 @@ metadata/_edit_lock_ = true
 [node name="InLevelMap" type="Node2D" parent="." index="2"]
 metadata/_edit_lock_ = true
 
-[node name="Background" type="Sprite2D" parent="InLevelMap" index="0"]
+[node name="MonsterSpawner" parent="InLevelMap" index="0" instance=ExtResource("21_s4rnw")]
+MonsterPoolPath = NodePath("../Fleeting")
+MonsterMotionPoolPath = NodePath("../Paths/Path2D")
+
+[node name="Background" type="Sprite2D" parent="InLevelMap" index="1"]
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="Paths" type="Node2D" parent="InLevelMap" index="1"]
+[node name="Paths" type="Node2D" parent="InLevelMap" index="2"]
 metadata/_edit_lock_ = true
 
 [node name="Entrance" parent="InLevelMap/Paths" index="0" instance=ExtResource("4_66c0s")]
@@ -187,7 +192,7 @@ metadata/_edit_lock_ = true
 [node name="Path2D" type="Path2D" parent="InLevelMap/Paths" index="2"]
 metadata/_edit_lock_ = true
 
-[node name="Props" type="Node2D" parent="InLevelMap" index="2"]
+[node name="Props" type="Node2D" parent="InLevelMap" index="3"]
 metadata/_edit_lock_ = true
 
-[node name="Fleeting" type="Node2D" parent="InLevelMap" index="3"]
+[node name="Fleeting" type="Node2D" parent="InLevelMap" index="4"]

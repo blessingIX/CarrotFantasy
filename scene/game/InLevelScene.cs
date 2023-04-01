@@ -33,6 +33,9 @@ namespace CarrotFantasy.scene.game
         [Node("InLevelMap/Fleeting")]
         private Node2D fleeting;
 
+        [Node("InLevelMap/MonsterSpawner")]
+        private MonsterSpawner monsterSpawner;
+
         public override void _Ready()
         {
             base._Ready();
@@ -96,6 +99,7 @@ namespace CarrotFantasy.scene.game
         protected void OnCountDownFinished()
         {
             GD.Print("Game start!");
+            monsterSpawner.Spawn(new float[] { 3f, 0.8f, 0.8f, 0.8f, 0.8f, 0.8f, 0.8f, 0.8f, 0.8f, 0.8f });
         }
     }
 }

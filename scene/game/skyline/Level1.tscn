@@ -22,7 +22,7 @@ texture = ExtResource("2_imuff")
 [node name="CoinAvailable" parent="HUD/MenuBar" index="0"]
 Value = 450
 
-[node name="Background" parent="InLevelMap" index="0"]
+[node name="Background" parent="InLevelMap" index="1"]
 texture = ExtResource("2_am8a1")
 offset = Vector2(0, 128)
 
