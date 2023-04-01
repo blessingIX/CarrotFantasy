@@ -1,5 +1,5 @@
 using CarrotFantasy.autoload;
-using CarrotFantasy.po;
+using CarrotFantasy.def;
 using Godot;
 using Godot.Collections;
 using GodotUtilities;
@@ -45,7 +45,7 @@ namespace CarrotFantasy.scene.adventure
 
         private PackedScene coverPagePackedScene;
 
-        private ThemePO theme;
+        private ThemeDef themeDef;
 
         public override void _Ready()
         {
@@ -56,7 +56,7 @@ namespace CarrotFantasy.scene.adventure
 
             back.Pressed += OnBackPressed;
             start.Pressed += OnStartPressed;
-            theme = LoadThemeData();
+            themeDef = LoadThemeDef();
             LoadTheme();
             SwitchLevel(this._<SceneManager>().Data<int>());
         }
@@ -79,9 +79,9 @@ namespace CarrotFantasy.scene.adventure
             this._<SceneManager>().ChangeScene(backScene, Variant.From(GetThemeCode()));
         }
 
-        protected virtual ThemePO LoadThemeData()
+        protected virtual ThemeDef LoadThemeDef()
         {
-            ThemePO themePO = null;
+            ThemeDef themeDef = null;
 
             if (FileAccess.FileExists(themeData))
             {
@@ -89,17 +89,17 @@ namespace CarrotFantasy.scene.adventure
                 try
                 {
                     string json = fileAccess.GetAsText();
-                    themePO = JsonConvert.DeserializeObject<ThemePO>(json);
+                    themeDef = JsonConvert.DeserializeObject<ThemeDef>(json);
 
-                    if (themePO != null && themePO.Levels != null)
+                    if (themeDef != null && themeDef.Levels != null)
                     {
-                        foreach (var level in themePO.Levels)
+                        foreach (var level in themeDef.Levels)
                         {
                             if (level == null)
                             {
                                 continue;
                             }
-                            level.ThemeCode = themePO.Code;
+                            level.ThemeCode = themeDef.Code;
                         }
                     }
                 }
@@ -109,7 +109,7 @@ namespace CarrotFantasy.scene.adventure
                 }
             }
 
-            return themePO;
+            return themeDef;
         }
 
         protected virtual void LoadTheme()
@@ -131,9 +131,9 @@ namespace CarrotFantasy.scene.adventure
                 currentLevelIndex = 1;
             }
 
-            if (currentLevelIndex >= theme.Levels.Count)
+            if (currentLevelIndex >= themeDef.Levels.Count)
             {
-                currentLevelIndex = theme.Levels.Count;
+                currentLevelIndex = themeDef.Levels.Count;
             }
 
             if (old == currentLevelIndex)
@@ -154,17 +154,17 @@ namespace CarrotFantasy.scene.adventure
 
         protected virtual void LoadLevels()
         {
-            if (theme == null)
+            if (themeDef == null)
             {
                 return;
             }
 
-            if (theme.Levels == null || theme.Levels.Count == 0)
+            if (themeDef.Levels == null || themeDef.Levels.Count == 0)
             {
                 return;
             }
 
-            if (currentLevelIndex < 1 && currentLevelIndex >= theme.Levels.Count)
+            if (currentLevelIndex < 1 && currentLevelIndex >= themeDef.Levels.Count)
             {
                 return;
             }
@@ -190,14 +190,14 @@ namespace CarrotFantasy.scene.adventure
             }
 
             int count = 0;
-            foreach (var levelPO in theme.Levels)
+            foreach (var levelDef in themeDef.Levels)
             {
-                if (levelPO == null)
+                if (levelDef == null)
                 {
                     continue;
                 }
                 Level level = coverPagePackedScene.Instantiate<Level>();
-                level.LevelData = levelPO;
+                level.LevelDef = levelDef;
                 level.Position = LevelCoverPagePosition + new Vector2(levelCoverPageInterval * count, 0);
                 level.GrayingOrLightUp(currentLevelIndex);
                 levels.AddChild(level);
@@ -220,17 +220,17 @@ namespace CarrotFantasy.scene.adventure
 
         protected virtual void LoadTotalWaves()
         {
-            if (theme == null)
+            if (themeDef == null)
             {
                 return;
             }
 
-            if (theme.Levels == null || theme.Levels.Count == 0)
+            if (themeDef.Levels == null || themeDef.Levels.Count == 0)
             {
                 return;
             }
 
-            if (currentLevelIndex < 1 && currentLevelIndex >= theme.Levels.Count)
+            if (currentLevelIndex < 1 && currentLevelIndex >= themeDef.Levels.Count)
             {
                 return;
             }
@@ -240,7 +240,7 @@ namespace CarrotFantasy.scene.adventure
                 return;
             }
 
-            LevelPO levelPO = theme.Levels[currentLevelIndex - 1];
+            LevelDef levelPO = themeDef.Levels[currentLevelIndex - 1];
             if (levelPO == null)
             {
                 return;
@@ -251,17 +251,17 @@ namespace CarrotFantasy.scene.adventure
 
         protected virtual void LoadAvailableTowers()
         {
-            if (theme == null)
+            if (themeDef == null)
             {
                 return;
             }
 
-            if (theme.Levels == null || theme.Levels.Count == 0)
+            if (themeDef.Levels == null || themeDef.Levels.Count == 0)
             {
                 return;
             }
 
-            if (currentLevelIndex < 1 && currentLevelIndex >= theme.Levels.Count)
+            if (currentLevelIndex < 1 && currentLevelIndex >= themeDef.Levels.Count)
             {
                 return;
             }
@@ -281,14 +281,14 @@ namespace CarrotFantasy.scene.adventure
                 towers.Clear();
             }
 
-            LevelPO levelPO = theme.Levels[currentLevelIndex - 1];
-            if (levelPO == null || levelPO.AvailableTowers == null || levelPO.AvailableTowers.Count == 0)
+            LevelDef levelDef = themeDef.Levels[currentLevelIndex - 1];
+            if (levelDef == null || levelDef.AvailableTowers == null || levelDef.AvailableTowers.Count == 0)
             {
                 return;
             }
             int count = 0;
-            float offset = -(float)(levelPO.AvailableTowers.Count + 1) / 2f + 1;
-            foreach (var availableTower in levelPO.AvailableTowers)
+            float offset = -(float)(levelDef.AvailableTowers.Count + 1) / 2f + 1;
+            foreach (var availableTower in levelDef.AvailableTowers)
             {
                 Sprite2D towerSprite = new();
                 Texture2D towerTexture = null;
@@ -308,12 +308,12 @@ namespace CarrotFantasy.scene.adventure
 
         protected virtual void LoadStyle()
         {
-            if (theme == null)
+            if (themeDef == null)
             {
                 return;
             }
 
-            if (string.IsNullOrEmpty(theme.Code))
+            if (string.IsNullOrEmpty(themeDef.Code))
             {
                 return;
             }
@@ -323,7 +323,7 @@ namespace CarrotFantasy.scene.adventure
                 return;
             }
 
-            style.Texture = GD.Load<Texture2D>($"res://resource/adventure/{theme.Code}/Style.tres");
+            style.Texture = GD.Load<Texture2D>($"res://resource/adventure/{themeDef.Code}/Style.tres");
         }
 
         private void UpdateLevelCoverPageShadow()
@@ -340,22 +340,22 @@ namespace CarrotFantasy.scene.adventure
 
         private void UpdateStartButtonStatus()
         {
-            if (theme == null)
+            if (themeDef == null)
             {
                 return;
             }
 
-            if (theme.Levels == null || theme.Levels.Count == 0)
+            if (themeDef.Levels == null || themeDef.Levels.Count == 0)
             {
                 return;
             }
 
-            if (currentLevelIndex < 1 && currentLevelIndex >= theme.Levels.Count)
+            if (currentLevelIndex < 1 && currentLevelIndex >= themeDef.Levels.Count)
             {
                 return;
             }
 
-            LevelPO level = theme.Levels[currentLevelIndex - 1];
+            LevelDef level = themeDef.Levels[currentLevelIndex - 1];
             if (level == null)
             {
                 return;
@@ -371,20 +371,20 @@ namespace CarrotFantasy.scene.adventure
 
         public string GetThemeCode()
         {
-            if (theme == null)
+            if (themeDef == null)
             {
                 return string.Empty;
             }
-            return theme.Code;
+            return themeDef.Code;
         }
 
         private void OnStartPressed()
         {
-            if (theme == null)
+            if (themeDef == null)
             {
                 return;
             }
-            string themeCode = theme.Code;
+            string themeCode = themeDef.Code;
             this._<SceneManager>().ChangeScene($"res://scene/game/{themeCode}/Level{currentLevelIndex}.tscn");
         }
     }

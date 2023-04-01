@@ -1,4 +1,4 @@
-using CarrotFantasy.po;
+using CarrotFantasy.def;
 using Godot;
 using GodotUtilities;
 
@@ -16,11 +16,11 @@ namespace CarrotFantasy.scene.adventure
         [Node("LevelCoverPage/LevelLock")]
         private Sprite2D levelLock;
 
-        private LevelPO levelData;
-        public LevelPO LevelData
+        private LevelDef levelDef;
+        public LevelDef LevelDef
         {
-            set => levelData = value;
-            get => levelData;
+            set => levelDef = value;
+            get => levelDef;
         }
 
         private readonly Color lightUpColor = new Color("#ffffff");
@@ -38,16 +38,16 @@ namespace CarrotFantasy.scene.adventure
             base._Ready();
             this.WireNodes();
 
-            if (levelData != null)
+            if (levelDef != null)
             {
-                levelCoverPage.Texture = GD.Load<Texture2D>($"res://resource/adventure/{levelData.ThemeCode}/level{levelData.Index}/LevelCoverPage.tres");
+                levelCoverPage.Texture = GD.Load<Texture2D>($"res://resource/adventure/{levelDef.ThemeCode}/level{levelDef.Index}/LevelCoverPage.tres");
 
                 levelLock.Texture = GD.Load<Texture2D>("res://resource/adventure/LevelLock.tres");
             }
 
-            if (levelLock != null && levelData != null)
+            if (levelLock != null && levelDef != null)
             {
-                levelLock.Visible = !levelData.IsUnlocked;
+                levelLock.Visible = !levelDef.IsUnlocked;
             }
         }
 
@@ -64,7 +64,7 @@ namespace CarrotFantasy.scene.adventure
 
         public int GetLevelIndex()
         {
-            return levelData != null ? levelData.Index : 0;
+            return levelDef != null ? levelDef.Index : 0;
         }
     }
 }

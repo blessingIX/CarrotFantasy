@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace CarrotFantasy.po
+namespace CarrotFantasy.def
 {
-    public class LevelPO
+    public class LevelDef
     {
         private int index;
         public int Index { set; get; }
