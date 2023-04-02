@@ -40,6 +40,12 @@ click={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Carrot"
+2d_physics/layer_2="Monster"
+2d_physics/layer_3="Prop"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

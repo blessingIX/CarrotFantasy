@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bufmo4nra8m4y"]
+
+[ext_resource type="PackedScene" uid="uid://b5a71h5mtjiju" path="res://scene/game/CollistionBox.tscn" id="1_wtmrs"]
+
+[node name="HitBox" instance=ExtResource("1_wtmrs")]

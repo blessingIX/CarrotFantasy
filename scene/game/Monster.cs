@@ -1,3 +1,4 @@
+using CarrotFantasy.autoload;
 using Godot;
 using GodotUtilities;
 
@@ -7,6 +8,12 @@ namespace CarrotFantasy.scene.game
     {
         [Node("AnimatedSprite2D")]
         private AnimatedSprite2D animatedSprite2D;
+
+        [Node("HitBox")]
+        private HitBox hitBox;
+
+        [Node("HurtBox")]
+        private HurtBox hurtBox;
 
         private int velocity = 80;
         [Export]
@@ -30,6 +37,8 @@ namespace CarrotFantasy.scene.game
 
             // EmitSignal
             this.Velocity = this.Velocity;
+            hitBox.Hit += OnHitBoxHit;
+            hurtBox.Hurt += OnHurtBoxHurt;
         }
 
         public void OnMonsterMotionArrived(Node motion)
@@ -49,6 +58,19 @@ namespace CarrotFantasy.scene.game
                 center = animatedSprite2D.Position;
             }
             return center;
+        }
+
+        private void OnHitBoxHit(Node beHit)
+        {
+            if (beHit is Carrot carrot)
+            {
+                this._<SoundManager>().PlayFleeting("res://assets/Music/Items/Crash.ogg");
+            }
+        }
+
+        public void OnHurtBoxHurt(Node hitter)
+        {
+
         }
     }
 }

@@ -6,5 +6,6 @@
 [node name="BigHair" instance=ExtResource("1_avxhi")]
 
 [node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -23)
 sprite_frames = ExtResource("2_65g1t")
 frame_progress = 0.353699
