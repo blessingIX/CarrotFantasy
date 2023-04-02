@@ -1,7 +1,0 @@
-[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bje31ojdwr8jq"]
-
-[ext_resource type="Texture2D" uid="uid://nhb0sedhj6tv" path="res://assets/Theme/scene/stages_bg-hd.pvr.png" id="1_7l5g1"]
-
-[resource]
-texture = ExtResource("1_7l5g1")
-region_rect = Rect2(559, 1738, 39, 39)

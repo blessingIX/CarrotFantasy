@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://brrmsjfqhihe5"]
+
+[ext_resource type="Texture2D" uid="uid://xumsnbof0u1l" path="res://assets/Theme/Items/Items01-hd/18.png" id="1_kgefj"]
+[ext_resource type="Script" path="res://scene/game/Carrot.cs" id="1_qsty3"]
+[ext_resource type="Texture2D" uid="uid://8dmrjsil72y4" path="res://assets/Theme/skyline/Items/Object01-hd/10.png" id="2_nsoyd"]
+[ext_resource type="PackedScene" uid="uid://jghp5ay2erpd" path="res://scene/game/HurtBox.tscn" id="4_p8ayh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjvby"]
+
+[node name="Carrot" type="Node2D"]
+script = ExtResource("1_qsty3")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+texture = ExtResource("2_nsoyd")
+
+[node name="CarrotSprite" type="Sprite2D" parent="."]
+position = Vector2(13, -42)
+texture = ExtResource("1_kgefj")
+
+[node name="HurtBox" parent="." instance=ExtResource("4_p8ayh")]
+collision_layer = 1
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+scale = Vector2(1.61832, 0.65635)
+shape = SubResource("RectangleShape2D_cjvby")

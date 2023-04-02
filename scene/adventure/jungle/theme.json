@@ -1,0 +1,147 @@
+{
+    "code": "jungle",
+    "levels": [
+        {
+            "index": 1,
+            "totalWaves": 15,
+            "availableTowers": [
+                "Bottle",
+                "Shit",
+                "Fan",
+                "Star",
+                "Ball"
+            ],
+            "isUnlocked": true
+        },
+        {
+            "index": 2,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Shit",
+                "Star",
+                "FireBottle"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 3,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Fan",
+                "FireBottle",
+                "BlueStar"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 4,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Star",
+                "BlueStar",
+                "Sun"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 5,
+            "totalWaves": 25,
+            "availableTowers": [
+                "Fan",
+                "FireBottle",
+                "BlueStar",
+                "Sun"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 6,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Ball",
+                "BlueStar",
+                "Sun",
+                "Rocket"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 7,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Fan",
+                "Star",
+                "Ball",
+                "FireBottle",
+                "Sun",
+                "Rocket"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 8,
+            "totalWaves": 25,
+            "availableTowers": [
+                "Shit",
+                "Star",
+                "Fan",
+                "Ball",
+                "FireBottle",
+                "BlueStar",
+                "Sun",
+                "Rocket"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 9,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Bottle",
+                "Star",
+                "FireBottle",
+                "BlueStar"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 10,
+            "totalWaves": 20,
+            "availableTowers": [
+                "BlueStar",
+                "Rocket"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 11,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Shit",
+                "Fan",
+                "Star",
+                "Ball",
+                "FireBottle",
+                "BlueStar",
+                "Sun",
+                "Rocket"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 12,
+            "totalWaves": 10,
+            "availableTowers": [
+                "Bottle",
+                "Shit",
+                "Fan",
+                "Star",
+                "Ball",
+                "FireBottle",
+                "BlueStar",
+                "Sun"
+            ],
+            "isUnlocked": false
+        }
+    ]
+}

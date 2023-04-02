@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://coj3btlppj73w"]
+
+[ext_resource type="Script" path="res://common/ButtonWithAudio.cs" id="1_euy6u"]
+
+[node name="ButtonWithAudio" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_euy6u")
+audioPath = "res://assets/Music/Main/Select.ogg"

@@ -1,84 +1,44 @@
-[gd_scene load_steps=22 format=3 uid="uid://bmkhm2ln5cmgn"]
+[gd_scene load_steps=25 format=3 uid="uid://vy508myb3apv"]
 
 [ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_hjuc7"]
-[ext_resource type="Texture2D" uid="uid://nhb0sedhj6tv" path="res://assets/Theme/scene/stages_bg-hd.pvr.png" id="2_g85j0"]
-[ext_resource type="StyleBox" uid="uid://f71jqdaiou8u" path="res://resouce/adventure/BackNormal.tres" id="3_kkwi1"]
+[ext_resource type="PackedScene" uid="uid://dirwqpvqgibks" path="res://scene/adventure/MenuBar.tscn" id="3_0ir5a"]
 [ext_resource type="Script" path="res://scene/adventure/AdventureScene.cs" id="3_ufe78"]
-[ext_resource type="StyleBox" uid="uid://b0fc3suqilw1u" path="res://resouce/adventure/BackPressed.tres" id="4_tx5jy"]
-[ext_resource type="StyleBox" uid="uid://bje31ojdwr8jq" path="res://resouce/adventure/HelpNormal.tres" id="5_p3xqy"]
-[ext_resource type="StyleBox" uid="uid://b3m058owwhey8" path="res://resouce/adventure/HelpPressed.tres" id="6_2c0po"]
-[ext_resource type="StyleBox" uid="uid://c05jupyiu4wwj" path="res://resouce/adventure/PrevNormal.tres" id="8_38si0"]
-[ext_resource type="Texture2D" uid="uid://bvy7iry60qyq8" path="res://assets/Theme/scene/themescene1-hd.png" id="8_ikyw2"]
+[ext_resource type="StyleBox" uid="uid://f71jqdaiou8u" path="res://resource/adventure/HomeNormal.tres" id="4_38byw"]
+[ext_resource type="StyleBox" uid="uid://b0fc3suqilw1u" path="res://resource/adventure/HomePressed.tres" id="5_h7tmp"]
+[ext_resource type="StyleBox" uid="uid://c05jupyiu4wwj" path="res://resource/adventure/PrevNormal.tres" id="5_qu70b"]
+[ext_resource type="StyleBox" uid="uid://d1yeab1ujuj5l" path="res://resource/adventure/PrevPressed.tres" id="6_675vd"]
+[ext_resource type="PackedScene" uid="uid://coj3btlppj73w" path="res://common/ButtonWithAudio.tscn" id="7_1y6b8"]
+[ext_resource type="StyleBox" uid="uid://ctuvd6pxt7b3h" path="res://resource/adventure/NextNormal.tres" id="7_fun68"]
+[ext_resource type="StyleBox" uid="uid://brricrupabxgk" path="res://resource/adventure/NextPressed.tres" id="8_3hivt"]
 [ext_resource type="Script" path="res://scene/adventure/PageTurning.cs" id="8_ugr78"]
-[ext_resource type="StyleBox" uid="uid://d1yeab1ujuj5l" path="res://resouce/adventure/PrevPressed.tres" id="9_mjbpn"]
-[ext_resource type="StyleBox" uid="uid://ctuvd6pxt7b3h" path="res://resouce/adventure/NextNormal.tres" id="10_pad8g"]
-[ext_resource type="StyleBox" uid="uid://brricrupabxgk" path="res://resouce/adventure/NextPressed.tres" id="11_hww0m"]
 [ext_resource type="PackedScene" uid="uid://opqakm50l86s" path="res://scene/adventure/Theme.tscn" id="12_qh5nc"]
+[ext_resource type="Script" path="res://scene/adventure/ThemeCoverPage.cs" id="12_y17n5"]
 [ext_resource type="Script" path="res://scene/adventure/Themes.cs" id="13_i7pr5"]
-[ext_resource type="Texture2D" uid="uid://dgk1u740oxfrk" path="res://assets/Theme/scene/themescene2-hd.pvr.png" id="13_jqr4a"]
+[ext_resource type="Texture2D" uid="uid://cory56fb7mt1i" path="res://assets/Theme/scene/themescene2-hd/7.png" id="16_sj2uy"]
+[ext_resource type="Texture2D" uid="uid://d2ngw6iqyk6jp" path="res://assets/Theme/scene/themescene1-hd/6.png" id="17_4ri7a"]
+[ext_resource type="Texture2D" uid="uid://cip2db06recfi" path="res://assets/Theme/scene/themescene2-hd/1.png" id="18_tf1jn"]
+[ext_resource type="Texture2D" uid="uid://bnlpmipkrxtqy" path="res://assets/Theme/scene/themescene1-hd/3.png" id="19_0vg6g"]
+[ext_resource type="Texture2D" uid="uid://bmgku1a3wev16" path="res://assets/Theme/scene/themescene2-hd/3.png" id="20_rrsqo"]
+[ext_resource type="Texture2D" uid="uid://dv04bgkn8lbam" path="res://assets/Theme/scene/themescene2-hd/6.png" id="21_6qxkt"]
+[ext_resource type="Texture2D" uid="uid://d0dk7r0fkx18j" path="res://assets/Theme/scene/themescene1-hd/2.png" id="21_ci43h"]
+[ext_resource type="Texture2D" uid="uid://ch6ox27ard5hp" path="res://assets/Theme/scene/themescene1-hd/73.png" id="23_qy0j4"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2irm"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_anlcj"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jmkro"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nufho"]
-texture = ExtResource("2_g85j0")
-region_rect = Rect2(285, 1736, 115, 31)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bwx0a"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lww5t"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8jarc"]
 
 [node name="AdventureScene" instance=ExtResource("1_hjuc7")]
-position = Vector2(0, 640)
-rotation = 4.71239
-texture = ExtResource("2_g85j0")
-region_enabled = true
 region_rect = Rect2(258, 2, 640, 960)
 script = ExtResource("3_ufe78")
+BGM = "res://assets/Music/Main/BGMusic.ogg"
 
-[node name="MenuBar" type="Control" parent="." index="0"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="MenuBar" parent="." index="0" instance=ExtResource("3_0ir5a")]
 
-[node name="Back" type="Button" parent="MenuBar" index="0"]
-layout_mode = 0
-offset_left = 587.0
-offset_top = 23.9995
-offset_right = 630.0
-offset_bottom = 72.9995
-scale = Vector2(0.9, 0.9)
-theme_override_styles/normal = ExtResource("3_kkwi1")
-theme_override_styles/hover = ExtResource("3_kkwi1")
-theme_override_styles/pressed = ExtResource("4_tx5jy")
-theme_override_styles/disabled = ExtResource("3_kkwi1")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_s2irm")
-
-[node name="Help" type="Button" parent="MenuBar" index="1"]
-layout_mode = 0
-offset_left = 587.001
-offset_top = 895.999
-offset_right = 639.001
-offset_bottom = 953.999
-scale = Vector2(0.8, 0.8)
-theme_override_styles/normal = ExtResource("5_p3xqy")
-theme_override_styles/hover = ExtResource("5_p3xqy")
-theme_override_styles/pressed = ExtResource("6_2c0po")
-theme_override_styles/disabled = ExtResource("5_p3xqy")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_jmkro")
-
-[node name="Label" type="Label" parent="MenuBar" index="2"]
-layout_mode = 0
-offset_left = 594.0
-offset_top = 504.999
-offset_right = 709.0
-offset_bottom = 535.999
-rotation = 4.71239
-theme_override_styles/normal = SubResource("StyleBoxTexture_nufho")
+[node name="Back" parent="MenuBar" index="0"]
+theme_override_styles/normal = ExtResource("4_38byw")
+theme_override_styles/hover = ExtResource("4_38byw")
+theme_override_styles/pressed = ExtResource("5_h7tmp")
+theme_override_styles/disabled = ExtResource("4_38byw")
 
 [node name="PageTurning" type="Control" parent="." index="1"]
 layout_mode = 3
@@ -90,38 +50,36 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("8_ugr78")
 
-[node name="Prev" type="Button" parent="PageTurning" index="0"]
+[node name="Prev" parent="PageTurning" index="0" instance=ExtResource("7_1y6b8")]
 layout_mode = 0
-offset_left = 288.0
-offset_top = 31.9997
-offset_right = 351.0
-offset_bottom = 94.9997
-theme_override_styles/normal = ExtResource("8_38si0")
-theme_override_styles/hover = ExtResource("8_38si0")
-theme_override_styles/pressed = ExtResource("9_mjbpn")
-theme_override_styles/disabled = ExtResource("8_38si0")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_bwx0a")
+offset_left = 24.0
+offset_top = 224.0
+offset_right = 102.0
+offset_bottom = 302.0
+theme_override_styles/normal = ExtResource("5_qu70b")
+theme_override_styles/hover = ExtResource("5_qu70b")
+theme_override_styles/pressed = ExtResource("6_675vd")
+theme_override_styles/disabled = ExtResource("5_qu70b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_anlcj")
 
-[node name="Next" type="Button" parent="PageTurning" index="1"]
+[node name="Next" parent="PageTurning" index="1" instance=ExtResource("7_1y6b8")]
 layout_mode = 0
-offset_left = 352.001
-offset_top = 864.0
-offset_right = 415.001
-offset_bottom = 927.0
-rotation = 1.5708
-theme_override_styles/normal = ExtResource("10_pad8g")
-theme_override_styles/hover = ExtResource("10_pad8g")
-theme_override_styles/pressed = ExtResource("11_hww0m")
-theme_override_styles/disabled = ExtResource("10_pad8g")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_lww5t")
+offset_left = 664.0
+offset_top = 224.0
+offset_right = 742.0
+offset_bottom = 302.0
+theme_override_styles/normal = ExtResource("7_fun68")
+theme_override_styles/hover = ExtResource("7_fun68")
+theme_override_styles/pressed = ExtResource("8_3hivt")
+theme_override_styles/disabled = ExtResource("7_fun68")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8jarc")
 
 [node name="PointContainer" type="Control" parent="PageTurning" index="2"]
 anchors_preset = 0
-offset_left = 32.0005
-offset_top = 480.0
-offset_right = 992.0
-offset_bottom = 544.0
-rotation = 1.5708
+offset_left = 384.0
+offset_top = 488.0
+offset_right = 384.0
+offset_bottom = 488.0
 mouse_filter = 2
 
 [node name="Themes" type="Node2D" parent="." index="2"]
@@ -129,67 +87,56 @@ script = ExtResource("13_i7pr5")
 
 [node name="Skyline" parent="Themes" index="0" instance=ExtResource("12_qh5nc")]
 
-[node name="ConverPage" type="Sprite2D" parent="Themes/Skyline" index="0"]
-position = Vector2(294, 480)
-rotation = 1.5708
-texture = ExtResource("13_jqr4a")
-region_enabled = true
+[node name="ThemeCoverPage" type="Sprite2D" parent="Themes/Skyline" index="0"]
+position = Vector2(384, 272)
+texture = ExtResource("16_sj2uy")
 region_rect = Rect2(12, 519, 614, 506)
+script = ExtResource("12_y17n5")
+themePackedScenePath = "res://scene/adventure/skyline/SkylineScene.tscn"
 
-[node name="TitleCN" type="Sprite2D" parent="Themes/Skyline/ConverPage" index="0"]
-position = Vector2(152, -154.001)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("8_ikyw2")
-region_enabled = true
+[node name="TitleCN" type="Sprite2D" parent="Themes/Skyline/ThemeCoverPage" index="0"]
+position = Vector2(122, -128)
+texture = ExtResource("17_4ri7a")
 region_rect = Rect2(444, 310, 139, 28)
 
 [node name="Jungle" parent="Themes" index="1" instance=ExtResource("12_qh5nc")]
-position = Vector2(0, 960)
+position = Vector2(768, 0)
 
-[node name="ConverPage" type="Sprite2D" parent="Themes/Jungle" index="0"]
-position = Vector2(294, 480)
-rotation = 1.5708
-texture = ExtResource("13_jqr4a")
-region_enabled = true
+[node name="ThemeCoverPage" type="Sprite2D" parent="Themes/Jungle" index="0"]
+position = Vector2(384, 272)
+texture = ExtResource("18_tf1jn")
 region_rect = Rect2(30, 4, 614, 506)
+script = ExtResource("12_y17n5")
+themePackedScenePath = "res://scene/adventure/jungle/JungleScene.tscn"
 
-[node name="TitleCN" type="Sprite2D" parent="Themes/Jungle/ConverPage" index="0"]
-position = Vector2(120, -154.002)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("8_ikyw2")
-region_enabled = true
-region_rect = Rect2(836, 3, 140, 28)
+[node name="TitleCN" type="Sprite2D" parent="Themes/Jungle/ThemeCoverPage" index="0"]
+position = Vector2(96, -128)
+texture = ExtResource("19_0vg6g")
 
 [node name="Desert" parent="Themes" index="2" instance=ExtResource("12_qh5nc")]
-position = Vector2(0, 1920)
+position = Vector2(1536, 0)
 
-[node name="ConverPage" type="Sprite2D" parent="Themes/Desert" index="0"]
-position = Vector2(294, 480)
-rotation = 1.5708
-texture = ExtResource("13_jqr4a")
-region_enabled = true
-region_rect = Rect2(700, 3, 614, 506)
+[node name="ThemeCoverPage" type="Sprite2D" parent="Themes/Desert" index="0"]
+position = Vector2(384, 272)
+texture = ExtResource("20_rrsqo")
+script = ExtResource("12_y17n5")
+themePackedScenePath = "res://scene/adventure/desert/DesertScene.tscn"
 
-[node name="TitleCN" type="Sprite2D" parent="Themes/Desert/ConverPage" index="0"]
-position = Vector2(120, -154.002)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("8_ikyw2")
-region_enabled = true
-region_rect = Rect2(445, 276, 140, 29)
+[node name="TitleCN" type="Sprite2D" parent="Themes/Desert/ThemeCoverPage" index="0"]
+position = Vector2(104, -128)
+texture = ExtResource("21_ci43h")
 
 [node name="Deepsea" parent="Themes" index="3" instance=ExtResource("12_qh5nc")]
-position = Vector2(0, 2880)
+position = Vector2(2304, 0)
 
-[node name="ConverPage" type="Sprite2D" parent="Themes/Deepsea" index="0"]
-position = Vector2(294, 480)
-texture = ExtResource("13_jqr4a")
-region_enabled = true
-region_rect = Rect2(1060, 1041, 507, 613)
+[node name="ThemeCoverPage" type="Sprite2D" parent="Themes/Deepsea" index="0"]
+position = Vector2(384, 272)
+texture = ExtResource("21_6qxkt")
+script = ExtResource("12_y17n5")
+themePackedScenePath = "res://scene/adventure/deepsea/Deepsea.tscn"
 
-[node name="TitleCN" type="Sprite2D" parent="Themes/Deepsea/ConverPage" index="0"]
-position = Vector2(154.003, 7.99951)
-rotation = 1.5708
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("8_ikyw2")
-region_enabled = true
-region_rect = Rect2(5, 684, 342, 65)
+[node name="TitleCN" type="Sprite2D" parent="Themes/Deepsea/ThemeCoverPage" index="0"]
+position = Vector2(8, -120)
+texture = ExtResource("23_qy0j4")
+
+[editable path="MenuBar"]

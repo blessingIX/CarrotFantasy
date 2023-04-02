@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://dnelsjc0osmrs"]
+
+[ext_resource type="Texture2D" uid="uid://cyy32bv2a3f2n" path="res://assets/Theme/skyline/Items/Monsters01-hd/34.png" id="1_ss6lv"]
+[ext_resource type="Texture2D" uid="uid://b5k26xs8j7ak7" path="res://assets/Theme/skyline/Items/Monsters01-hd/35.png" id="2_5cqfu"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ss6lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5cqfu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]

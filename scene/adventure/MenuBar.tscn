@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://dirwqpvqgibks"]
+
+[ext_resource type="StyleBox" uid="uid://bje31ojdwr8jq" path="res://resource/adventure/HelpNormal.tres" id="3_ahwv7"]
+[ext_resource type="StyleBox" uid="uid://b3m058owwhey8" path="res://resource/adventure/HelpPressed.tres" id="4_irviy"]
+[ext_resource type="Texture2D" uid="uid://om4s0lekdr7t" path="res://assets/Theme/scene/themescene1-hd/84.png" id="5_jtji8"]
+[ext_resource type="PackedScene" uid="uid://coj3btlppj73w" path="res://common/ButtonWithAudio.tscn" id="6_q44wp"]
+[ext_resource type="StyleBox" uid="uid://bdbn22bdfqglm" path="res://resource/adventure/BackNormal.tres" id="7_al6v7"]
+[ext_resource type="StyleBox" uid="uid://cgb8qt7liregl" path="res://resource/adventure/BackPressed.tres" id="8_vnq61"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eksje"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6otyr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nufho"]
+texture = ExtResource("5_jtji8")
+
+[node name="MenuBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" parent="." instance=ExtResource("6_q44wp")]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 11.0
+offset_right = 51.0
+offset_bottom = 39.0
+theme_override_styles/normal = ExtResource("7_al6v7")
+theme_override_styles/hover = ExtResource("7_al6v7")
+theme_override_styles/pressed = ExtResource("8_vnq61")
+theme_override_styles/disabled = ExtResource("7_al6v7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eksje")
+
+[node name="Help" parent="." instance=ExtResource("6_q44wp")]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 9.0
+offset_right = 744.0
+offset_bottom = 41.0
+theme_override_styles/normal = ExtResource("3_ahwv7")
+theme_override_styles/hover = ExtResource("3_ahwv7")
+theme_override_styles/pressed = ExtResource("4_irviy")
+theme_override_styles/disabled = ExtResource("3_ahwv7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6otyr")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 8.0
+offset_right = 443.0
+offset_bottom = 39.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_nufho")

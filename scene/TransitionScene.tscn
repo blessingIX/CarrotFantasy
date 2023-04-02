@@ -1,8 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://blebnr3eeunc8"]
+[gd_scene load_steps=3 format=3 uid="uid://dsh8iqjnkmwru"]
 
-[ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_me42j"]
+[ext_resource type="Texture2D" uid="uid://614q8de3yd6r" path="res://assets/Theme/scene/loading_reload-hd/loading.png" id="2_k4n5t"]
 [ext_resource type="Script" path="res://scene/TransitionScene.cs" id="2_kd2kg"]
 
-[node name="TransitionScene" instance=ExtResource("1_me42j")]
-z_index = 99
+[node name="TransitionScene" type="CanvasLayer"]
+layer = 99
 script = ExtResource("2_kd2kg")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("2_k4n5t")
+centered = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

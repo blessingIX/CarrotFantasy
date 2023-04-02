@@ -12,12 +12,17 @@ namespace CarrotFantasy.scene.adventure
         [Node("MenuBar/Help")]
         private Button help;
 
+        [Node("Themes")]
+        private Themes themes;
+
         public override void _Ready()
         {
             base._Ready();
             this.WireNodes();
 
             back.Pressed += () => this._<SceneManager>().ChangeScene("res://scene/main/MainScene.tscn");
+
+            themes?.SwitchTheme(this._<SceneManager>().Data<string>(0));
         }
     }
 }

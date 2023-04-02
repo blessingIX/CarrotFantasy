@@ -1,0 +1,211 @@
+{
+    "code": "deepsea",
+    "levels": [
+        {
+            "index": 1,
+            "totalWaves": 15,
+            "availableTowers": [
+                "Fish",
+                "BlueStar",
+                "Snow"
+            ],
+            "isUnlocked": true
+        },
+        {
+            "index": 2,
+            "totalWaves": 25,
+            "availableTowers": [
+                "Fish",
+                "Shit",
+                "Rocket",
+                "Arrow"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 3,
+            "totalWaves": 30,
+            "availableTowers": [
+                "Mushroom",
+                "Fish",
+                "Pin",
+                "Plane"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 4,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Mushroom",
+                "Fish",
+                "Snow",
+                "Sun"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 5,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Bottle",
+                "Fan",
+                "Star",
+                "Ball",
+                "FireBottle",
+                "Mushroom"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 6,
+            "totalWaves": 15,
+            "availableTowers": [
+                "Anchor",
+                "Mushroom",
+                "Fish",
+                "Fan"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 7,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Anchor",
+                "Fish",
+                "BlueStar",
+                "Pin"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 8,
+            "totalWaves": 25,
+            "availableTowers": [
+                "Mushroom",
+                "Cuttle"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 9,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Ball",
+                "Mushroom",
+                "Cuttle",
+                "Anchor"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 10,
+            "totalWaves": 25,
+            "availableTowers": [
+                "Fish",
+                "Mushroom",
+                "Cuttle",
+                "Anchor",
+                "Ball",
+                "Fan"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 11,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Fish",
+                "Anchor",
+                "Arrow",
+                "Snow"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 12,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Mushroom",
+                "Cuttle",
+                "Anchor",
+                "Ball",
+                "Rocket",
+                "Plane"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 13,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Bottle",
+                "Mushroom",
+                "Snow"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 14,
+            "totalWaves": 25,
+            "availableTowers": [
+                "Shit",
+                "BlueStar",
+                "Snow",
+                "Mushroom"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 15,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Shit",
+                "Rocket",
+                "Pin",
+                "Plane",
+                "Buff"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 16,
+            "totalWaves": 30,
+            "availableTowers": [
+                "Star",
+                "Anchor",
+                "BlueStar",
+                "Rocket"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 17,
+            "totalWaves": 20,
+            "availableTowers": [
+                "Fish",
+                "Mushroom",
+                "Cuttle",
+                "Anchor"
+            ],
+            "isUnlocked": false
+        },
+        {
+            "index": 18,
+            "totalWaves": 15,
+            "availableTowers": [
+                "Point",
+                "QuestionMarkRed",
+                "QuestionMarkOrange",
+                "QuestionMarkYellow",
+                "QuestionMarkGreen",
+                "QuestionMarkCyan",
+                "QuestionMarkBlue",
+                "QuestionMarkPurple",
+                "Point"
+            ],
+            "isUnlocked": false
+        }
+    ]
+}

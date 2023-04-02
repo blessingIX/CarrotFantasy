@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bles6pay3nc4k"]
+
+[ext_resource type="PackedScene" uid="uid://cu30p3nupohpx" path="res://scene/game/Monster.tscn" id="1_gaodc"]
+[ext_resource type="SpriteFrames" uid="uid://dnelsjc0osmrs" path="res://resource/game/monster/PinkWorm.tres" id="2_jcq5q"]
+
+[node name="PinkWorm" instance=ExtResource("1_gaodc")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(-3, -24)
+sprite_frames = ExtResource("2_jcq5q")
+frame_progress = 0.246126

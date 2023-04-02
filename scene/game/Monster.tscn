@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://cu30p3nupohpx"]
+
+[ext_resource type="Script" path="res://scene/game/Monster.cs" id="1_qcaqa"]
+[ext_resource type="PackedScene" uid="uid://bufmo4nra8m4y" path="res://scene/game/HitBox.tscn" id="2_ml0mg"]
+[ext_resource type="PackedScene" uid="uid://jghp5ay2erpd" path="res://scene/game/HurtBox.tscn" id="3_vkqfn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82tma"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnlpy"]
+
+[node name="Monster" type="Node2D"]
+script = ExtResource("1_qcaqa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+autoplay = "default"
+
+[node name="HitBox" parent="." instance=ExtResource("2_ml0mg")]
+collision_layer = 2
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("RectangleShape2D_82tma")
+
+[node name="HurtBox" parent="." instance=ExtResource("3_vkqfn")]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("RectangleShape2D_xnlpy")

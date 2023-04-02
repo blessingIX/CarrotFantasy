@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsbhbn41mhvlo"]
+
+[ext_resource type="Texture2D" uid="uid://cuxnjdt25f5gw" path="res://assets/Theme/Items/Items02-hd/186.png" id="1_tt27v"]
+[ext_resource type="Script" path="res://scene/game/SelectFault.cs" id="2_vd4be"]
+
+[node name="SelectFault" type="Sprite2D"]
+texture = ExtResource("1_tt27v")
+script = ExtResource("2_vd4be")
+soundPath = "res://assets/Music/Items/SelectFault.ogg"

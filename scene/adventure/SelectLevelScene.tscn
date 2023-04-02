@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=3 uid="uid://c47l72cwc7kwi"]
+
+[ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_ekaga"]
+[ext_resource type="PackedScene" uid="uid://dirwqpvqgibks" path="res://scene/adventure/MenuBar.tscn" id="2_8xe55"]
+[ext_resource type="Script" path="res://scene/adventure/SelectLevelScene.cs" id="2_lk2g3"]
+[ext_resource type="StyleBox" uid="uid://del16xcvyibmj" path="res://resource/adventure/StartNormal.tres" id="6_r4s68"]
+[ext_resource type="StyleBox" uid="uid://bj8yohkyooq27" path="res://resource/adventure/StartPressed.tres" id="7_c2djc"]
+[ext_resource type="PackedScene" uid="uid://coj3btlppj73w" path="res://common/ButtonWithAudio.tscn" id="7_wepq6"]
+[ext_resource type="StyleBox" uid="uid://bcydgfb6omwik" path="res://resource/adventure/StartDisabled.tres" id="8_vdavp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q1my4"]
+
+[node name="SelectLevelScene" instance=ExtResource("1_ekaga")]
+script = ExtResource("2_lk2g3")
+backScene = "res://scene/adventure/AdventureScene.tscn"
+themeData = ""
+levelCoverPageInterval = 414
+BGM = "res://assets/Music/Main/BGMusic.ogg"
+
+[node name="MenuBar" parent="." index="0" instance=ExtResource("2_8xe55")]
+
+[node name="Levels" type="Node2D" parent="." index="1"]
+
+[node name="TotalWaves" type="Sprite2D" parent="." index="2"]
+position = Vector2(464, 80)
+
+[node name="AvailableTowers" type="Node2D" parent="." index="3"]
+position = Vector2(384, 400)
+
+[node name="Start" parent="." index="4" instance=ExtResource("7_wepq6")]
+offset_left = 296.0
+offset_top = 432.0
+offset_right = 474.0
+offset_bottom = 489.0
+theme_override_styles/normal = ExtResource("6_r4s68")
+theme_override_styles/hover = ExtResource("6_r4s68")
+theme_override_styles/pressed = ExtResource("7_c2djc")
+theme_override_styles/disabled = ExtResource("8_vdavp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q1my4")
+
+[node name="Style" type="Sprite2D" parent="." index="5"]
+position = Vector2(384, 451)
+
+[editable path="MenuBar"]

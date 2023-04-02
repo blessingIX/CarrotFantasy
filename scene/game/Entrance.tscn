@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5dhx08qa5sv2"]
+
+[ext_resource type="Texture2D" uid="uid://dumy4fbwcelpc" path="res://assets/Theme/skyline/Items/Object01-hd/6.png" id="1_glarb"]
+
+[node name="Entrance" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -21)
+texture = ExtResource("1_glarb")

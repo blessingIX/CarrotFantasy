@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dccutfpm458c0"]
+
+[ext_resource type="Script" path="res://scene/game/CellContainer.cs" id="1_ptr45"]
+
+[node name="CellContainer" type="CanvasLayer"]
+layer = -1
+script = ExtResource("1_ptr45")
