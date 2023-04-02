@@ -45,6 +45,7 @@ click={
 2d_physics/layer_1="Carrot"
 2d_physics/layer_2="Monster"
 2d_physics/layer_3="Prop"
+2d_physics/layer_4="Bullet"
 
 [rendering]
 

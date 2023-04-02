@@ -42,12 +42,12 @@ rotation = 1.5708
 [node name="BigCloud1" parent="InLevelMap/Props" index="0" instance=ExtResource("3_kdy3c")]
 position = Vector2(256, 128)
 Texture = ExtResource("4_bfsg3")
-PropSize = Vector2(2, 1)
+PropSize = Vector2(2, 2)
 
 [node name="BigCloud2" parent="InLevelMap/Props" index="1" instance=ExtResource("3_kdy3c")]
 position = Vector2(512, 128)
 Texture = ExtResource("4_bfsg3")
-PropSize = Vector2(2, 1)
+PropSize = Vector2(2, 2)
 
 [node name="SmallCloud1" parent="InLevelMap/Props" index="2" instance=ExtResource("3_kdy3c")]
 position = Vector2(160, 288)
