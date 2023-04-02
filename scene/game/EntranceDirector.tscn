@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://uxrc15yoep61"]
+
+[ext_resource type="Texture2D" uid="uid://bbawqv41snh1e" path="res://assets/Theme/Items/Items02-hd/130.png" id="1_1ls6w"]
+[ext_resource type="Script" path="res://scene/game/EntranceDirector.cs" id="1_y71ee"]
+
+[node name="EntranceDirector" type="Node2D"]
+script = ExtResource("1_y71ee")
+
+[node name="Arrow1" type="Sprite2D" parent="."]
+position = Vector2(15, 2)
+texture = ExtResource("1_1ls6w")
+
+[node name="Arrow2" type="Sprite2D" parent="."]
+position = Vector2(42, 2)
+texture = ExtResource("1_1ls6w")
+
+[node name="Arrow3" type="Sprite2D" parent="."]
+position = Vector2(69, 2)
+texture = ExtResource("1_1ls6w")

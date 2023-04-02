@@ -35,6 +35,10 @@ position = Vector2(672, 160)
 [node name="Path2D" parent="InLevelMap/Paths" index="2"]
 curve = SubResource("Curve2D_ecc62")
 
+[node name="EntranceDirector" parent="InLevelMap/Paths" index="3"]
+position = Vector2(96, 160)
+rotation = 1.5708
+
 [node name="BigCloud1" parent="InLevelMap/Props" index="0" instance=ExtResource("3_kdy3c")]
 position = Vector2(256, 128)
 Texture = ExtResource("4_bfsg3")

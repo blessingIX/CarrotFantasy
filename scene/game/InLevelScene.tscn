@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bdxcq3vib0xkb"]
+[gd_scene load_steps=31 format=3 uid="uid://bdxcq3vib0xkb"]
 
 [ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_wtbg2"]
 [ext_resource type="Script" path="res://scene/game/InLevelScene.cs" id="2_plyuu"]
@@ -23,6 +23,7 @@
 [ext_resource type="StyleBox" uid="uid://40f02hi1s3rw" path="res://resource/game/QuitNormal.tres" id="19_3f8xt"]
 [ext_resource type="StyleBox" uid="uid://bqaxemlkly3vi" path="res://resource/game/QuitPressed.tres" id="20_isljc"]
 [ext_resource type="PackedScene" uid="uid://cos8f2tbmpylw" path="res://scene/game/MonsterSpawner.tscn" id="21_s4rnw"]
+[ext_resource type="PackedScene" uid="uid://uxrc15yoep61" path="res://scene/game/EntranceDirector.tscn" id="24_2nqm0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_okcrp"]
 
@@ -191,6 +192,8 @@ metadata/_edit_lock_ = true
 
 [node name="Path2D" type="Path2D" parent="InLevelMap/Paths" index="2"]
 metadata/_edit_lock_ = true
+
+[node name="EntranceDirector" parent="InLevelMap/Paths" index="3" instance=ExtResource("24_2nqm0")]
 
 [node name="Props" type="Node2D" parent="InLevelMap" index="3"]
 metadata/_edit_lock_ = true

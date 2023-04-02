@@ -44,6 +44,9 @@ namespace CarrotFantasy.scene.game
         [Node("InLevelMap/MonsterSpawner")]
         private MonsterSpawner monsterSpawner;
 
+        [Node("InLevelMap/Paths/EntranceDirector")]
+        private EntranceDirector entranceDirector;
+
         private List<WaveDef> waveDefs;
 
         private int waveIndex = -1;
@@ -65,7 +68,7 @@ namespace CarrotFantasy.scene.game
             cellContainer.CellPressed += OnCellContainerCellPressed;
             monsterSpawner.SpwanFinished += () => spawned = true;
 
-            StartCountDown(skipCountDown);
+            GameReady(skipCountDown);
         }
 
         public override void _Process(double delta)
@@ -123,7 +126,7 @@ namespace CarrotFantasy.scene.game
             fleeting.AddChild(selectFault);
         }
 
-        private void StartCountDown(bool skipCountDown = false)
+        private void GameReady(bool skipCountDown = false)
         {
             PackedScene packedScene = GD.Load<PackedScene>("res://scene/game/CountDown.tscn");
             CountDown countDown = packedScene.InstantiateOrNull<CountDown>();
@@ -137,6 +140,10 @@ namespace CarrotFantasy.scene.game
                 countDown.SkipCountDown();
             }
             hud.AddChild(countDown);
+            if (!skipCountDown)
+            {
+                entranceDirector.Start();
+            }
         }
 
         protected void OnCountDownFinished()
