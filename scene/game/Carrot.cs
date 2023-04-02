@@ -12,6 +12,14 @@ public partial class Carrot : Node2D
         base._Ready();
         this.WireNodes();
 
-        hurtBox.Hurt += node => GD.Print(node);
+        hurtBox.Hurt += OnHurtBoxHurt;
+    }
+
+    private void OnHurtBoxHurt(Node beHit)
+    {
+        if (beHit is Monster monster)
+        {
+            GD.Print($"The carrot's HP -{monster.Atk}. Attacker: {monster.Name}");
+        }
     }
 }

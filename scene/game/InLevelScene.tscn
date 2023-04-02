@@ -175,7 +175,7 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 
 [node name="MonsterSpawner" parent="InLevelMap" index="0" instance=ExtResource("21_s4rnw")]
-MonsterPoolPath = NodePath("../Fleeting")
+MonsterPoolPath = NodePath("../Monsters")
 MonsterMotionPoolPath = NodePath("../Paths/Path2D")
 
 [node name="Background" type="Sprite2D" parent="InLevelMap" index="1"]
@@ -195,4 +195,9 @@ metadata/_edit_lock_ = true
 [node name="Props" type="Node2D" parent="InLevelMap" index="3"]
 metadata/_edit_lock_ = true
 
-[node name="Fleeting" type="Node2D" parent="InLevelMap" index="4"]
+[node name="Monsters" type="Node2D" parent="InLevelMap" index="4"]
+y_sort_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="Fleeting" type="Node2D" parent="InLevelMap" index="5"]
+metadata/_edit_lock_ = true

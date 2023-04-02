@@ -64,7 +64,7 @@ namespace CarrotFantasy.autoload
 
             fleetingPlayer.Stream = audioStream;
             fleetingPlayer.Autoplay = true;
-            fleeting.AddChild(fleetingPlayer);
+            fleeting.AddChildDeferred(fleetingPlayer);
         }
     }
 }

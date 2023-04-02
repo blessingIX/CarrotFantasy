@@ -27,6 +27,9 @@ namespace CarrotFantasy.scene.game
             }
         }
 
+        [Export(PropertyHint.Range, "1,2147483647")]
+        public int Atk = 1;
+
         [Signal]
         public delegate void VelocityChangedEventHandler(int velocity);
 
@@ -47,7 +50,12 @@ namespace CarrotFantasy.scene.game
             {
                 motion.QueueFree();
             }
-            QueueFree();
+            // 怪物吃掉萝卜/到达终点经常同时触发，如果其中一个方法中已经进行了QueueFree会抛出System.ObjectDisposedException
+            // 这里判断一下当前对象是否有效再进行QueueFree
+            if (IsInstanceValid(this))
+            {
+                QueueFree();
+            }
         }
 
         public Vector2 GetCenter()
@@ -65,6 +73,7 @@ namespace CarrotFantasy.scene.game
             if (beHit is Carrot carrot)
             {
                 this._<SoundManager>().PlayFleeting("res://assets/Music/Items/Crash.ogg");
+                QueueFree();
             }
         }
 

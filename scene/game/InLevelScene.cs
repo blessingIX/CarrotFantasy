@@ -35,6 +35,9 @@ namespace CarrotFantasy.scene.game
         [Node("CellContainer")]
         private CellContainer cellContainer;
 
+        [Node("InLevelMap/Monsters")]
+        private Node2D monsterSet;  // 开启YSort
+
         [Node("InLevelMap/Fleeting")]
         private Node2D fleeting;
 
@@ -71,7 +74,7 @@ namespace CarrotFantasy.scene.game
 
             if (spawned)
             {
-                List<Monster> monsters = fleeting.GetChildren<Monster>();
+                List<Monster> monsters = monsterSet.GetChildren<Monster>();
                 if (monsters == null || monsters.Count == 0)
                 {
                     spawned = false;
