@@ -4,8 +4,17 @@
 
 [node name="SoundManager" type="Node"]
 script = ExtResource("1_6t2kk")
+Refresh = true
+BusVolumes = {
+"BGM": 50,
+"Master": 25,
+"SoundEffects": 50
+}
 
 [node name="BGMPlayer" type="AudioStreamPlayer" parent="."]
-volume_db = -10.0
+bus = &"BGM"
 
 [node name="Fleeting" type="Node" parent="."]
+
+[node name="SoundEffectsPrototype" type="AudioStreamPlayer" parent="Fleeting"]
+bus = &"SoundEffects"
