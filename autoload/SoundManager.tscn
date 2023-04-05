@@ -4,8 +4,7 @@
 
 [node name="SoundManager" type="Node"]
 script = ExtResource("1_6t2kk")
-Refresh = true
-BusVolumes = {
+BusVolumesConfig = {
 "BGM": 50,
 "Master": 25,
 "SoundEffects": 50

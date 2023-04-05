@@ -37,16 +37,16 @@ namespace CarrotFantasy.autoload
         /// <summary>
         /// 当作一个编辑器按钮使用，用来刷新BusVolumesConfig属性
         /// </summary>
-        private bool _refresh = false;
         [Export]
         public bool Refresh
         {
             set
             {
-                _refresh = value;
+                if (!value)
+                    return;
                 UpdateBusVolumesConfig();
             }
-            get => _refresh;
+            get => false;
         }
 
         [Export]
@@ -151,11 +151,6 @@ namespace CarrotFantasy.autoload
         /// </summary>
         private void UpdateBusVolumesConfig()
         {
-            if (!_refresh)
-            {
-                return;
-            }
-
             // 获取项目设置：项目设置->常规->音频->总线->默认总线布局
             string path = (string)ProjectSettings.GetSetting("audio/buses/default_bus_layout");
             if (string.IsNullOrEmpty(path))
