@@ -20,9 +20,9 @@ namespace CarrotFantasy.scene.adventure
             base._Ready();
             this.WireNodes();
 
-            back.Pressed += () => this._<SceneManager>().ChangeScene("res://scene/main/MainScene.tscn");
+            back.Pressed += () => SceneManager.Instance.ChangeScene("res://scene/main/MainScene.tscn");
 
-            themes?.SwitchTheme(this._<SceneManager>().Data<string>(0));
+            themes?.SwitchTheme(SceneManager.Instance.Data<string>(0));
         }
     }
 }

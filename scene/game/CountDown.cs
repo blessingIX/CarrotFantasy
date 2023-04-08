@@ -53,7 +53,7 @@ namespace CarrotFantasy.scene.game
             {
                 effect.Hide();
 
-                this._<SoundManager>().PlayFleeting(goSound);
+                SoundManager.Instance.PlayFleeting(goSound);
                 double fadeInInterval = 0.1;
                 double interval = 0.2;
                 double fadeOutInterval = 0.1;
@@ -68,7 +68,7 @@ namespace CarrotFantasy.scene.game
             }
             else
             {
-                this._<SoundManager>().PlayFleeting(countDownSound);
+                SoundManager.Instance.PlayFleeting(countDownSound);
                 double effectInterval = 1.1;
                 double charactersFadeInInterval = 0.1;
                 double charactersFadeOutInterval = 0.1;

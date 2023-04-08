@@ -134,7 +134,7 @@ namespace CarrotFantasy.scene.game
             monsterPool.AddChild(monster);
             monsterMotion.RemotePath = $"../../{MonsterPoolPath}/{monster.Name}";
             monsterMotionPool.AddChild(monsterMotion);
-            this._<SoundManager>().PlayFleeting(MonsterSpawnSound);
+            SoundManager.Instance.PlayFleeting(MonsterSpawnSound);
             if (monsterSpawnEffect != null)
             {
                 monsterSpawnEffect.Position = monster.GetCenter();

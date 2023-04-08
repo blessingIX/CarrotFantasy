@@ -7,6 +7,12 @@ namespace CarrotFantasy.autoload
 {
     public partial class SceneManager : Node
     {
+        private static SceneManager instance;
+        public static SceneManager Instance
+        {
+            get => instance;
+        }
+
         public static readonly Object[] DefaultSceneData = new Object[] { };
 
         [Node("TransitionScene")]
@@ -18,6 +24,7 @@ namespace CarrotFantasy.autoload
         {
             base._Ready();
             this.WireNodes();
+            SceneManager.instance = this;
         }
 
         public void ChangeScene(string path)

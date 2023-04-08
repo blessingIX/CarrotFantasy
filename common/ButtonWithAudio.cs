@@ -14,7 +14,7 @@ namespace CarrotFantasy.common
             base._Ready();
             this.WireNodes();
 
-            this.Pressed += () => this._<SoundManager>().PlayFleeting(audioPath);
+            this.Pressed += () => SoundManager.Instance.PlayFleeting(audioPath);
         }
     }
 }

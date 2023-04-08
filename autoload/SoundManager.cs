@@ -9,6 +9,12 @@ namespace CarrotFantasy.autoload
     [Tool]
     public partial class SoundManager : Node
     {
+        private static SoundManager instance;
+        public static SoundManager Instance
+        {
+            get => instance;
+        }
+
         /// <summary>
         /// 默认总线音量，取值范围[0,100]
         /// </summary>
@@ -56,6 +62,7 @@ namespace CarrotFantasy.autoload
         {
             base._Ready();
             this.WireNodes();
+            SoundManager.instance = this;
 
             BGMPlayer.Finished += ReplayBGM;
             UpdateBusVolumes();

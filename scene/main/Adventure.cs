@@ -15,7 +15,7 @@ namespace CarrotFantasy.scene.main
         public override void _Pressed()
         {
             base._Pressed();
-            this._<SceneManager>().ChangeScene("res://scene/adventure/AdventureScene.tscn");
+            SceneManager.Instance.ChangeScene("res://scene/adventure/AdventureScene.tscn");
         }
     }
 }

@@ -43,7 +43,7 @@ namespace CarrotFantasy.scene.adventure
                     && mPosition.X <= rect2.Position.X + rect2.Size.X
                     && mPosition.Y <= rect2.Position.Y + rect2.Size.Y)
                 {
-                    this._<SceneManager>().ChangeScene(themePackedScenePath);
+                    SceneManager.Instance.ChangeScene(themePackedScenePath);
                 }
             }
         }

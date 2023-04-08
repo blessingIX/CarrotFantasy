@@ -58,8 +58,8 @@ namespace CarrotFantasy.scene.game
             base._Ready();
             this.WireNodes();
 
-            bool skipCountDown = this._<SceneManager>().Data<bool>(0);
-            this.waveDefs = this._<SceneManager>().Data<List<WaveDef>>(1);
+            bool skipCountDown = SceneManager.Instance.Data<bool>(0);
+            this.waveDefs = SceneManager.Instance.Data<List<WaveDef>>(1);
 
             menu.Pressed += OnMenuPressed;
             continueButton.Pressed += OnContinuePressed;
@@ -106,12 +106,12 @@ namespace CarrotFantasy.scene.game
 
         private void OnQuitPressed()
         {
-            this._<SceneManager>().ChangeScene($"res://scene/adventure/{themeCode.ToLower()}/{themeCode}Scene.tscn", levelIndex);
+            SceneManager.Instance.ChangeScene($"res://scene/adventure/{themeCode.ToLower()}/{themeCode}Scene.tscn", levelIndex);
         }
 
         private void OnRestartPressed()
         {
-            this._<SceneManager>().ChangeScene($"res://scene/game/{themeCode}/Level{levelIndex}.tscn", true, this.waveDefs);
+            SceneManager.Instance.ChangeScene($"res://scene/game/{themeCode}/Level{levelIndex}.tscn", true, this.waveDefs);
         }
 
         private void OnCellContainerCellPressed(Vector2 center)

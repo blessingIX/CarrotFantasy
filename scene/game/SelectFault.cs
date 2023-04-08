@@ -19,7 +19,7 @@ namespace CarrotFantasy.scene.game
 
         private void FadeOut()
         {
-            this._<SoundManager>().PlayFleeting(soundPath);
+            SoundManager.Instance.PlayFleeting(soundPath);
             var tween = CreateTween();
             tween.TweenProperty(this, "modulate:a", 0f, 0.7);
             tween.TweenCallback(Callable.From(QueueFree));

@@ -72,7 +72,7 @@ namespace CarrotFantasy.scene.game
         {
             if (beHit is Carrot carrot)
             {
-                this._<SoundManager>().PlayFleeting("res://assets/Music/Items/Crash.ogg");
+                SoundManager.Instance.PlayFleeting("res://assets/Music/Items/Crash.ogg");
                 QueueFree();
             }
         }
