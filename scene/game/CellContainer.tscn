@@ -1,7 +1,577 @@
-[gd_scene load_steps=2 format=3 uid="uid://dccutfpm458c0"]
+[gd_scene load_steps=4 format=3 uid="uid://dccutfpm458c0"]
 
 [ext_resource type="Script" path="res://scene/game/CellContainer.cs" id="1_ptr45"]
+[ext_resource type="PackedScene" uid="uid://c0do4wbhvcsfx" path="res://scene/game/Cell.tscn" id="2_aftok"]
+[ext_resource type="Theme" uid="uid://dx4ndtyrhnynp" path="res://resource/game/CellDisable.tres" id="3_qqjvg"]
 
 [node name="CellContainer" type="CanvasLayer"]
 layer = -1
 script = ExtResource("1_ptr45")
+
+[node name="Cell1" parent="." instance=ExtResource("2_aftok")]
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell2" parent="." instance=ExtResource("2_aftok")]
+offset_left = 64.0
+offset_right = 128.0
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell3" parent="." instance=ExtResource("2_aftok")]
+offset_left = 128.0
+offset_right = 192.0
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell4" parent="." instance=ExtResource("2_aftok")]
+offset_left = 192.0
+offset_right = 256.0
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell5" parent="." instance=ExtResource("2_aftok")]
+offset_left = 256.0
+offset_right = 320.0
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell6" parent="." instance=ExtResource("2_aftok")]
+offset_left = 320.0
+offset_right = 384.0
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell7" parent="." instance=ExtResource("2_aftok")]
+offset_left = 384.0
+offset_right = 448.0
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell8" parent="." instance=ExtResource("2_aftok")]
+offset_left = 448.0
+offset_right = 512.0
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell9" parent="." instance=ExtResource("2_aftok")]
+offset_left = 512.0
+offset_right = 576.0
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell10" parent="." instance=ExtResource("2_aftok")]
+offset_left = 576.0
+offset_right = 640.0
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell11" parent="." instance=ExtResource("2_aftok")]
+offset_left = 640.0
+offset_right = 704.0
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell12" parent="." instance=ExtResource("2_aftok")]
+offset_left = 704.0
+offset_right = 768.0
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell13" parent="." instance=ExtResource("2_aftok")]
+offset_top = 64.0
+offset_bottom = 128.0
+
+[node name="Cell14" parent="." instance=ExtResource("2_aftok")]
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 128.0
+offset_bottom = 128.0
+
+[node name="Cell15" parent="." instance=ExtResource("2_aftok")]
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 192.0
+offset_bottom = 128.0
+
+[node name="Cell16" parent="." instance=ExtResource("2_aftok")]
+offset_left = 192.0
+offset_top = 64.0
+offset_right = 256.0
+offset_bottom = 128.0
+
+[node name="Cell17" parent="." instance=ExtResource("2_aftok")]
+offset_left = 256.0
+offset_top = 64.0
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Cell18" parent="." instance=ExtResource("2_aftok")]
+offset_left = 320.0
+offset_top = 64.0
+offset_right = 384.0
+offset_bottom = 128.0
+
+[node name="Cell19" parent="." instance=ExtResource("2_aftok")]
+offset_left = 384.0
+offset_top = 64.0
+offset_right = 448.0
+offset_bottom = 128.0
+
+[node name="Cell20" parent="." instance=ExtResource("2_aftok")]
+offset_left = 448.0
+offset_top = 64.0
+offset_right = 512.0
+offset_bottom = 128.0
+
+[node name="Cell21" parent="." instance=ExtResource("2_aftok")]
+offset_left = 512.0
+offset_top = 64.0
+offset_right = 576.0
+offset_bottom = 128.0
+
+[node name="Cell22" parent="." instance=ExtResource("2_aftok")]
+offset_left = 576.0
+offset_top = 64.0
+offset_right = 640.0
+offset_bottom = 128.0
+
+[node name="Cell23" parent="." instance=ExtResource("2_aftok")]
+offset_left = 640.0
+offset_top = 64.0
+offset_right = 704.0
+offset_bottom = 128.0
+
+[node name="Cell24" parent="." instance=ExtResource("2_aftok")]
+offset_left = 704.0
+offset_top = 64.0
+offset_right = 768.0
+offset_bottom = 128.0
+
+[node name="Cell25" parent="." instance=ExtResource("2_aftok")]
+offset_top = 128.0
+offset_bottom = 192.0
+
+[node name="Cell26" parent="." instance=ExtResource("2_aftok")]
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 128.0
+offset_bottom = 192.0
+
+[node name="Cell27" parent="." instance=ExtResource("2_aftok")]
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 192.0
+offset_bottom = 192.0
+
+[node name="Cell28" parent="." instance=ExtResource("2_aftok")]
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 192.0
+
+[node name="Cell29" parent="." instance=ExtResource("2_aftok")]
+offset_left = 256.0
+offset_top = 128.0
+offset_right = 320.0
+offset_bottom = 192.0
+
+[node name="Cell30" parent="." instance=ExtResource("2_aftok")]
+offset_left = 320.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 192.0
+
+[node name="Cell31" parent="." instance=ExtResource("2_aftok")]
+offset_left = 384.0
+offset_top = 128.0
+offset_right = 448.0
+offset_bottom = 192.0
+
+[node name="Cell32" parent="." instance=ExtResource("2_aftok")]
+offset_left = 448.0
+offset_top = 128.0
+offset_right = 512.0
+offset_bottom = 192.0
+
+[node name="Cell33" parent="." instance=ExtResource("2_aftok")]
+offset_left = 512.0
+offset_top = 128.0
+offset_right = 576.0
+offset_bottom = 192.0
+
+[node name="Cell34" parent="." instance=ExtResource("2_aftok")]
+offset_left = 576.0
+offset_top = 128.0
+offset_right = 640.0
+offset_bottom = 192.0
+
+[node name="Cell35" parent="." instance=ExtResource("2_aftok")]
+offset_left = 640.0
+offset_top = 128.0
+offset_right = 704.0
+offset_bottom = 192.0
+
+[node name="Cell36" parent="." instance=ExtResource("2_aftok")]
+offset_left = 704.0
+offset_top = 128.0
+offset_right = 768.0
+offset_bottom = 192.0
+
+[node name="Cell37" parent="." instance=ExtResource("2_aftok")]
+offset_top = 192.0
+offset_bottom = 256.0
+
+[node name="Cell38" parent="." instance=ExtResource("2_aftok")]
+offset_left = 64.0
+offset_top = 192.0
+offset_right = 128.0
+offset_bottom = 256.0
+
+[node name="Cell39" parent="." instance=ExtResource("2_aftok")]
+offset_left = 128.0
+offset_top = 192.0
+offset_right = 192.0
+offset_bottom = 256.0
+
+[node name="Cell40" parent="." instance=ExtResource("2_aftok")]
+offset_left = 192.0
+offset_top = 192.0
+offset_right = 256.0
+offset_bottom = 256.0
+
+[node name="Cell41" parent="." instance=ExtResource("2_aftok")]
+offset_left = 256.0
+offset_top = 192.0
+offset_right = 320.0
+offset_bottom = 256.0
+
+[node name="Cell42" parent="." instance=ExtResource("2_aftok")]
+offset_left = 320.0
+offset_top = 192.0
+offset_right = 384.0
+offset_bottom = 256.0
+
+[node name="Cell43" parent="." instance=ExtResource("2_aftok")]
+offset_left = 384.0
+offset_top = 192.0
+offset_right = 448.0
+offset_bottom = 256.0
+
+[node name="Cell44" parent="." instance=ExtResource("2_aftok")]
+offset_left = 448.0
+offset_top = 192.0
+offset_right = 512.0
+offset_bottom = 256.0
+
+[node name="Cell45" parent="." instance=ExtResource("2_aftok")]
+offset_left = 512.0
+offset_top = 192.0
+offset_right = 576.0
+offset_bottom = 256.0
+
+[node name="Cell46" parent="." instance=ExtResource("2_aftok")]
+offset_left = 576.0
+offset_top = 192.0
+offset_right = 640.0
+offset_bottom = 256.0
+
+[node name="Cell47" parent="." instance=ExtResource("2_aftok")]
+offset_left = 640.0
+offset_top = 192.0
+offset_right = 704.0
+offset_bottom = 256.0
+
+[node name="Cell48" parent="." instance=ExtResource("2_aftok")]
+offset_left = 704.0
+offset_top = 192.0
+offset_right = 768.0
+offset_bottom = 256.0
+
+[node name="Cell49" parent="." instance=ExtResource("2_aftok")]
+offset_top = 256.0
+offset_bottom = 320.0
+
+[node name="Cell50" parent="." instance=ExtResource("2_aftok")]
+offset_left = 64.0
+offset_top = 256.0
+offset_right = 128.0
+offset_bottom = 320.0
+
+[node name="Cell51" parent="." instance=ExtResource("2_aftok")]
+offset_left = 128.0
+offset_top = 256.0
+offset_right = 192.0
+offset_bottom = 320.0
+
+[node name="Cell52" parent="." instance=ExtResource("2_aftok")]
+offset_left = 192.0
+offset_top = 256.0
+offset_right = 256.0
+offset_bottom = 320.0
+
+[node name="Cell53" parent="." instance=ExtResource("2_aftok")]
+offset_left = 256.0
+offset_top = 256.0
+offset_right = 320.0
+offset_bottom = 320.0
+
+[node name="Cell54" parent="." instance=ExtResource("2_aftok")]
+offset_left = 320.0
+offset_top = 256.0
+offset_right = 384.0
+offset_bottom = 320.0
+
+[node name="Cell55" parent="." instance=ExtResource("2_aftok")]
+offset_left = 384.0
+offset_top = 256.0
+offset_right = 448.0
+offset_bottom = 320.0
+
+[node name="Cell56" parent="." instance=ExtResource("2_aftok")]
+offset_left = 448.0
+offset_top = 256.0
+offset_right = 512.0
+offset_bottom = 320.0
+
+[node name="Cell57" parent="." instance=ExtResource("2_aftok")]
+offset_left = 512.0
+offset_top = 256.0
+offset_right = 576.0
+offset_bottom = 320.0
+
+[node name="Cell58" parent="." instance=ExtResource("2_aftok")]
+offset_left = 576.0
+offset_top = 256.0
+offset_right = 640.0
+offset_bottom = 320.0
+
+[node name="Cell59" parent="." instance=ExtResource("2_aftok")]
+offset_left = 640.0
+offset_top = 256.0
+offset_right = 704.0
+offset_bottom = 320.0
+
+[node name="Cell60" parent="." instance=ExtResource("2_aftok")]
+offset_left = 704.0
+offset_top = 256.0
+offset_right = 768.0
+offset_bottom = 320.0
+
+[node name="Cell61" parent="." instance=ExtResource("2_aftok")]
+offset_top = 320.0
+offset_bottom = 384.0
+
+[node name="Cell62" parent="." instance=ExtResource("2_aftok")]
+offset_left = 64.0
+offset_top = 320.0
+offset_right = 128.0
+offset_bottom = 384.0
+
+[node name="Cell63" parent="." instance=ExtResource("2_aftok")]
+offset_left = 128.0
+offset_top = 320.0
+offset_right = 192.0
+offset_bottom = 384.0
+
+[node name="Cell64" parent="." instance=ExtResource("2_aftok")]
+offset_left = 192.0
+offset_top = 320.0
+offset_right = 256.0
+offset_bottom = 384.0
+
+[node name="Cell65" parent="." instance=ExtResource("2_aftok")]
+offset_left = 256.0
+offset_top = 320.0
+offset_right = 320.0
+offset_bottom = 384.0
+
+[node name="Cell66" parent="." instance=ExtResource("2_aftok")]
+offset_left = 320.0
+offset_top = 320.0
+offset_right = 384.0
+offset_bottom = 384.0
+
+[node name="Cell67" parent="." instance=ExtResource("2_aftok")]
+offset_left = 384.0
+offset_top = 320.0
+offset_right = 448.0
+offset_bottom = 384.0
+
+[node name="Cell68" parent="." instance=ExtResource("2_aftok")]
+offset_left = 448.0
+offset_top = 320.0
+offset_right = 512.0
+offset_bottom = 384.0
+
+[node name="Cell69" parent="." instance=ExtResource("2_aftok")]
+offset_left = 512.0
+offset_top = 320.0
+offset_right = 576.0
+offset_bottom = 384.0
+
+[node name="Cell70" parent="." instance=ExtResource("2_aftok")]
+offset_left = 576.0
+offset_top = 320.0
+offset_right = 640.0
+offset_bottom = 384.0
+
+[node name="Cell71" parent="." instance=ExtResource("2_aftok")]
+offset_left = 640.0
+offset_top = 320.0
+offset_right = 704.0
+offset_bottom = 384.0
+
+[node name="Cell72" parent="." instance=ExtResource("2_aftok")]
+offset_left = 704.0
+offset_top = 320.0
+offset_right = 768.0
+offset_bottom = 384.0
+
+[node name="Cell73" parent="." instance=ExtResource("2_aftok")]
+offset_top = 384.0
+offset_bottom = 448.0
+
+[node name="Cell74" parent="." instance=ExtResource("2_aftok")]
+offset_left = 64.0
+offset_top = 384.0
+offset_right = 128.0
+offset_bottom = 448.0
+
+[node name="Cell75" parent="." instance=ExtResource("2_aftok")]
+offset_left = 128.0
+offset_top = 384.0
+offset_right = 192.0
+offset_bottom = 448.0
+
+[node name="Cell76" parent="." instance=ExtResource("2_aftok")]
+offset_left = 192.0
+offset_top = 384.0
+offset_right = 256.0
+offset_bottom = 448.0
+
+[node name="Cell77" parent="." instance=ExtResource("2_aftok")]
+offset_left = 256.0
+offset_top = 384.0
+offset_right = 320.0
+offset_bottom = 448.0
+
+[node name="Cell78" parent="." instance=ExtResource("2_aftok")]
+offset_left = 320.0
+offset_top = 384.0
+offset_right = 384.0
+offset_bottom = 448.0
+
+[node name="Cell79" parent="." instance=ExtResource("2_aftok")]
+offset_left = 384.0
+offset_top = 384.0
+offset_right = 448.0
+offset_bottom = 448.0
+
+[node name="Cell80" parent="." instance=ExtResource("2_aftok")]
+offset_left = 448.0
+offset_top = 384.0
+offset_right = 512.0
+offset_bottom = 448.0
+
+[node name="Cell81" parent="." instance=ExtResource("2_aftok")]
+offset_left = 512.0
+offset_top = 384.0
+offset_right = 576.0
+offset_bottom = 448.0
+
+[node name="Cell82" parent="." instance=ExtResource("2_aftok")]
+offset_left = 576.0
+offset_top = 384.0
+offset_right = 640.0
+offset_bottom = 448.0
+
+[node name="Cell83" parent="." instance=ExtResource("2_aftok")]
+offset_left = 640.0
+offset_top = 384.0
+offset_right = 704.0
+offset_bottom = 448.0
+
+[node name="Cell84" parent="." instance=ExtResource("2_aftok")]
+offset_left = 704.0
+offset_top = 384.0
+offset_right = 768.0
+offset_bottom = 448.0
+
+[node name="Cell85" parent="." instance=ExtResource("2_aftok")]
+offset_top = 448.0
+offset_bottom = 512.0
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell86" parent="." instance=ExtResource("2_aftok")]
+offset_left = 64.0
+offset_top = 448.0
+offset_right = 128.0
+offset_bottom = 512.0
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell87" parent="." instance=ExtResource("2_aftok")]
+offset_left = 128.0
+offset_top = 448.0
+offset_right = 192.0
+offset_bottom = 512.0
+
+[node name="Cell88" parent="." instance=ExtResource("2_aftok")]
+offset_left = 192.0
+offset_top = 448.0
+offset_right = 256.0
+offset_bottom = 512.0
+
+[node name="Cell89" parent="." instance=ExtResource("2_aftok")]
+offset_left = 256.0
+offset_top = 448.0
+offset_right = 320.0
+offset_bottom = 512.0
+
+[node name="Cell90" parent="." instance=ExtResource("2_aftok")]
+offset_left = 320.0
+offset_top = 448.0
+offset_right = 384.0
+offset_bottom = 512.0
+
+[node name="Cell91" parent="." instance=ExtResource("2_aftok")]
+offset_left = 384.0
+offset_top = 448.0
+offset_right = 448.0
+offset_bottom = 512.0
+
+[node name="Cell92" parent="." instance=ExtResource("2_aftok")]
+offset_left = 448.0
+offset_top = 448.0
+offset_right = 512.0
+offset_bottom = 512.0
+
+[node name="Cell93" parent="." instance=ExtResource("2_aftok")]
+offset_left = 512.0
+offset_top = 448.0
+offset_right = 576.0
+offset_bottom = 512.0
+
+[node name="Cell94" parent="." instance=ExtResource("2_aftok")]
+offset_left = 576.0
+offset_top = 448.0
+offset_right = 640.0
+offset_bottom = 512.0
+
+[node name="Cell95" parent="." instance=ExtResource("2_aftok")]
+offset_left = 640.0
+offset_top = 448.0
+offset_right = 704.0
+offset_bottom = 512.0
+theme = ExtResource("3_qqjvg")
+Enable = false
+
+[node name="Cell96" parent="." instance=ExtResource("2_aftok")]
+offset_left = 704.0
+offset_top = 448.0
+offset_right = 768.0
+offset_bottom = 512.0
+theme = ExtResource("3_qqjvg")
+Enable = false

@@ -1,23 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0do4wbhvcsfx"]
+[gd_scene load_steps=4 format=3 uid="uid://c0do4wbhvcsfx"]
 
 [ext_resource type="Script" path="res://scene/game/Cell.cs" id="1_rwwa8"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xry7w"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p8ecf"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uylb7"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tpmw4"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uy631"]
+[ext_resource type="Theme" uid="uid://bnbb4yucfvawp" path="res://resource/game/CellEnable.tres" id="2_j4uju"]
+[ext_resource type="Theme" uid="uid://dx4ndtyrhnynp" path="res://resource/game/CellDisable.tres" id="3_xh6ja"]
 
 [node name="Cell" type="Button"]
 offset_right = 64.0
 offset_bottom = 64.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_xry7w")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_p8ecf")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_uylb7")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_tpmw4")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_uy631")
+theme = ExtResource("2_j4uju")
 script = ExtResource("1_rwwa8")
+EnalbelTheme = ExtResource("2_j4uju")
+DisableTheme = ExtResource("3_xh6ja")
+Enable = true

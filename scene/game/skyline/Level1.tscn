@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://vbtil58taqu7"]
+[gd_scene load_steps=12 format=3 uid="uid://vbtil58taqu7"]
 
 [ext_resource type="PackedScene" uid="uid://bdxcq3vib0xkb" path="res://scene/game/InLevelScene.tscn" id="1_1gn77"]
 [ext_resource type="Texture2D" uid="uid://buulrdybopcps" path="res://assets/Theme/skyline/BG1/BG-hd.png" id="2_am8a1"]
 [ext_resource type="Texture2D" uid="uid://q6ifk3bwx76y" path="res://assets/Theme/skyline/BG0/BG1-hd.png" id="2_imuff"]
 [ext_resource type="PackedScene" uid="uid://wdqlbc4dodvl" path="res://scene/game/Prop.tscn" id="3_kdy3c"]
+[ext_resource type="Theme" uid="uid://dx4ndtyrhnynp" path="res://resource/game/CellDisable.tres" id="3_psau8"]
 [ext_resource type="Texture2D" uid="uid://cq65nf12012t4" path="res://assets/Theme/skyline/Items/Object01-hd/4.png" id="4_bfsg3"]
 [ext_resource type="Texture2D" uid="uid://yy37qdntbcmw" path="res://assets/Theme/skyline/Items/Object01-hd/5.png" id="5_sqfw4"]
 [ext_resource type="Texture2D" uid="uid://xq10bbl8b65d" path="res://assets/Theme/skyline/Items/Object01-hd/8.png" id="5_wmkxp"]
@@ -18,6 +19,78 @@ point_count = 8
 
 [node name="Level1" instance=ExtResource("1_1gn77")]
 texture = ExtResource("2_imuff")
+
+[node name="Cell26" parent="CellContainer" index="25"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell35" parent="CellContainer" index="34"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell38" parent="CellContainer" index="37"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell47" parent="CellContainer" index="46"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell50" parent="CellContainer" index="49"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell53" parent="CellContainer" index="52"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell54" parent="CellContainer" index="53"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell55" parent="CellContainer" index="54"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell56" parent="CellContainer" index="55"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell59" parent="CellContainer" index="58"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell62" parent="CellContainer" index="61"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell63" parent="CellContainer" index="62"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell64" parent="CellContainer" index="63"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell65" parent="CellContainer" index="64"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell68" parent="CellContainer" index="67"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell69" parent="CellContainer" index="68"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell70" parent="CellContainer" index="69"]
+theme = ExtResource("3_psau8")
+Enable = false
+
+[node name="Cell71" parent="CellContainer" index="70"]
+theme = ExtResource("3_psau8")
+Enable = false
 
 [node name="CoinAvailable" parent="HUD/MenuBar" index="0"]
 Value = 450
@@ -78,3 +151,5 @@ PropSize = Vector2(2, 1)
 position = Vector2(384, 128)
 Texture = ExtResource("8_50fl1")
 PropSize = Vector2(2, 2)
+
+[editable path="CellContainer"]

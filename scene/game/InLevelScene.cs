@@ -114,16 +114,22 @@ namespace CarrotFantasy.scene.game
             SceneManager.Instance.ChangeScene($"res://scene/game/{themeCode}/Level{levelIndex}.tscn", true, this.waveDefs);
         }
 
-        private void OnCellContainerCellPressed(Vector2 center)
+        private void OnCellContainerCellPressed(Vector2 center, bool enable)
         {
-            PackedScene packedScene = GD.Load<PackedScene>("res://scene/game/SelectFault.tscn");
-            SelectFault selectFault = packedScene.InstantiateOrNull<SelectFault>();
-            if (selectFault == null)
+            if (!enable)
             {
-                return;
+                PackedScene packedScene = GD.Load<PackedScene>("res://scene/game/SelectFault.tscn");
+                SelectFault selectFault = packedScene.InstantiateOrNull<SelectFault>();
+                if (selectFault == null)
+                {
+                    return;
+                }
+                selectFault.Position = center;
+                fleeting.AddChild(selectFault);
             }
-            selectFault.Position = center;
-            fleeting.AddChild(selectFault);
+            {
+                GD.Print($"{center} {enable}");
+            }
         }
 
         private void GameReady(bool skipCountDown = false)
