@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://c7k7a4sba0p02"]
+
+[ext_resource type="PackedScene" uid="uid://kr6oo05vd5aa" path="res://scene/game/Interaction2D.tscn" id="1_hb0jr"]
+[ext_resource type="Script" path="res://scene/game/CellSelector.cs" id="2_bvbia"]
+[ext_resource type="Texture2D" uid="uid://dwsnrn1aoom2m" path="res://assets/Theme/Items/Items02-hd/CellSelector1.png" id="2_k2wxv"]
+[ext_resource type="Texture2D" uid="uid://cr5204qeycal0" path="res://assets/Theme/Items/Items02-hd/CellSelector2.png" id="3_pxkwg"]
+[ext_resource type="Texture2D" uid="uid://dt0xwi3sq7f1y" path="res://assets/Theme/Items/Items02-hd/CellSelector3.png" id="4_41604"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kwdqv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k2wxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pxkwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_41604")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="CellSelector" instance=ExtResource("1_hb0jr")]
+script = ExtResource("2_bvbia")
+selectSoundPath = "res://assets/Music/Items/TowerSelect.ogg"
+deselectSoundPath = "res://assets/Music/Items/TowerDeselect.ogg"
+
+[node name="Interaction" parent="." index="0"]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_kwdqv")
+frame_progress = 0.777519

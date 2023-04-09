@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bdxcq3vib0xkb"]
+[gd_scene load_steps=32 format=3 uid="uid://bdxcq3vib0xkb"]
 
 [ext_resource type="PackedScene" uid="uid://2mcmjuespeq8" path="res://scene/Scene.tscn" id="1_wtbg2"]
 [ext_resource type="Script" path="res://scene/game/InLevelScene.cs" id="2_plyuu"]
@@ -24,6 +24,7 @@
 [ext_resource type="StyleBox" uid="uid://bqaxemlkly3vi" path="res://resource/game/QuitPressed.tres" id="20_isljc"]
 [ext_resource type="PackedScene" uid="uid://cos8f2tbmpylw" path="res://scene/game/MonsterSpawner.tscn" id="21_s4rnw"]
 [ext_resource type="PackedScene" uid="uid://uxrc15yoep61" path="res://scene/game/EntranceDirector.tscn" id="24_2nqm0"]
+[ext_resource type="PackedScene" uid="uid://c7k7a4sba0p02" path="res://scene/game/CellSelector.tscn" id="25_7p6ct"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_okcrp"]
 
@@ -204,5 +205,8 @@ metadata/_edit_lock_ = true
 
 [node name="Fleeting" type="Node2D" parent="InLevelMap" index="5"]
 metadata/_edit_lock_ = true
+
+[node name="CellSelector" parent="InLevelMap" index="6" instance=ExtResource("25_7p6ct")]
+visible = false
 
 [editable path="CellContainer"]

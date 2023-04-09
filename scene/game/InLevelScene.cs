@@ -47,6 +47,9 @@ namespace CarrotFantasy.scene.game
         [Node("InLevelMap/Paths/EntranceDirector")]
         private EntranceDirector entranceDirector;
 
+        [Node("InLevelMap/CellSelector")]
+        private CellSelector cellSelector;
+
         private List<WaveDef> waveDefs;
 
         private int waveIndex = -1;
@@ -116,6 +119,12 @@ namespace CarrotFantasy.scene.game
 
         private void OnCellContainerCellPressed(Vector2 center, bool enable)
         {
+            if (cellSelector != null && cellSelector.Visible)
+            {
+                cellSelector.Visible = false;
+                return;
+            }
+
             if (!enable)
             {
                 PackedScene packedScene = GD.Load<PackedScene>("res://scene/game/SelectFault.tscn");
@@ -127,8 +136,18 @@ namespace CarrotFantasy.scene.game
                 selectFault.Position = center;
                 fleeting.AddChild(selectFault);
             }
+            else
             {
-                GD.Print($"{center} {enable}");
+                if (cellSelector != null)
+                {
+                    if (cellSelector.Visible)
+                        cellSelector.Visible = false;
+                    else
+                    {
+                        cellSelector.Position = center;
+                        cellSelector.Visible = true;
+                    }
+                }
             }
         }
 
