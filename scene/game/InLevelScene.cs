@@ -17,6 +17,9 @@ namespace CarrotFantasy.scene.game
         [Node("HUD")]
         private CanvasLayer hud;
 
+        [Node("HUD/MenuBar/Pause")]
+        private Button pause;
+
         [Node("HUD/MenuBar/Menu")]
         private Button menu;
 
@@ -65,6 +68,7 @@ namespace CarrotFantasy.scene.game
             this.waveDefs = SceneManager.Instance.Data<List<WaveDef>>(1);
 
             menu.Pressed += OnMenuPressed;
+            pause.Pressed += OnPausePressed;
             continueButton.Pressed += OnContinuePressed;
             quit.Pressed += OnQuitPressed;
             restartButton.Pressed += OnRestartPressed;
@@ -96,10 +100,39 @@ namespace CarrotFantasy.scene.game
                 return;
             }
             gameMenuRect.Show();
+            PauseGame();
+        }
+
+        private void OnPausePressed()
+        {
+            PauseOrContinueGame();
+        }
+
+        private void PauseGame()
+        {
+            GetTree().Paused = true;
+        }
+
+        private void ContinueGame()
+        {
+            GetTree().Paused = false;
+        }
+
+        private void PauseOrContinueGame()
+        {
+            if (GetTree().Paused)
+            {
+                ContinueGame();
+            }
+            else
+            {
+                PauseGame();
+            }
         }
 
         private void OnContinuePressed()
         {
+            ContinueGame();
             if (gameMenuRect == null)
             {
                 return;
@@ -109,11 +142,13 @@ namespace CarrotFantasy.scene.game
 
         private void OnQuitPressed()
         {
+            ContinueGame();
             SceneManager.Instance.ChangeScene($"res://scene/adventure/{themeCode.ToLower()}/{themeCode}Scene.tscn", levelIndex);
         }
 
         private void OnRestartPressed()
         {
+            ContinueGame();
             SceneManager.Instance.ChangeScene($"res://scene/game/{themeCode}/Level{levelIndex}.tscn", true, this.waveDefs);
         }
 

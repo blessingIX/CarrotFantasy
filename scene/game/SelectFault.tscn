@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://scene/game/SelectFault.cs" id="2_vd4be"]
 
 [node name="SelectFault" type="Sprite2D"]
+process_mode = 3
 texture = ExtResource("1_tt27v")
 script = ExtResource("2_vd4be")
 soundPath = "res://assets/Music/Items/SelectFault.ogg"

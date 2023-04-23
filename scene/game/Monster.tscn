@@ -12,6 +12,7 @@
 script = ExtResource("1_qcaqa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+process_mode = 3
 autoplay = "default"
 
 [node name="HitBox" parent="." instance=ExtResource("2_ml0mg")]
