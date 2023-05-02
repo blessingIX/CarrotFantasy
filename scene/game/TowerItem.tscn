@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://kr6oo05vd5aa" path="res://scene/game/Interaction2D.tscn" id="1_rg1ki"]
 [ext_resource type="Script" path="res://scene/game/TowerItem.cs" id="2_m03mx"]
 
-[node name="TowerPlacer" instance=ExtResource("1_rg1ki")]
+[node name="TowerItem" instance=ExtResource("1_rg1ki")]
 script = ExtResource("2_m03mx")
 
 [node name="Interaction" parent="." index="0"]
