@@ -211,6 +211,5 @@ metadata/_edit_lock_ = true
 
 [node name="CellSelector" parent="InLevelMap" index="6" instance=ExtResource("25_7p6ct")]
 process_mode = 3
-visible = false
 
 [editable path="CellContainer"]

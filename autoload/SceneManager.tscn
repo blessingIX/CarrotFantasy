@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://brq3rvlipdjpm"]
+[gd_scene load_steps=3 format=3 uid="uid://chvuuntl5umml"]
 
 [ext_resource type="Script" path="res://autoload/SceneManager.cs" id="1_fv5yu"]
 [ext_resource type="PackedScene" uid="uid://dsh8iqjnkmwru" path="res://scene/TransitionScene.tscn" id="2_v4452"]

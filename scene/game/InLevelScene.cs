@@ -66,6 +66,7 @@ namespace CarrotFantasy.scene.game
 
             bool skipCountDown = SceneManager.Instance.Data<bool>(0);
             this.waveDefs = SceneManager.Instance.Data<List<WaveDef>>(1);
+            cellSelector.AvailableTowers = SceneManager.Instance.Data<List<TowerDef>>(2);
 
             menu.Pressed += OnMenuPressed;
             pause.Pressed += OnPausePressed;

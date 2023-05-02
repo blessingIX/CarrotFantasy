@@ -5,8 +5,12 @@
             "index": 1,
             "totalWaves": 15,
             "availableTowers": [
-                "Bottle",
-                "Shit"
+                {
+                    "code": "Bottle"
+                },
+                {
+                    "code": "Shit"
+                }
             ],
             "isUnlocked": true,
             "waves": [
@@ -184,9 +188,15 @@
             "index": 2,
             "totalWaves": 15,
             "availableTowers": [
-                "Bottle",
-                "Shit",
-                "Fan"
+                {
+                    "code": "Bottle"
+                },
+                {
+                    "code": "Shit"
+                },
+                {
+                    "code": "Fan"
+                }
             ],
             "isUnlocked": false
         },
@@ -194,9 +204,15 @@
             "index": 3,
             "totalWaves": 20,
             "availableTowers": [
-                "Bottle",
-                "Shit",
-                "Star"
+                {
+                    "code": "Bottle"
+                },
+                {
+                    "code": "Shit"
+                },
+                {
+                    "code": "Star"
+                }
             ],
             "isUnlocked": false
         },
@@ -204,8 +220,12 @@
             "index": 4,
             "totalWaves": 20,
             "availableTowers": [
-                "Shit",
-                "Ball"
+                {
+                    "code": "Shit"
+                },
+                {
+                    "code": "Ball"
+                }
             ],
             "isUnlocked": false
         },
@@ -213,8 +233,12 @@
             "index": 5,
             "totalWaves": 20,
             "availableTowers": [
-                "Shit",
-                "Star"
+                {
+                    "code": "Shit"
+                },
+                {
+                    "code": "Star"
+                }
             ],
             "isUnlocked": false
         },
@@ -222,8 +246,12 @@
             "index": 6,
             "totalWaves": 25,
             "availableTowers": [
-                "Shit",
-                "Fan"
+                {
+                    "code": "Shit"
+                },
+                {
+                    "code": "Fan"
+                }
             ],
             "isUnlocked": false
         },
@@ -231,8 +259,12 @@
             "index": 7,
             "totalWaves": 20,
             "availableTowers": [
-                "Bottle",
-                "Ball"
+                {
+                    "code": "Bottle"
+                },
+                {
+                    "code": "Ball"
+                }
             ],
             "isUnlocked": false
         },
@@ -240,9 +272,15 @@
             "index": 8,
             "totalWaves": 25,
             "availableTowers": [
-                "Star",
-                "Fan",
-                "Ball"
+                {
+                    "code": "Star"
+                },
+                {
+                    "code": "Fan"
+                },
+                {
+                    "code": "Ball"
+                }
             ],
             "isUnlocked": false
         },
@@ -250,11 +288,21 @@
             "index": 9,
             "totalWaves": 20,
             "availableTowers": [
-                "Bottle",
-                "Shit",
-                "Star",
-                "Fan",
-                "Ball"
+                {
+                    "code": "Bottle"
+                },
+                {
+                    "code": "Shit"
+                },
+                {
+                    "code": "Star"
+                },
+                {
+                    "code": "Fan"
+                },
+                {
+                    "code": "Ball"
+                }
             ],
             "isUnlocked": false
         },
@@ -262,7 +310,9 @@
             "index": 10,
             "totalWaves": 20,
             "availableTowers": [
-                "Bottle"
+                {
+                    "code": "Bottle"
+                }
             ],
             "isUnlocked": false
         },
@@ -270,10 +320,18 @@
             "index": 11,
             "totalWaves": 20,
             "availableTowers": [
-                "Bottle",
-                "Shit",
-                "Star",
-                "Fan"
+                {
+                    "code": "Bottle"
+                },
+                {
+                    "code": "Shit"
+                },
+                {
+                    "code": "Star"
+                },
+                {
+                    "code": "Fan"
+                }
             ],
             "isUnlocked": false
         },
@@ -281,11 +339,21 @@
             "index": 12,
             "totalWaves": 10,
             "availableTowers": [
-                "Bottle",
-                "Shit",
-                "Star",
-                "Fan",
-                "Ball"
+                {
+                    "code": "Bottle"
+                },
+                {
+                    "code": "Shit"
+                },
+                {
+                    "code": "Star"
+                },
+                {
+                    "code": "Fan"
+                },
+                {
+                    "code": "Ball"
+                }
             ],
             "isUnlocked": false
         }

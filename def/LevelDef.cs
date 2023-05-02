@@ -10,7 +10,7 @@ namespace CarrotFantasy.def
 
         public int TotalWaves;
 
-        public List<string> AvailableTowers;
+        public List<TowerDef> AvailableTowers;
 
         public bool IsUnlocked;
 

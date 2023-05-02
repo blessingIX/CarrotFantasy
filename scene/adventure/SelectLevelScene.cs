@@ -292,10 +292,10 @@ namespace CarrotFantasy.scene.adventure
             {
                 Sprite2D towerSprite = new();
                 Texture2D towerTexture = null;
-                if (!string.IsNullOrEmpty(availableTower))
+                if (!string.IsNullOrEmpty(availableTower.Code))
                 {
-                    towerTexture = GD.Load<Texture2D>($"res://resource/adventure/availableTowers/{availableTower}.tres");
-                    towerSprite.Name = availableTower;
+                    towerTexture = GD.Load<Texture2D>($"res://resource/adventure/availableTowers/{availableTower.Code}.tres");
+                    towerSprite.Name = availableTower.Code;
                 }
                 towerSprite.Texture = towerTexture;
                 towerSprite.Position = new Vector2(48f * (offset + (float)count), 0f);
@@ -385,7 +385,12 @@ namespace CarrotFantasy.scene.adventure
                 return;
             }
             string themeCode = themeDef.Code;
-            SceneManager.Instance.ChangeScene($"res://scene/game/{themeCode}/Level{currentLevelIndex}.tscn", false, themeDef.Levels[currentLevelIndex - 1].Waves);
+            SceneManager.Instance.ChangeScene(
+                $"res://scene/game/{themeCode}/Level{currentLevelIndex}.tscn",
+                false,
+                themeDef.Levels[currentLevelIndex - 1].Waves,
+                themeDef.Levels[currentLevelIndex - 1].AvailableTowers
+            );
         }
     }
 }
